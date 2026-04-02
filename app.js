@@ -161,6 +161,16 @@ const attachPhoneMask = (input) => {
   });
 };
 
+const attachUrlPrefix = (input) => {
+  if (!input) return;
+  input.addEventListener("blur", () => {
+    const value = input.value.trim();
+    if (!value) return;
+    if (/^https?:\/\//i.test(value)) return;
+    input.value = `https://${value}`;
+  });
+};
+
 const createPhoneRow = (data = {}) => {
   const row = document.createElement("div");
   row.className = "phone-row";
@@ -391,6 +401,11 @@ const createStationForm = (data = {}) => {
   setValue("lon", data.lon);
   setValue("lat", data.lat);
   setValue("gallery-url", data.galleryUrl);
+
+  attachUrlPrefix(station.querySelector('[data-field="url"]'));
+  attachUrlPrefix(station.querySelector('[data-field="add-url"]'));
+  attachUrlPrefix(station.querySelector('[data-field="info-page"]'));
+  attachUrlPrefix(station.querySelector('[data-field="gallery-url"]'));
 
   const phonesList = station.querySelector('[data-list="phones"]');
   phonesList.innerHTML = "";
