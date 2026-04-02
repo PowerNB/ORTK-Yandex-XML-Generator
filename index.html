@@ -87,6 +87,7 @@
       <section class="tabs">
         <button class="tab active" data-tab="single">Одна станция — все поля</button>
         <button class="tab" data-tab="bulk">Все станции — основные поля</button>
+        <button class="tab ghost" id="insertMock">Вставить мокап данные</button>
       </section>
 
       <section class="tab-content active" id="single">
@@ -127,9 +128,11 @@
               <span class="field-hint">Уточнение или альтернативное название филиала.</span>
             </label>
             <label>
-              <span class="label-title">Населенный пункт (locality-name)</span>
+              <span class="label-title">Населенный пункт (добавим в address)</span>
               <input data-field="locality-name" type="text" placeholder="город/село" />
-              <span class="field-hint">Используйте, если адрес содержит только улицу и дом.</span>
+              <span class="field-hint">
+                Если в адресе только улица и дом, укажите город здесь — мы добавим его в address.
+              </span>
             </label>
             <label>
               <span class="label-title"><strong>Адрес (address) *</strong></span>
@@ -144,12 +147,18 @@
             <label>
               <span class="label-title"><strong>Время работы (working-time) *</strong></span>
               <input data-field="working-time" type="text" placeholder="ежедн. 00:00-24:00" />
-              <span class="field-hint">Общий график. Выходные не указываются.</span>
+              <span class="field-hint">
+                Общий график без выходных. Пример: ежедн. 11:30-21:30 перерыв 14:00-14:30, перерыв
+                16:30-17:00.
+              </span>
             </label>
             <label>
               <span class="label-title">Праздничный график (scheduled-working-time)</span>
               <input data-field="scheduled-working-time" type="text" placeholder="01.01.2026 10:00-22:00" />
-              <span class="field-hint">Используйте для праздничных дат.</span>
+              <span class="field-hint">
+                Для праздничных дат. Формат: ДД.ММ.ГГГГ 10:00-22:00 (перерыв 14:00-14:30). Несколько
+                дат — через ; или с новой строки.
+              </span>
             </label>
             <label>
               <span class="label-title"><strong>Рубрика (rubric-id) *</strong></span>
@@ -257,7 +266,9 @@
                   </th>
                   <th>
                     <strong>working-time *</strong>
-                    <span class="field-hint">Например: ежедневно 00:00-24:00.</span>
+                    <span class="field-hint">
+                      Пример: ежедн. 11:30-21:30 перерыв 14:00-14:30.
+                    </span>
                   </th>
                   <th>
                     <strong>rubric-id *</strong>
@@ -276,8 +287,8 @@
                     <span class="field-hint">Уточнение/название АЗС.</span>
                   </th>
                   <th>
-                    locality-name
-                    <span class="field-hint">Город, если адрес неполный.</span>
+                    населенный пункт
+                    <span class="field-hint">Добавим к address, если он неполный.</span>
                   </th>
                   <th>копировать</th>
                   <th></th>

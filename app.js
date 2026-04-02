@@ -1,3 +1,4 @@
+﻿
 const preview = document.getElementById("xmlPreview");
 const singleErrors = document.getElementById("singleErrors");
 const bulkErrors = document.getElementById("bulkErrors");
@@ -38,6 +39,154 @@ const allowedPhotoTags = [
 ];
 
 let rubricIndex = [];
+let stationCache = new Map();
+
+const escapeXml = (value) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+
+const formatDate = (value) => {
+  if (!value) return "";
+  const [year, month, day] = value.split("-");
+  return `${day}.${month}.${year}`;
+};
+
+const normalizeDateToInput = (value) => {
+  if (!value) return "";
+  if (/^\d{2}\.\d{2}\.\d{4}$/.test(value)) {
+    const [day, month, year] = value.split(".");
+    return `${year}-${month}-${day}`;
+  }
+  if (/^\d{13}$/.test(value)) {
+    const date = new Date(Number(value));
+    if (Number.isNaN(date.getTime())) return "";
+    return date.toISOString().slice(0, 10);
+  }
+  return "";
+};
+
+const parseScheduledEntries = (value) => {
+  if (!value) return [];
+  const parts = value
+    .split(/[\n;]+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  return parts
+    .map((part) => {
+      const match = part.match(/^(\d{2}\.\d{2}\.\d{4})\s+(.+)$/);
+      if (!match) return null;
+      const date = match[1];
+      const rest = match[2].trim();
+      const intervalMatches = Array.from(
+        rest.matchAll(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/g)
+      ).map((m) => ({ from: m[1], to: m[2] }));
+      if (!intervalMatches.length) return { date, work: null, dinners: [] };
+
+      const dinnerMatches = Array.from(
+        rest.matchAll(/перерыв\s*(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/gi)
+      ).map((m) => ({ from: m[1], to: m[2] }));
+
+      const work = intervalMatches[0];
+      const dinners = dinnerMatches.length ? dinnerMatches : intervalMatches.slice(1);
+      return { date, work, dinners };
+    })
+    .filter(Boolean);
+};
+
+const formatPhoneRu = (value) => {
+  const digits = value.replace(/\D/g, "");
+  if (!digits) return "";
+  let normalized = digits;
+  if (normalized.length === 11 && normalized.startsWith("8")) {
+    normalized = `7${normalized.slice(1)}`;
+  }
+  if (normalized.length === 10 && normalized.startsWith("9")) {
+    normalized = `7${normalized}`;
+  }
+  if (normalized.length !== 11 || !normalized.startsWith("7")) {
+    return value;
+  }
+  const code = normalized.slice(1, 4);
+  const part1 = normalized.slice(4, 7);
+  const part2 = normalized.slice(7, 9);
+  const part3 = normalized.slice(9, 11);
+  return `+7 (${code}) ${part1}-${part2}-${part3}`;
+};
+
+const attachPhoneMask = (input) => {
+  if (!input) return;
+  input.addEventListener("blur", () => {
+    const formatted = formatPhoneRu(input.value);
+    if (formatted) input.value = formatted;
+  });
+};
+
+const attachUrlPrefix = (input) => {
+  if (!input) return;
+  input.addEventListener("blur", () => {
+    const value = input.value.trim();
+    if (!value) return;
+    if (/^https?:\/\//i.test(value)) return;
+    input.value = `https://${value}`;
+  });
+};
+
+const normalizeScheduledInput = (input) => {
+  if (!input) return;
+  input.addEventListener("blur", () => {
+    const entries = parseScheduledEntries(input.value);
+    if (!entries.length) return;
+    const lines = entries.map((entry) => {
+      if (!entry.work) return entry.date;
+      let line = `${entry.date} ${entry.work.from}-${entry.work.to}`;
+      if (entry.dinners?.length) {
+        entry.dinners.forEach((dinner) => {
+          line += ` перерыв ${dinner.from}-${dinner.to}`;
+        });
+      }
+      return line;
+    });
+    input.value = lines.join("; ");
+  });
+};
+
+const shouldDisableLocality = (address) => {
+  if (!address) return false;
+  const lower = address.toLowerCase();
+  if (/(^|,)\s*(г\.|город)\s*/.test(lower)) return true;
+  const parts = address.split(",").map((part) => part.trim()).filter(Boolean);
+  return parts.length >= 4;
+};
+
+const composeAddress = (address, locality) => {
+  if (!locality) return address;
+  const addressLower = (address || "").toLowerCase();
+  const localityLower = locality.toLowerCase();
+  if (addressLower.includes(localityLower)) return address;
+  return `${locality}, ${address}`;
+};
+
+const attachLocalityGuard = (addressInput, localityInput) => {
+  if (!addressInput || !localityInput) return;
+  const update = () => {
+    if (shouldDisableLocality(addressInput.value)) {
+      localityInput.value = "";
+      localityInput.disabled = true;
+      localityInput.placeholder = "не требуется";
+    } else {
+      localityInput.disabled = false;
+      localityInput.placeholder = "город/село";
+    }
+  };
+  addressInput.addEventListener("input", update);
+  addressInput.addEventListener("blur", update);
+  update();
+};
 
 const parseRubrics = (text) => {
   const trimmed = text.trim();
@@ -46,7 +195,6 @@ const parseRubrics = (text) => {
     const parsed = JSON.parse(trimmed);
     return Array.isArray(parsed) ? parsed : [parsed];
   } catch {
-    // rubric.json может быть списком объектов без внешних []
     try {
       const wrapped = `[${trimmed.replace(/^\s*,|,\s*$/g, "")}]`;
       return JSON.parse(wrapped);
@@ -92,187 +240,6 @@ const normalizeRubricValue = (value) => {
   if (exact) return exact.id;
   const partial = rubricIndex.find((item) => item.name.toLowerCase().includes(lower));
   return partial ? partial.id : trimmed;
-};
-
-const refreshRubricTags = () => {
-  document.querySelectorAll(".rubric-tag").forEach((tag) => {
-    const id = tag.dataset.id;
-    const match = rubricIndex.find((item) => item.id === id);
-    if (!match) return;
-    const button = tag.querySelector("button");
-    tag.textContent = `${match.name} — ${id}`;
-    if (button) tag.appendChild(button);
-  });
-};
-
-const escapeXml = (value) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-
-const formatDate = (value) => {
-  if (!value) return "";
-  const [year, month, day] = value.split("-");
-  return `${day}.${month}.${year}`;
-};
-
-const normalizeDateToInput = (value) => {
-  if (!value) return "";
-  if (/^\d{2}\.\d{2}\.\d{4}$/.test(value)) {
-    const [day, month, year] = value.split(".");
-    return `${year}-${month}-${day}`;
-  }
-  if (/^\d{13}$/.test(value)) {
-    const date = new Date(Number(value));
-    if (Number.isNaN(date.getTime())) return "";
-    return date.toISOString().slice(0, 10);
-  }
-  return "";
-};
-
-const formatPhoneRu = (value) => {
-  const digits = value.replace(/\D/g, "");
-  if (!digits) return "";
-  let normalized = digits;
-  if (normalized.length === 11 && normalized.startsWith("8")) {
-    normalized = `7${normalized.slice(1)}`;
-  }
-  if (normalized.length === 10 && normalized.startsWith("9")) {
-    normalized = `7${normalized}`;
-  }
-  if (normalized.length !== 11 || !normalized.startsWith("7")) {
-    return value;
-  }
-  const code = normalized.slice(1, 4);
-  const part1 = normalized.slice(4, 7);
-  const part2 = normalized.slice(7, 9);
-  const part3 = normalized.slice(9, 11);
-  return `+7 (${code}) ${part1}-${part2}-${part3}`;
-};
-
-const attachPhoneMask = (input) => {
-  if (!input) return;
-  input.addEventListener("blur", () => {
-    const formatted = formatPhoneRu(input.value);
-    if (formatted) input.value = formatted;
-  });
-};
-
-const attachUrlPrefix = (input) => {
-  if (!input) return;
-  input.addEventListener("blur", () => {
-    const value = input.value.trim();
-    if (!value) return;
-    if (/^https?:\/\//i.test(value)) return;
-    input.value = `https://${value}`;
-  });
-};
-
-const createPhoneRow = (data = {}) => {
-  const row = document.createElement("div");
-  row.className = "phone-row";
-
-  row.innerHTML = `
-    <input type="text" placeholder="+7 (___) ___-__-__" value="${data.number || ""}">
-    <select>
-      <option value="phone">phone</option>
-      <option value="fax">fax</option>
-      <option value="phone-fax">phone-fax</option>
-    </select>
-    <input type="text" placeholder="ext" value="${data.ext || ""}">
-    <input type="text" placeholder="info" value="${data.info || ""}">
-    <button class="remove" title="Удалить">×</button>
-  `;
-
-  const select = row.querySelector("select");
-  select.value = data.type || networkFields.phoneType.value || "phone";
-  const numberInput = row.querySelector("input");
-  attachPhoneMask(numberInput);
-  row.querySelector(".remove").addEventListener("click", () => row.remove());
-  return row;
-};
-
-const createPhotoRow = (data = {}) => {
-  const row = document.createElement("div");
-  row.className = "photo-row";
-
-  row.innerHTML = `
-    <input type="text" placeholder="https://site.ru/photo.jpg" value="${data.url || ""}">
-    <input type="text" placeholder="alt (описание)" value="${data.alt || ""}">
-    <select>
-      <option value="">type (необязательно)</option>
-      <option value="interior">interior</option>
-    </select>
-    <select>
-      <option value="">tag (необязательно)</option>
-      ${allowedPhotoTags.map((tag) => `<option value="${tag}">${tag}</option>`).join("")}
-    </select>
-    <button class="remove" title="Удалить">×</button>
-  `;
-
-  const typeSelect = row.querySelectorAll("select")[0];
-  typeSelect.value = data.type || "";
-  const tagSelect = row.querySelectorAll("select")[1];
-  tagSelect.value = data.tag || "";
-  row.querySelector(".remove").addEventListener("click", () => row.remove());
-  return row;
-};
-
-const createBulkRow = (data = {}) => {
-  const row = document.createElement("tr");
-  row.className = "bulk-row";
-
-  row.innerHTML = `
-    <td><input type="text" value="${data.id || ""}"></td>
-    <td><input type="text" value="${data.address || ""}"></td>
-    <td><input type="text" value="${data.phone || ""}"></td>
-    <td><input type="text" value="${data.workingTime || ""}"></td>
-    <td>
-      <div class="rubric-cell">
-        <input class="rubric-input" type="text" value="${data.rubric || ""}" autocomplete="off">
-        <div class="rubric-suggestions"></div>
-      </div>
-    </td>
-    <td><input type="text" value="${data.lon || ""}"></td>
-    <td><input type="text" value="${data.lat || ""}"></td>
-    <td><input type="text" value="${data.nameOther || ""}"></td>
-    <td><input type="text" value="${data.locality || ""}"></td>
-    <td><button class="duplicate" title="Дублировать">⧉</button></td>
-    <td><button class="remove" title="Удалить">×</button></td>
-  `;
-
-  row.querySelector(".duplicate").addEventListener("click", () => {
-    const inputs = row.querySelectorAll("input");
-    const cloneData = {
-      id: inputs[0].value.trim(),
-      address: inputs[1].value.trim(),
-      phone: inputs[2].value.trim(),
-      workingTime: inputs[3].value.trim(),
-      rubric: inputs[4].value.trim(),
-      lon: inputs[5].value.trim(),
-      lat: inputs[6].value.trim(),
-      nameOther: inputs[7].value.trim(),
-      locality: inputs[8].value.trim(),
-    };
-    const cloneRow = createBulkRow(cloneData);
-    row.insertAdjacentElement("afterend", cloneRow);
-  });
-
-  row.querySelector(".remove").addEventListener("click", () => row.remove());
-
-  const phoneInput = row.querySelectorAll("input")[2];
-  attachPhoneMask(phoneInput);
-
-  const rubricInput = row.querySelector(".rubric-input");
-  const rubricSuggestions = row.querySelector(".rubric-suggestions");
-  attachRubricAutocomplete(rubricInput, rubricSuggestions, (item) => {
-    rubricInput.value = item.id;
-  });
-
-  return row;
 };
 
 const renderRubricSuggestions = (container, items, onPick) => {
@@ -366,13 +333,118 @@ const attachRubricPicker = (station, data) => {
   const rubrics = data.rubrics?.length
     ? data.rubrics
     : data.rubric
-    ? [data.rubric]
-    : [];
+      ? [data.rubric]
+      : [];
 
   rubrics.forEach((id) => {
     const match = rubricIndex.find((item) => item.id === String(id));
     addRubricTag(tagsContainer, match || { id: String(id), name: "Рубрика" });
   });
+};
+
+const refreshRubricTags = () => {
+  document.querySelectorAll(".rubric-tag").forEach((tag) => {
+    const id = tag.dataset.id;
+    const match = rubricIndex.find((item) => item.id === id);
+    if (!match) return;
+    const button = tag.querySelector("button");
+    tag.textContent = `${match.name} — ${id}`;
+    if (button) tag.appendChild(button);
+  });
+};
+const createPhoneRow = (data = {}) => {
+  const row = document.createElement("div");
+  row.className = "phone-row";
+  row.innerHTML = `
+    <input type="text" placeholder="+7 (___) ___-__-__" value="${data.number || ""}">
+    <select>
+      <option value="phone">phone</option>
+      <option value="fax">fax</option>
+      <option value="phone-fax">phone-fax</option>
+    </select>
+    <input type="text" placeholder="ext" value="${data.ext || ""}">
+    <input type="text" placeholder="info" value="${data.info || ""}">
+    <button class="remove" title="Удалить">×</button>
+  `;
+  const select = row.querySelector("select");
+  select.value = data.type || networkFields.phoneType.value || "phone";
+  attachPhoneMask(row.querySelector("input"));
+  row.querySelector(".remove").addEventListener("click", () => row.remove());
+  return row;
+};
+
+const createPhotoRow = (data = {}) => {
+  const row = document.createElement("div");
+  row.className = "photo-row";
+  row.innerHTML = `
+    <input type="text" placeholder="https://site.ru/photo.jpg" value="${data.url || ""}">
+    <input type="text" placeholder="alt (описание)" value="${data.alt || ""}">
+    <select>
+      <option value="">type (необязательно)</option>
+      <option value="interior">interior</option>
+    </select>
+    <select>
+      <option value="">tag (необязательно)</option>
+      ${allowedPhotoTags.map((tag) => `<option value="${tag}">${tag}</option>`).join("")}
+    </select>
+    <button class="remove" title="Удалить">×</button>
+  `;
+  const typeSelect = row.querySelectorAll("select")[0];
+  typeSelect.value = data.type || "";
+  const tagSelect = row.querySelectorAll("select")[1];
+  tagSelect.value = data.tag || "";
+  row.querySelector(".remove").addEventListener("click", () => row.remove());
+  return row;
+};
+
+const createBulkRow = (data = {}) => {
+  const row = document.createElement("tr");
+  row.className = "bulk-row";
+  row.innerHTML = `
+    <td><input type="text" value="${data.id || ""}"></td>
+    <td><input type="text" value="${data.address || ""}"></td>
+    <td><input type="text" value="${data.phone || ""}"></td>
+    <td><input type="text" value="${data.workingTime || ""}"></td>
+    <td>
+      <div class="rubric-cell">
+        <input class="rubric-input" type="text" value="${data.rubric || ""}" autocomplete="off">
+        <div class="rubric-suggestions"></div>
+      </div>
+    </td>
+    <td><input type="text" value="${data.lon || ""}"></td>
+    <td><input type="text" value="${data.lat || ""}"></td>
+    <td><input type="text" value="${data.nameOther || ""}"></td>
+    <td><input type="text" value="${data.locality || ""}"></td>
+    <td><button class="duplicate" title="Дублировать">⧉</button></td>
+    <td><button class="remove" title="Удалить">×</button></td>
+  `;
+
+  row.querySelector(".duplicate").addEventListener("click", () => {
+    const inputs = row.querySelectorAll("input");
+    const cloneData = {
+      id: inputs[0].value.trim(),
+      address: inputs[1].value.trim(),
+      phone: inputs[2].value.trim(),
+      workingTime: inputs[3].value.trim(),
+      rubric: inputs[4].value.trim(),
+      lon: inputs[5].value.trim(),
+      lat: inputs[6].value.trim(),
+      nameOther: inputs[7].value.trim(),
+      locality: inputs[8].value.trim(),
+    };
+    row.insertAdjacentElement("afterend", createBulkRow(cloneData));
+  });
+
+  row.querySelector(".remove").addEventListener("click", () => row.remove());
+  attachPhoneMask(row.querySelectorAll("input")[2]);
+
+  const rubricInput = row.querySelector(".rubric-input");
+  const rubricSuggestions = row.querySelector(".rubric-suggestions");
+  attachRubricAutocomplete(rubricInput, rubricSuggestions, (item) => {
+    rubricInput.value = item.id;
+  });
+
+  return row;
 };
 
 const createStationForm = (data = {}) => {
@@ -393,7 +465,6 @@ const createStationForm = (data = {}) => {
   setValue("address-add", data.addressAdd);
   setValue("working-time", data.workingTime);
   setValue("scheduled-working-time", data.scheduled);
-  setValue("rubric-id", data.rubric);
   setValue("email", data.email);
   setValue("url", data.url);
   setValue("add-url", data.addUrl);
@@ -406,6 +477,11 @@ const createStationForm = (data = {}) => {
   attachUrlPrefix(station.querySelector('[data-field="add-url"]'));
   attachUrlPrefix(station.querySelector('[data-field="info-page"]'));
   attachUrlPrefix(station.querySelector('[data-field="gallery-url"]'));
+  normalizeScheduledInput(station.querySelector('[data-field="scheduled-working-time"]'));
+  attachLocalityGuard(
+    station.querySelector('[data-field="address"]'),
+    station.querySelector('[data-field="locality-name"]')
+  );
 
   const phonesList = station.querySelector('[data-list="phones"]');
   phonesList.innerHTML = "";
@@ -428,17 +504,14 @@ const createStationForm = (data = {}) => {
   station.querySelector('[data-action="add-phone"]').addEventListener("click", () => {
     phonesList.appendChild(createPhoneRow());
   });
-
   station.querySelector('[data-action="add-photo"]').addEventListener("click", () => {
     photosList.appendChild(createPhotoRow());
   });
-
   station.querySelector('[data-action="duplicate-station"]').addEventListener("click", () => {
     const cloneData = readStationData(station);
     const clone = createStationForm(cloneData);
     station.insertAdjacentElement("afterend", clone);
   });
-
   station.querySelector('[data-action="remove-station"]').addEventListener("click", () => {
     station.remove();
   });
@@ -463,7 +536,6 @@ const getNetworkData = () => ({
   actualization: formatDate(networkFields.actualization.value),
   phoneType: networkFields.phoneType.value,
 });
-
 const hasControlChars = (value) => /[\x00-\x08\x0B\x0C\x0E-\x1F]/.test(value);
 const hasHtml = (value) => /<[^>]*>/.test(value);
 const hasAngleBrackets = (value) => /[<>]/.test(value);
@@ -539,15 +611,46 @@ const validateUrl = (value, errors, label, requireLowercase = true) => {
   }
 };
 
-const validateWorkingTime = (value, errors) => {
+const validateWorkingTime = (value, errors, warnings = []) => {
   if (/\n/.test(value)) errors.push("working-time: значение должно быть в одной строке.");
+  if (!/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/.test(value)) {
+    errors.push("working-time: укажите хотя бы один интервал времени, например 10:00-21:00.");
+  }
+  if (/(выходн|нераб|празд)/i.test(value)) {
+    warnings.push(
+      "working-time: выходные/праздничные дни не указываются, используйте scheduled-working-time."
+    );
+  }
 };
 
 const validateScheduled = (value, errors) => {
   if (!value) return;
-  if (!/\d{2}\.\d{2}\.\d{4}/.test(value)) {
-    errors.push("scheduled-working-time: укажите даты в формате ДД.ММ.ГГГГ.");
+  const entries = parseScheduledEntries(value);
+  if (!entries.length) {
+    errors.push(
+      "scheduled-working-time: формат ДД.ММ.ГГГГ 10:00-22:00 (перерыв 14:00-14:30)."
+    );
+    return;
   }
+  entries.forEach((entry) => {
+    if (!entry.work) {
+      errors.push(`scheduled-working-time: укажите интервал времени для даты ${entry.date}.`);
+      return;
+    }
+    if (
+      !/\d{1,2}:\d{2}/.test(entry.work.from) ||
+      !/\d{1,2}:\d{2}/.test(entry.work.to)
+    ) {
+      errors.push(`scheduled-working-time: неверный интервал ${entry.work.from}-${entry.work.to}.`);
+    }
+    (entry.dinners || []).forEach((dinner) => {
+      if (!/\d{1,2}:\d{2}/.test(dinner.from) || !/\d{1,2}:\d{2}/.test(dinner.to)) {
+        errors.push(
+          `scheduled-working-time: неверный перерыв ${dinner.from}-${dinner.to}.`
+        );
+      }
+    });
+  });
 };
 
 const validateActualization = (value, errors) => {
@@ -587,6 +690,34 @@ const buildPhoneXml = (phones) =>
     })
     .join("\n");
 
+const buildScheduledXml = (value) => {
+  const entries = parseScheduledEntries(value);
+  if (!entries.length) return "";
+  return entries
+    .map((entry) => {
+      const blocks = [];
+      blocks.push(`    <scheduled-working-time>`);
+      blocks.push(`      <date>${escapeXml(entry.date)}</date>`);
+      if (entry.work) {
+        blocks.push(
+          `      <work from="${escapeXml(entry.work.from)}" to="${escapeXml(
+            entry.work.to
+          )}"/>`
+        );
+      }
+      (entry.dinners || []).forEach((dinner) => {
+        blocks.push(
+          `      <dinner from="${escapeXml(dinner.from)}" to="${escapeXml(
+            dinner.to
+          )}"/>`
+        );
+      });
+      blocks.push(`    </scheduled-working-time>`);
+      return blocks.join("\n");
+    })
+    .join("\n");
+};
+
 const buildPhotosXml = (photos, galleryUrl) => {
   if (!photos.length && !galleryUrl) return "";
   const galleryAttr = galleryUrl ? ` gallery-url="${escapeXml(galleryUrl)}"` : "";
@@ -610,38 +741,29 @@ const buildCompanyXml = (data, network) => {
   blocks.push(
     `    <shortname lang="ru">${escapeXml(data.shortname || network.shortname)}</shortname>`
   );
-  blocks.push(`    <address lang="ru">${escapeXml(data.address)}</address>`);
-  if (data.locality) {
-    blocks.push(`    <locality-name lang="ru">${escapeXml(data.locality)}</locality-name>`);
+  if (data.nameOther) {
+    blocks.push(`    <name-other lang="ru">${escapeXml(data.nameOther)}</name-other>`);
   }
+
+  const addressValue = composeAddress(data.address, data.locality);
+  blocks.push(`    <address lang="ru">${escapeXml(addressValue)}</address>`);
   blocks.push(`    <country lang="ru">${escapeXml(network.country)}</country>`);
-
-  const phoneXml = buildPhoneXml(data.phones || []);
-  if (phoneXml) blocks.push(phoneXml);
-
-  blocks.push(`    <working-time lang="ru">${escapeXml(data.workingTime)}</working-time>`);
-
-  if (data.scheduled) {
-    blocks.push(
-      `    <scheduled-working-time lang="ru">${escapeXml(data.scheduled)}</scheduled-working-time>`
-    );
-  }
-
   if (data.addressAdd) {
     blocks.push(`    <address-add lang="ru">${escapeXml(data.addressAdd)}</address-add>`);
   }
 
-  if (data.nameOther) {
-    blocks.push(`    <name-other lang="ru">${escapeXml(data.nameOther)}</name-other>`);
-  }
+  const phoneXml = buildPhoneXml(data.phones || []);
+  if (phoneXml) blocks.push(phoneXml);
 
   if (data.email) blocks.push(`    <email>${escapeXml(data.email)}</email>`);
   if (data.url) blocks.push(`    <url>${escapeXml(data.url)}</url>`);
   if (data.addUrl) blocks.push(`    <add-url>${escapeXml(data.addUrl)}</add-url>`);
   if (data.infoPage) blocks.push(`    <info-page>${escapeXml(data.infoPage)}</info-page>`);
 
-  const photosXml = buildPhotosXml(data.photos || [], data.galleryUrl);
-  if (photosXml) blocks.push(photosXml);
+  blocks.push(`    <working-time lang="ru">${escapeXml(data.workingTime)}</working-time>`);
+
+  const scheduledXml = buildScheduledXml(data.scheduled);
+  if (scheduledXml) blocks.push(scheduledXml);
 
   const rubrics = data.rubrics && data.rubrics.length ? data.rubrics : network.rubric ? [network.rubric] : [];
   rubrics.forEach((rubric) => {
@@ -651,6 +773,9 @@ const buildCompanyXml = (data, network) => {
   if (network.actualization) {
     blocks.push(`    <actualization-date>${escapeXml(network.actualization)}</actualization-date>`);
   }
+
+  const photosXml = buildPhotosXml(data.photos || [], data.galleryUrl);
+  if (photosXml) blocks.push(photosXml);
 
   if (data.lon && data.lat) {
     blocks.push(`    <coordinates>`);
@@ -691,10 +816,10 @@ const validateStation = (data, network) => {
   if (!data.rubrics.length && !network.rubric) errors.push("Укажите rubric-id.");
   if (data.id) validateCompanyId(data.id, errors);
   if (data.nameOther) validateTextValue("name-other", data.nameOther, errors);
-  if (data.locality) validateTextValue("locality-name", data.locality, errors);
+  if (data.locality) validateTextValue("locality", data.locality, errors);
   if (data.address) validateTextValue("address", data.address, errors);
   if (data.addressAdd) validateAddressAdd(data.addressAdd, errors);
-  if (data.workingTime) validateWorkingTime(data.workingTime, errors);
+  if (data.workingTime) validateWorkingTime(data.workingTime, errors, warnings);
   if (data.scheduled) validateScheduled(data.scheduled, errors);
   if (data.rubrics.length > 3) {
     errors.push("rubric-id: можно указывать не более трех рубрик.");
@@ -709,6 +834,22 @@ const validateStation = (data, network) => {
   if (data.addUrl) validateUrl(data.addUrl, errors, "add-url", true);
   if (data.infoPage) validateUrl(data.infoPage, errors, "info-page", true);
   if (data.galleryUrl) validateUrl(data.galleryUrl, errors, "gallery-url", false);
+
+  if (data.locality && shouldDisableLocality(data.address)) {
+    warnings.push("locality: адрес уже содержит город/регион, поле можно оставить пустым.");
+  } else if (!data.locality && !shouldDisableLocality(data.address)) {
+    warnings.push("address: добавьте город в адрес или заполните поле населенного пункта.");
+  }
+
+  if ((data.lon && !data.lat) || (!data.lon && data.lat)) {
+    errors.push("coordinates: укажите и lon, и lat.");
+  }
+  if (data.lon && !/^-?\d+(\.\d+)?$/.test(data.lon)) {
+    errors.push("lon: используйте точку как разделитель дробной части.");
+  }
+  if (data.lat && !/^-?\d+(\.\d+)?$/.test(data.lat)) {
+    errors.push("lat: используйте точку как разделитель дробной части.");
+  }
 
   data.phones.forEach((phone) => {
     validatePhone(phone.number, errors);
@@ -749,9 +890,9 @@ const validateBulkRow = (row, network, rowIndex) => {
   if (!row.rubric && !network.rubric) errors.push(`${rowLabel}: нет rubric-id.`);
   if (row.id) validateCompanyId(row.id, errors);
   if (row.nameOther) validateTextValue(`${rowLabel} name-other`, row.nameOther, errors);
-  if (row.locality) validateTextValue(`${rowLabel} locality-name`, row.locality, errors);
+  if (row.locality) validateTextValue(`${rowLabel} locality`, row.locality, errors);
   if (row.address) validateTextValue(`${rowLabel} address`, row.address, errors);
-  if (row.workingTime) validateWorkingTime(row.workingTime, errors);
+  if (row.workingTime) validateWorkingTime(row.workingTime, errors, warnings);
   if (row.phone) validatePhone(row.phone, errors, `${rowLabel} phone`);
   validateRubric(row.rubric || network.rubric, errors);
   if (row.rubric && network.rubric && row.rubric !== network.rubric) {
@@ -759,7 +900,6 @@ const validateBulkRow = (row, network, rowIndex) => {
   }
   return errors;
 };
-
 const readStationData = (station) => {
   const getValue = (field) => {
     const input = station.querySelector(`[data-field="${field}"]`);
@@ -859,12 +999,39 @@ const extractCompany = (company) => {
   const photosRoot = company.querySelector("photos");
   const photos = photosRoot
     ? Array.from(photosRoot.querySelectorAll("photo")).map((photo) => ({
-        url: photo.getAttribute("url") || "",
-        alt: photo.getAttribute("alt") || "",
-        type: photo.getAttribute("type") || "",
-        tag: readText(photo, "tag").toUpperCase(),
-      }))
+      url: photo.getAttribute("url") || "",
+      alt: photo.getAttribute("alt") || "",
+      type: photo.getAttribute("type") || "",
+      tag: readText(photo, "tag").toUpperCase(),
+    }))
     : [];
+
+  const scheduledEntries = Array.from(company.querySelectorAll("scheduled-working-time")).map(
+    (node) => {
+      const date = readText(node, "date");
+      const workNode = node.querySelector("work");
+      const workFrom = workNode ? workNode.getAttribute("from") : "";
+      const workTo = workNode ? workNode.getAttribute("to") : "";
+      const dinners = Array.from(node.querySelectorAll("dinner"))
+        .map((dinner) => {
+          const from = dinner.getAttribute("from");
+          const to = dinner.getAttribute("to");
+          return from && to ? `${from}-${to}` : "";
+        })
+        .filter(Boolean);
+
+      let line = date || "";
+      if (workFrom && workTo) {
+        line = line ? `${line} ${workFrom}-${workTo}` : `${workFrom}-${workTo}`;
+      }
+      if (dinners.length) {
+        dinners.forEach((dinner) => {
+          line += ` перерыв ${dinner}`;
+        });
+      }
+      return line.trim() || node.textContent.trim();
+    }
+  );
 
   return {
     id: readText(company, "company-id"),
@@ -872,10 +1039,10 @@ const extractCompany = (company) => {
     shortname: readTextByLang(company, "shortname"),
     nameOther: readTextByLang(company, "name-other"),
     address: readTextByLang(company, "address"),
-    locality: readTextByLang(company, "locality-name"),
-    addressAdd: readTextByLang(company, "address-add"),
+    locality: readText(company, "locality-name"),
+    addressAdd: readText(company, "address-add"),
     workingTime: readTextByLang(company, "working-time"),
-    scheduled: readTextByLang(company, "scheduled-working-time"),
+    scheduled: scheduledEntries.filter(Boolean).join("; "),
     email: readText(company, "email"),
     url: readText(company, "url"),
     addUrl: readText(company, "add-url"),
@@ -892,15 +1059,12 @@ const extractCompany = (company) => {
   };
 };
 
-const fillNetworkFields = (companyData, companies) => {
+const fillNetworkFields = (companyData) => {
   if (companyData.name) networkFields.name.value = companyData.name;
   if (companyData.shortname) networkFields.shortname.value = companyData.shortname;
-  if (companyData.country) {
-    networkFields.country.value = companyData.country;
-  }
-  const actualization = companyData.actualization;
-  if (actualization) {
-    networkFields.actualization.value = normalizeDateToInput(actualization);
+  if (companyData.country) networkFields.country.value = companyData.country;
+  if (companyData.actualization) {
+    networkFields.actualization.value = normalizeDateToInput(companyData.actualization);
   }
   const firstRubric = companyData.rubrics?.[0];
   if (firstRubric) {
@@ -915,6 +1079,7 @@ const fillSingleStations = (companies) => {
     return;
   }
   companies.forEach((company) => singleStations.appendChild(createStationForm(company)));
+  setStationCache(companies);
 };
 
 const fillBulkTable = (companies) => {
@@ -939,6 +1104,14 @@ const fillBulkTable = (companies) => {
   }
 };
 
+const setStationCache = (companies) => {
+  stationCache = new Map();
+  companies.forEach((company) => {
+    if (!company.id) return;
+    stationCache.set(company.id, company);
+  });
+};
+
 const renderXml = (xml) => {
   preview.value = xml;
 };
@@ -952,6 +1125,7 @@ const downloadXml = (xml) => {
   a.click();
   URL.revokeObjectURL(url);
 };
+
 
 document.getElementById("addStation").addEventListener("click", () => {
   const last = singleStations.querySelector(".station-card:last-child");
@@ -988,6 +1162,7 @@ document.getElementById("generateSingle").addEventListener("click", () => {
   singleErrors.textContent = errors.join(" ");
   singleWarnings.textContent = warnings.join(" ");
   if (errors.length) return;
+  setStationCache(stations);
   const companiesXml = stations.map((data) => buildCompanyXml(data, network)).join("\n");
   renderXml(buildXml(companiesXml));
 });
@@ -1016,24 +1191,29 @@ document.getElementById("generateBulk").addEventListener("click", () => {
   const companiesXml = rows
     .filter((row) => row.id && row.address)
     .map((row) => {
-      const data = {
-        id: row.id,
-        address: row.address,
-        workingTime: row.workingTime,
-        rubrics: row.rubric ? [row.rubric] : [],
-        nameOther: row.nameOther,
-        locality: row.locality,
-        lon: row.lon,
-        lat: row.lat,
-        phones: row.phone
-          ? [
-              {
-                number: row.phone,
-                type: network.phoneType,
-              },
-            ]
-          : [],
-      };
+      const cached = stationCache.get(row.id);
+      const data = cached ? { ...cached } : { id: row.id, phones: [] };
+
+      data.id = row.id;
+      data.address = row.address;
+      data.workingTime = row.workingTime;
+      data.nameOther = row.nameOther;
+      data.locality = row.locality;
+      data.lon = row.lon;
+      data.lat = row.lat;
+
+      if (row.rubric) {
+        data.rubrics = [row.rubric];
+      }
+
+      if (row.phone) {
+        if (data.phones && data.phones.length) {
+          data.phones[0] = { ...data.phones[0], number: row.phone, type: network.phoneType };
+        } else {
+          data.phones = [{ number: row.phone, type: network.phoneType }];
+        }
+      }
+
       return buildCompanyXml(data, network);
     })
     .join("\n");
@@ -1048,6 +1228,7 @@ document.getElementById("downloadBulk").addEventListener("click", () => {
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
+    if (tab.id === "insertMock") return;
     tabs.forEach((btn) => btn.classList.remove("active"));
     tabContents.forEach((section) => section.classList.remove("active"));
     tab.classList.add("active");
@@ -1079,9 +1260,10 @@ document.getElementById("xmlUpload").addEventListener("change", (event) => {
         return data;
       });
 
-      fillNetworkFields(extracted[0], extracted);
+      fillNetworkFields(extracted[0]);
       fillSingleStations(extracted);
       fillBulkTable(extracted);
+      setStationCache(extracted);
       setActiveTab("single");
       renderXml(text.trim());
     } catch (error) {
@@ -1095,6 +1277,86 @@ const networkRubricInput = document.getElementById("networkRubric");
 const networkRubricSuggestions = document.getElementById("networkRubricSuggestions");
 attachRubricAutocomplete(networkRubricInput, networkRubricSuggestions, (item) => {
   networkRubricInput.value = item.id;
+});
+
+const insertMockData = () => {
+  networkFields.name.value = "ортк";
+  networkFields.shortname.value = "ортк";
+  networkFields.country.value = "Россия";
+  networkFields.rubric.value = "184105274";
+  networkFields.actualization.value = today.toISOString().slice(0, 10);
+
+  const stations = [
+    {
+      id: "ORTK_0001",
+      nameOther: "АЗС №1",
+      address: "ул. Такая-то, д. 3",
+      locality: "Одинцово",
+      addressAdd: "ТЦ, этаж, вход.",
+      workingTime: "ежедн. 00:00-24:00",
+      scheduled: "01.07.2026 12:50-13:40",
+      rubrics: ["184105274"],
+      lon: "37.286438",
+      lat: "55.670312",
+      phones: [
+        { number: "+7 (999) 888-77-66", type: "phone", info: "касса" },
+        { number: "+7 (999) 777-66-55", type: "phone" },
+      ],
+      email: "info@ortk.ru",
+      url: "https://ortk.ru",
+      addUrl: "https://ortk.ru/social",
+      infoPage: "https://ortk.ru/stations/ortk_0001",
+      galleryUrl: "https://ortk.ru/stations/ortk_0001/gallery",
+      photos: [
+        {
+          url: "https://ortk.ru/assets/ortk_0001_1.jpg",
+          alt: "Фасад",
+          tag: "EXTERIOR",
+        },
+        {
+          url: "https://ortk.ru/assets/ortk_0001_2.jpg",
+          alt: "Магазин",
+          type: "interior",
+          tag: "INTERIOR",
+        },
+      ],
+    },
+    {
+      id: "ORTK_0002",
+      nameOther: "АЗС №2",
+      address: "ул. Другая, д. 15",
+      locality: "Одинцово",
+      workingTime: "ежедн. 06:00-23:00",
+      scheduled: "01.01.2026 10:00-22:00; 02.01.2026 10:00-22:00",
+      rubrics: ["184105274"],
+      lon: "37.290100",
+      lat: "55.674900",
+      phones: [
+        { number: "+7 (999) 555-44-33", type: "phone" },
+        { number: "+7 (999) 222-11-00", type: "phone" },
+      ],
+      email: "info@ortk.ru",
+      url: "https://ortk.ru",
+      infoPage: "https://ortk.ru/stations/ortk_0002",
+      galleryUrl: "https://ortk.ru/stations/ortk_0002/gallery",
+      photos: [
+        { url: "https://ortk.ru/assets/ortk_0002_1.jpg", tag: "ENTER" },
+        { url: "https://ortk.ru/assets/ortk_0002_2.jpg", tag: "SERVICES" },
+      ],
+    },
+  ];
+
+  fillSingleStations(stations);
+  fillBulkTable(stations);
+  setStationCache(stations);
+  setActiveTab("single");
+  const xml = buildXml(stations.map((data) => buildCompanyXml(data, getNetworkData())).join("\n"));
+  renderXml(xml);
+};
+
+document.getElementById("insertMock").addEventListener("click", (event) => {
+  event.preventDefault();
+  insertMockData();
 });
 
 loadRubrics().then(refreshRubricTags);

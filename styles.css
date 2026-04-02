@@ -224,6 +224,7 @@ textarea {
   display: flex;
   gap: 12px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .tab {
