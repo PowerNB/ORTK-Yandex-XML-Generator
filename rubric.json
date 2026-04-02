@@ -1,0 +1,4962 @@
+[
+    {
+        "rubric-id": 184105242,
+        "ru_rubric_names": "Автоателье"
+    },
+    {
+        "rubric-id": 184105244,
+        "ru_rubric_names": "Автомойка"
+    },
+    {
+        "rubric-id": 184105246,
+        "ru_rubric_names": "Автосервис, автотехцентр"
+    },
+    {
+        "rubric-id": 184105248,
+        "ru_rubric_names": "Автотехпомощь, эвакуация автомобилей"
+    },
+    {
+        "rubric-id": 184105250,
+        "ru_rubric_names": "Студия автотюнинга"
+    },
+    {
+        "rubric-id": 184105252,
+        "ru_rubric_names": "Кузовной ремонт"
+    },
+    {
+        "rubric-id": 184105254,
+        "ru_rubric_names": "Переоборудование транспортных средств"
+    },
+    {
+        "rubric-id": 184105256,
+        "ru_rubric_names": "Ремонт АКПП"
+    },
+    {
+        "rubric-id": 184105258,
+        "ru_rubric_names": "Тонирование стёкол"
+    },
+    {
+        "rubric-id": 184105260,
+        "ru_rubric_names": "Шиномонтаж"
+    },
+    {
+        "rubric-id": 184105264,
+        "ru_rubric_names": "Автошкола"
+    },
+    {
+        "rubric-id": 184105268,
+        "ru_rubric_names": "Штрафстоянка"
+    },
+    {
+        "rubric-id": 184105270,
+        "ru_rubric_names": "Автомобильная парковка"
+    },
+    {
+        "rubric-id": 184105272,
+        "ru_rubric_names": "АГНС, АГЗС, АГНКС"
+    },
+    {
+        "rubric-id": 184105274,
+        "ru_rubric_names": "АЗС"
+    },
+    {
+        "rubric-id": 184105278,
+        "ru_rubric_names": "Медицинская комиссия"
+    },
+    {
+        "rubric-id": 184105280,
+        "ru_rubric_names": "Госавтоинспекция"
+    },
+    {
+        "rubric-id": 184105282,
+        "ru_rubric_names": "МРЭО"
+    },
+    {
+        "rubric-id": 184105286,
+        "ru_rubric_names": "Автоаксессуары"
+    },
+    {
+        "rubric-id": 184105288,
+        "ru_rubric_names": "Автоакустика"
+    },
+    {
+        "rubric-id": 184105290,
+        "ru_rubric_names": "Производство и оптовая продажа автозапчастей"
+    },
+    {
+        "rubric-id": 184105292,
+        "ru_rubric_names": "Автокондиционеры"
+    },
+    {
+        "rubric-id": 184105294,
+        "ru_rubric_names": "Автокосметика, автохимия"
+    },
+    {
+        "rubric-id": 184105298,
+        "ru_rubric_names": "Шины и диски"
+    },
+    {
+        "rubric-id": 184105300,
+        "ru_rubric_names": "Автомобильные отопители"
+    },
+    {
+        "rubric-id": 184105302,
+        "ru_rubric_names": "Автомобильные радиаторы"
+    },
+    {
+        "rubric-id": 184105306,
+        "ru_rubric_names": "Автомобильные тахографы"
+    },
+    {
+        "rubric-id": 184105308,
+        "ru_rubric_names": "Автосигнализация"
+    },
+    {
+        "rubric-id": 184105310,
+        "ru_rubric_names": "Автостёкла"
+    },
+    {
+        "rubric-id": 184105312,
+        "ru_rubric_names": "Автоэмали, автомобильные краски"
+    },
+    {
+        "rubric-id": 184105314,
+        "ru_rubric_names": "Запчасти для автобусов"
+    },
+    {
+        "rubric-id": 184105320,
+        "ru_rubric_names": "Магазин автозапчастей и автотоваров"
+    },
+    {
+        "rubric-id": 184105322,
+        "ru_rubric_names": "Автосалон"
+    },
+    {
+        "rubric-id": 184105330,
+        "ru_rubric_names": "Аварийно-спасательное оборудование и техника"
+    },
+    {
+        "rubric-id": 184105334,
+        "ru_rubric_names": "Бронированные стёкла"
+    },
+    {
+        "rubric-id": 184105336,
+        "ru_rubric_names": "Домофоны"
+    },
+    {
+        "rubric-id": 184105340,
+        "ru_rubric_names": "Металлоискатели"
+    },
+    {
+        "rubric-id": 184105344,
+        "ru_rubric_names": "Огнезащита"
+    },
+    {
+        "rubric-id": 184105348,
+        "ru_rubric_names": "Оружие и средства самозащиты"
+    },
+    {
+        "rubric-id": 184105350,
+        "ru_rubric_names": "Системы безопасности и охраны"
+    },
+    {
+        "rubric-id": 184105352,
+        "ru_rubric_names": "Пломбираторы и пломбы безопасности"
+    },
+    {
+        "rubric-id": 184105356,
+        "ru_rubric_names": "Пожарное оборудование"
+    },
+    {
+        "rubric-id": 184105358,
+        "ru_rubric_names": "Противопожарные системы"
+    },
+    {
+        "rubric-id": 184105362,
+        "ru_rubric_names": "Средства безопасности дорожного движения"
+    },
+    {
+        "rubric-id": 184105364,
+        "ru_rubric_names": "Средства индивидуальной защиты"
+    },
+    {
+        "rubric-id": 184105368,
+        "ru_rubric_names": "Безопасность труда"
+    },
+    {
+        "rubric-id": 184105370,
+        "ru_rubric_names": "Детективное агентство"
+    },
+    {
+        "rubric-id": 184105372,
+        "ru_rubric_names": "Информационная безопасность"
+    },
+    {
+        "rubric-id": 184105374,
+        "ru_rubric_names": "Охранное предприятие"
+    },
+    {
+        "rubric-id": 184105376,
+        "ru_rubric_names": "Пожарные части и службы"
+    },
+    {
+        "rubric-id": 184105378,
+        "ru_rubric_names": "Экспертиза промышленной безопасности"
+    },
+    {
+        "rubric-id": 184105380,
+        "ru_rubric_names": "Радиационный контроль"
+    },
+    {
+        "rubric-id": 184105382,
+        "ru_rubric_names": "Служба спасения"
+    },
+    {
+        "rubric-id": 184105390,
+        "ru_rubric_names": "Аудиторская компания"
+    },
+    {
+        "rubric-id": 184105392,
+        "ru_rubric_names": "Бухгалтерские услуги"
+    },
+    {
+        "rubric-id": 184105394,
+        "ru_rubric_names": "Финансовый консалтинг"
+    },
+    {
+        "rubric-id": 184105398,
+        "ru_rubric_names": "Банк"
+    },
+    {
+        "rubric-id": 184105402,
+        "ru_rubric_names": "Банкомат"
+    },
+    {
+        "rubric-id": 184105404,
+        "ru_rubric_names": "Депозитарии и реестродержатели"
+    },
+    {
+        "rubric-id": 184105406,
+        "ru_rubric_names": "Обмен валюты"
+    },
+    {
+        "rubric-id": 184105410,
+        "ru_rubric_names": "Автоэкспертиза, оценка автомобилей"
+    },
+    {
+        "rubric-id": 184105412,
+        "ru_rubric_names": "Архивные услуги"
+    },
+    {
+        "rubric-id": 184105414,
+        "ru_rubric_names": "Организация аукционов и тендеров"
+    },
+    {
+        "rubric-id": 184105416,
+        "ru_rubric_names": "Бюро переводов"
+    },
+    {
+        "rubric-id": 184105420,
+        "ru_rubric_names": "Автоматизация документооборота"
+    },
+    {
+        "rubric-id": 184105422,
+        "ru_rubric_names": "Изготовление печатей и штампов"
+    },
+    {
+        "rubric-id": 184105424,
+        "ru_rubric_names": "Изготовление пластиковых карт"
+    },
+    {
+        "rubric-id": 184105426,
+        "ru_rubric_names": "Инкассация"
+    },
+    {
+        "rubric-id": 184105428,
+        "ru_rubric_names": "Дисконтные системы и купонаторы"
+    },
+    {
+        "rubric-id": 184105430,
+        "ru_rubric_names": "Курьерские услуги"
+    },
+    {
+        "rubric-id": 184105434,
+        "ru_rubric_names": "Оценочная компания"
+    },
+    {
+        "rubric-id": 184105438,
+        "ru_rubric_names": "Складские услуги"
+    },
+    {
+        "rubric-id": 184105440,
+        "ru_rubric_names": "Таможенный склад"
+    },
+    {
+        "rubric-id": 184105442,
+        "ru_rubric_names": "Таможенный брокер"
+    },
+    {
+        "rubric-id": 184105444,
+        "ru_rubric_names": "Таможня"
+    },
+    {
+        "rubric-id": 184105446,
+        "ru_rubric_names": "Тиражирование дисков"
+    },
+    {
+        "rubric-id": 184105448,
+        "ru_rubric_names": "Клининговые услуги"
+    },
+    {
+        "rubric-id": 184105454,
+        "ru_rubric_names": "Электронная коммерция"
+    },
+    {
+        "rubric-id": 184105460,
+        "ru_rubric_names": "Кадровое агентство"
+    },
+    {
+        "rubric-id": 184105462,
+        "ru_rubric_names": "Бизнес-консалтинг"
+    },
+    {
+        "rubric-id": 184105464,
+        "ru_rubric_names": "Работа за рубежом"
+    },
+    {
+        "rubric-id": 184105468,
+        "ru_rubric_names": "Центр занятости"
+    },
+    {
+        "rubric-id": 184105472,
+        "ru_rubric_names": "Бизнес-школа"
+    },
+    {
+        "rubric-id": 184105474,
+        "ru_rubric_names": "Бухгалтерские курсы"
+    },
+    {
+        "rubric-id": 184105476,
+        "ru_rubric_names": "Тренинги"
+    },
+    {
+        "rubric-id": 184105482,
+        "ru_rubric_names": "Ассоциации и промышленные союзы"
+    },
+    {
+        "rubric-id": 184105486,
+        "ru_rubric_names": "Биржа"
+    },
+    {
+        "rubric-id": 184105488,
+        "ru_rubric_names": "Внешнеторговые и внешнеэкономические организации"
+    },
+    {
+        "rubric-id": 184105490,
+        "ru_rubric_names": "Гостиничный оператор"
+    },
+    {
+        "rubric-id": 184105492,
+        "ru_rubric_names": "Дилинговый центр"
+    },
+    {
+        "rubric-id": 184105498,
+        "ru_rubric_names": "Международная организация"
+    },
+    {
+        "rubric-id": 184105500,
+        "ru_rubric_names": "Модельное агентство"
+    },
+    {
+        "rubric-id": 184105502,
+        "ru_rubric_names": "Негосударственный пенсионный фонд"
+    },
+    {
+        "rubric-id": 184105510,
+        "ru_rubric_names": "Управляющая компания"
+    },
+    {
+        "rubric-id": 184105514,
+        "ru_rubric_names": "Организация и обслуживание выставок"
+    },
+    {
+        "rubric-id": 184105516,
+        "ru_rubric_names": "Организация конференций и семинаров"
+    },
+    {
+        "rubric-id": 184105524,
+        "ru_rubric_names": "Маркетинговые услуги"
+    },
+    {
+        "rubric-id": 184105528,
+        "ru_rubric_names": "Почтовые рассылки"
+    },
+    {
+        "rubric-id": 184105530,
+        "ru_rubric_names": "PR-агентство"
+    },
+    {
+        "rubric-id": 184105534,
+        "ru_rubric_names": "Страховая компания"
+    },
+    {
+        "rubric-id": 184105536,
+        "ru_rubric_names": "Страхование автомобилей"
+    },
+    {
+        "rubric-id": 184105538,
+        "ru_rubric_names": "Страховой брокер"
+    },
+    {
+        "rubric-id": 184105542,
+        "ru_rubric_names": "Канцтовары оптом"
+    },
+    {
+        "rubric-id": 184105546,
+        "ru_rubric_names": "Магазин канцтоваров"
+    },
+    {
+        "rubric-id": 184105548,
+        "ru_rubric_names": "Мебель для офиса"
+    },
+    {
+        "rubric-id": 184105550,
+        "ru_rubric_names": "Оргтехника"
+    },
+    {
+        "rubric-id": 184105554,
+        "ru_rubric_names": "Системы перегородок"
+    },
+    {
+        "rubric-id": 184105556,
+        "ru_rubric_names": "Проекторы и мультимедийное оборудование"
+    },
+    {
+        "rubric-id": 184105558,
+        "ru_rubric_names": "Расходные материалы для оргтехники"
+    },
+    {
+        "rubric-id": 184105560,
+        "ru_rubric_names": "Ремонт оргтехники"
+    },
+    {
+        "rubric-id": 184105564,
+        "ru_rubric_names": "Брокерская компания"
+    },
+    {
+        "rubric-id": 184105568,
+        "ru_rubric_names": "Денежные переводы"
+    },
+    {
+        "rubric-id": 184105570,
+        "ru_rubric_names": "Инвестиционная компания"
+    },
+    {
+        "rubric-id": 184105572,
+        "ru_rubric_names": "Коллекторское агентство"
+    },
+    {
+        "rubric-id": 184105574,
+        "ru_rubric_names": "Кредитный брокер"
+    },
+    {
+        "rubric-id": 184105576,
+        "ru_rubric_names": "Лизинговая компания"
+    },
+    {
+        "rubric-id": 184105578,
+        "ru_rubric_names": "Ломбард"
+    },
+    {
+        "rubric-id": 184105580,
+        "ru_rubric_names": "Налоговые консультанты"
+    },
+    {
+        "rubric-id": 184105588,
+        "ru_rubric_names": "Концертные и театральные агентства"
+    },
+    {
+        "rubric-id": 184105592,
+        "ru_rubric_names": "Продюсерский центр"
+    },
+    {
+        "rubric-id": 184105594,
+        "ru_rubric_names": "Студия звукозаписи"
+    },
+    {
+        "rubric-id": 184105598,
+        "ru_rubric_names": "Патентные услуги"
+    },
+    {
+        "rubric-id": 184105600,
+        "ru_rubric_names": "Сертификация продукции и услуг"
+    },
+    {
+        "rubric-id": 184105602,
+        "ru_rubric_names": "Стандартизация и метрология"
+    },
+    {
+        "rubric-id": 184105606,
+        "ru_rubric_names": "Товарные знаки"
+    },
+    {
+        "rubric-id": 184105608,
+        "ru_rubric_names": "Экспертиза"
+    },
+    {
+        "rubric-id": 184105610,
+        "ru_rubric_names": "Лаборатория ветеринарно-санитарной экспертизы"
+    },
+    {
+        "rubric-id": 184105612,
+        "ru_rubric_names": "Строительная экспертиза и технадзор"
+    },
+    {
+        "rubric-id": 184105616,
+        "ru_rubric_names": "Адвокаты"
+    },
+    {
+        "rubric-id": 184105618,
+        "ru_rubric_names": "Апостиль и легализация документов"
+    },
+    {
+        "rubric-id": 184105622,
+        "ru_rubric_names": "Лицензирование"
+    },
+    {
+        "rubric-id": 184105624,
+        "ru_rubric_names": "Нотариусы"
+    },
+    {
+        "rubric-id": 184105626,
+        "ru_rubric_names": "Регистрация и ликвидация предприятий"
+    },
+    {
+        "rubric-id": 184105630,
+        "ru_rubric_names": "Юридические услуги"
+    },
+    {
+        "rubric-id": 184105642,
+        "ru_rubric_names": "Инспекция"
+    },
+    {
+        "rubric-id": 184105644,
+        "ru_rubric_names": "Защита прав потребителя"
+    },
+    {
+        "rubric-id": 184105646,
+        "ru_rubric_names": "Органы государственного надзора"
+    },
+    {
+        "rubric-id": 184105648,
+        "ru_rubric_names": "Налоговая инспекция"
+    },
+    {
+        "rubric-id": 184105650,
+        "ru_rubric_names": "Санитарно-эпидемиологическая служба"
+    },
+    {
+        "rubric-id": 184105652,
+        "ru_rubric_names": "Статистическая организация"
+    },
+    {
+        "rubric-id": 184105658,
+        "ru_rubric_names": "Администрация"
+    },
+    {
+        "rubric-id": 184105660,
+        "ru_rubric_names": "Мухтарлык"
+    },
+    {
+        "rubric-id": 184105686,
+        "ru_rubric_names": "Военкомат"
+    },
+    {
+        "rubric-id": 184105688,
+        "ru_rubric_names": "Гражданская оборона"
+    },
+    {
+        "rubric-id": 184105692,
+        "ru_rubric_names": "Отделение полиции"
+    },
+    {
+        "rubric-id": 184105696,
+        "ru_rubric_names": "Паспортные и миграционные службы"
+    },
+    {
+        "rubric-id": 184105698,
+        "ru_rubric_names": "Исправительное учреждение"
+    },
+    {
+        "rubric-id": 184105710,
+        "ru_rubric_names": "Регистрационная палата"
+    },
+    {
+        "rubric-id": 184105712,
+        "ru_rubric_names": "Государственная служба безопасности"
+    },
+    {
+        "rubric-id": 184105716,
+        "ru_rubric_names": "Министерства, ведомства, государственные службы"
+    },
+    {
+        "rubric-id": 184105722,
+        "ru_rubric_names": "Прокуратура"
+    },
+    {
+        "rubric-id": 184105724,
+        "ru_rubric_names": "Судебные приставы"
+    },
+    {
+        "rubric-id": 184105726,
+        "ru_rubric_names": "Суд"
+    },
+    {
+        "rubric-id": 184105732,
+        "ru_rubric_names": "IP-телефония"
+    },
+    {
+        "rubric-id": 184105736,
+        "ru_rubric_names": "Студия веб-дизайна"
+    },
+    {
+        "rubric-id": 184105738,
+        "ru_rubric_names": "Интернет-маркетинг"
+    },
+    {
+        "rubric-id": 184105740,
+        "ru_rubric_names": "Интернет-кафе"
+    },
+    {
+        "rubric-id": 184105742,
+        "ru_rubric_names": "Интернет-магазин"
+    },
+    {
+        "rubric-id": 184105744,
+        "ru_rubric_names": "Информационный интернет-сайт"
+    },
+    {
+        "rubric-id": 184105748,
+        "ru_rubric_names": "Интернет-провайдер"
+    },
+    {
+        "rubric-id": 184105752,
+        "ru_rubric_names": "Регистрация доменов"
+    },
+    {
+        "rubric-id": 184105754,
+        "ru_rubric_names": "Хостинг"
+    },
+    {
+        "rubric-id": 184105758,
+        "ru_rubric_names": "Компьютерные аксессуары"
+    },
+    {
+        "rubric-id": 184105760,
+        "ru_rubric_names": "Компьютерный магазин"
+    },
+    {
+        "rubric-id": 184105764,
+        "ru_rubric_names": "Компьютеры и комплектующие оптом"
+    },
+    {
+        "rubric-id": 184105766,
+        "ru_rubric_names": "Ноутбуки и планшеты"
+    },
+    {
+        "rubric-id": 184105768,
+        "ru_rubric_names": "Компьютерный ремонт и услуги"
+    },
+    {
+        "rubric-id": 184105774,
+        "ru_rubric_names": "Платные базы данных"
+    },
+    {
+        "rubric-id": 184105776,
+        "ru_rubric_names": "Программное обеспечение"
+    },
+    {
+        "rubric-id": 184105784,
+        "ru_rubric_names": "Устройство сетей"
+    },
+    {
+        "rubric-id": 184105792,
+        "ru_rubric_names": "Дом моды"
+    },
+    {
+        "rubric-id": 184105798,
+        "ru_rubric_names": "Магазин парфюмерии и косметики"
+    },
+    {
+        "rubric-id": 184105800,
+        "ru_rubric_names": "Парфюмерно-косметическая компания"
+    },
+    {
+        "rubric-id": 184105802,
+        "ru_rubric_names": "Средства гигиены"
+    },
+    {
+        "rubric-id": 184105806,
+        "ru_rubric_names": "Визажисты, стилисты"
+    },
+    {
+        "rubric-id": 184105808,
+        "ru_rubric_names": "Пластическая хирургия"
+    },
+    {
+        "rubric-id": 184105810,
+        "ru_rubric_names": "Парики, накладные пряди, волосы для наращивания"
+    },
+    {
+        "rubric-id": 184105812,
+        "ru_rubric_names": "Парикмахерская"
+    },
+    {
+        "rubric-id": 184105814,
+        "ru_rubric_names": "Салон красоты"
+    },
+    {
+        "rubric-id": 184105816,
+        "ru_rubric_names": "Солярий"
+    },
+    {
+        "rubric-id": 184105818,
+        "ru_rubric_names": "Спа-салон"
+    },
+    {
+        "rubric-id": 184105820,
+        "ru_rubric_names": "Тату-салон"
+    },
+    {
+        "rubric-id": 184105824,
+        "ru_rubric_names": "Магазин бижутерии"
+    },
+    {
+        "rubric-id": 184105826,
+        "ru_rubric_names": "Ювелирные изделия оптом"
+    },
+    {
+        "rubric-id": 184105828,
+        "ru_rubric_names": "Ювелирный магазин"
+    },
+    {
+        "rubric-id": 184105830,
+        "ru_rubric_names": "Ювелирная мастерская"
+    },
+    {
+        "rubric-id": 184105836,
+        "ru_rubric_names": "Архив"
+    },
+    {
+        "rubric-id": 184105838,
+        "ru_rubric_names": "Библиотека"
+    },
+    {
+        "rubric-id": 184105844,
+        "ru_rubric_names": "Багетные изделия"
+    },
+    {
+        "rubric-id": 184105850,
+        "ru_rubric_names": "Художественная мастерская"
+    },
+    {
+        "rubric-id": 184105852,
+        "ru_rubric_names": "Художественный салон"
+    },
+    {
+        "rubric-id": 184105862,
+        "ru_rubric_names": "Кинооборудование"
+    },
+    {
+        "rubric-id": 184105864,
+        "ru_rubric_names": "Кинопрокатная компания"
+    },
+    {
+        "rubric-id": 184105866,
+        "ru_rubric_names": "Киностудия"
+    },
+    {
+        "rubric-id": 184105868,
+        "ru_rubric_names": "Кинотеатр"
+    },
+    {
+        "rubric-id": 184105870,
+        "ru_rubric_names": "Театрально-концертная касса"
+    },
+    {
+        "rubric-id": 184105872,
+        "ru_rubric_names": "Театр"
+    },
+    {
+        "rubric-id": 184105876,
+        "ru_rubric_names": "Дом культуры"
+    },
+    {
+        "rubric-id": 184105880,
+        "ru_rubric_names": "Культурный центр"
+    },
+    {
+        "rubric-id": 184105884,
+        "ru_rubric_names": "Букинистический магазин"
+    },
+    {
+        "rubric-id": 184105886,
+        "ru_rubric_names": "Книжный магазин"
+    },
+    {
+        "rubric-id": 184105888,
+        "ru_rubric_names": "Точка продажи прессы"
+    },
+    {
+        "rubric-id": 184105892,
+        "ru_rubric_names": "Выставочный центр"
+    },
+    {
+        "rubric-id": 184105894,
+        "ru_rubric_names": "Музей"
+    },
+    {
+        "rubric-id": 184105900,
+        "ru_rubric_names": "Консерватория"
+    },
+    {
+        "rubric-id": 184105902,
+        "ru_rubric_names": "Концертный зал"
+    },
+    {
+        "rubric-id": 184105908,
+        "ru_rubric_names": "Творческий коллектив"
+    },
+    {
+        "rubric-id": 184105910,
+        "ru_rubric_names": "Музыкальный магазин"
+    },
+    {
+        "rubric-id": 184105912,
+        "ru_rubric_names": "Музыкальное образование"
+    },
+    {
+        "rubric-id": 184105914,
+        "ru_rubric_names": "Оркестр"
+    },
+    {
+        "rubric-id": 184105916,
+        "ru_rubric_names": "Изготовление и ремонт музыкальных инструментов"
+    },
+    {
+        "rubric-id": 184105918,
+        "ru_rubric_names": "Филармония"
+    },
+    {
+        "rubric-id": 184105920,
+        "ru_rubric_names": "Хореографическое училище"
+    },
+    {
+        "rubric-id": 184105922,
+        "ru_rubric_names": "Хор, хоровая студия"
+    },
+    {
+        "rubric-id": 184105924,
+        "ru_rubric_names": "Школа танцев"
+    },
+    {
+        "rubric-id": 184105930,
+        "ru_rubric_names": "Фитопродукция, БАДы"
+    },
+    {
+        "rubric-id": 184105932,
+        "ru_rubric_names": "Аптека"
+    },
+    {
+        "rubric-id": 184105942,
+        "ru_rubric_names": "Справочная аптек"
+    },
+    {
+        "rubric-id": 184105944,
+        "ru_rubric_names": "Фармацевтическая компания"
+    },
+    {
+        "rubric-id": 184105946,
+        "ru_rubric_names": "Фармацевтическое оборудование"
+    },
+    {
+        "rubric-id": 184105950,
+        "ru_rubric_names": "Амбулатория, здравпункт, медпункт"
+    },
+    {
+        "rubric-id": 184105956,
+        "ru_rubric_names": "Больница для взрослых"
+    },
+    {
+        "rubric-id": 184105958,
+        "ru_rubric_names": "Детская больница"
+    },
+    {
+        "rubric-id": 184105984,
+        "ru_rubric_names": "Госпиталь"
+    },
+    {
+        "rubric-id": 184105986,
+        "ru_rubric_names": "Детская поликлиника"
+    },
+    {
+        "rubric-id": 184105988,
+        "ru_rubric_names": "Диспансер"
+    },
+    {
+        "rubric-id": 184106010,
+        "ru_rubric_names": "Женская консультация"
+    },
+    {
+        "rubric-id": 184106012,
+        "ru_rubric_names": "Медсанчасть"
+    },
+    {
+        "rubric-id": 184106014,
+        "ru_rubric_names": "Поликлиника для взрослых"
+    },
+    {
+        "rubric-id": 184106016,
+        "ru_rubric_names": "Родильный дом"
+    },
+    {
+        "rubric-id": 184106018,
+        "ru_rubric_names": "Станция переливания крови"
+    },
+    {
+        "rubric-id": 184106020,
+        "ru_rubric_names": "Травмпункт"
+    },
+    {
+        "rubric-id": 184106026,
+        "ru_rubric_names": "Изготовление протезно-ортопедических изделий"
+    },
+    {
+        "rubric-id": 184106028,
+        "ru_rubric_names": "Товары для инвалидов, средства реабилитации"
+    },
+    {
+        "rubric-id": 184106030,
+        "ru_rubric_names": "Контактные линзы"
+    },
+    {
+        "rubric-id": 184106034,
+        "ru_rubric_names": "Лабораторное оборудование"
+    },
+    {
+        "rubric-id": 184106036,
+        "ru_rubric_names": "Магазин медицинских товаров"
+    },
+    {
+        "rubric-id": 184106038,
+        "ru_rubric_names": "Медицинская мебель"
+    },
+    {
+        "rubric-id": 184106040,
+        "ru_rubric_names": "Медицинские изделия и расходные материалы"
+    },
+    {
+        "rubric-id": 184106044,
+        "ru_rubric_names": "Медицинское оборудование, медтехника"
+    },
+    {
+        "rubric-id": 184106046,
+        "ru_rubric_names": "Ортопедический салон"
+    },
+    {
+        "rubric-id": 184106050,
+        "ru_rubric_names": "Ремонт медицинской техники"
+    },
+    {
+        "rubric-id": 184106052,
+        "ru_rubric_names": "Салон оптики"
+    },
+    {
+        "rubric-id": 184106054,
+        "ru_rubric_names": "Слуховые аппараты"
+    },
+    {
+        "rubric-id": 184106056,
+        "ru_rubric_names": "Товары для здоровья"
+    },
+    {
+        "rubric-id": 184106066,
+        "ru_rubric_names": "Коррекция зрения"
+    },
+    {
+        "rubric-id": 184106070,
+        "ru_rubric_names": "Медицинский туризм"
+    },
+    {
+        "rubric-id": 184106074,
+        "ru_rubric_names": "Массажный салон"
+    },
+    {
+        "rubric-id": 184106076,
+        "ru_rubric_names": "Медико-социальная экспертиза"
+    },
+    {
+        "rubric-id": 184106078,
+        "ru_rubric_names": "Медицинская лаборатория"
+    },
+    {
+        "rubric-id": 184106082,
+        "ru_rubric_names": "Нетрадиционная медицина"
+    },
+    {
+        "rubric-id": 184106084,
+        "ru_rubric_names": "Перевозка больных"
+    },
+    {
+        "rubric-id": 184106086,
+        "ru_rubric_names": "Центр профилактики СПИДа"
+    },
+    {
+        "rubric-id": 184106088,
+        "ru_rubric_names": "Психологическая служба"
+    },
+    {
+        "rubric-id": 184106090,
+        "ru_rubric_names": "Психотерапевтическая помощь"
+    },
+    {
+        "rubric-id": 184106092,
+        "ru_rubric_names": "Судебно-медицинская экспертиза"
+    },
+    {
+        "rubric-id": 184106094,
+        "ru_rubric_names": "Патронажная служба"
+    },
+    {
+        "rubric-id": 184106096,
+        "ru_rubric_names": "Хоспис"
+    },
+    {
+        "rubric-id": 184106100,
+        "ru_rubric_names": "Гинекологическая клиника"
+    },
+    {
+        "rubric-id": 184106106,
+        "ru_rubric_names": "Диагностический центр"
+    },
+    {
+        "rubric-id": 184106108,
+        "ru_rubric_names": "Медцентр, клиника"
+    },
+    {
+        "rubric-id": 184106110,
+        "ru_rubric_names": "Наркологическая клиника"
+    },
+    {
+        "rubric-id": 184106112,
+        "ru_rubric_names": "Оздоровительный центр"
+    },
+    {
+        "rubric-id": 184106114,
+        "ru_rubric_names": "Медицинская реабилитация"
+    },
+    {
+        "rubric-id": 184106116,
+        "ru_rubric_names": "Урологический центр"
+    },
+    {
+        "rubric-id": 184106120,
+        "ru_rubric_names": "Детская скорая помощь"
+    },
+    {
+        "rubric-id": 184106122,
+        "ru_rubric_names": "Скорая медицинская помощь"
+    },
+    {
+        "rubric-id": 184106128,
+        "ru_rubric_names": "Стоматологические материалы и оборудование"
+    },
+    {
+        "rubric-id": 184106130,
+        "ru_rubric_names": "Стоматологическая поликлиника"
+    },
+    {
+        "rubric-id": 184106132,
+        "ru_rubric_names": "Стоматологическая клиника"
+    },
+    {
+        "rubric-id": 184106140,
+        "ru_rubric_names": "ВУЗ"
+    },
+    {
+        "rubric-id": 184106146,
+        "ru_rubric_names": "Геология, геофизика"
+    },
+    {
+        "rubric-id": 184106150,
+        "ru_rubric_names": "Гидрометеорология"
+    },
+    {
+        "rubric-id": 184106152,
+        "ru_rubric_names": "Картографическое производство"
+    },
+    {
+        "rubric-id": 184106156,
+        "ru_rubric_names": "Центр повышения квалификации"
+    },
+    {
+        "rubric-id": 184106158,
+        "ru_rubric_names": "Компьютерные курсы"
+    },
+    {
+        "rubric-id": 184106160,
+        "ru_rubric_names": "Курсы иностранных языков"
+    },
+    {
+        "rubric-id": 184106162,
+        "ru_rubric_names": "Дополнительное образование"
+    },
+    {
+        "rubric-id": 184106164,
+        "ru_rubric_names": "Обучение за рубежом"
+    },
+    {
+        "rubric-id": 184106166,
+        "ru_rubric_names": "Учебный комбинат"
+    },
+    {
+        "rubric-id": 184106168,
+        "ru_rubric_names": "Учебный центр"
+    },
+    {
+        "rubric-id": 184106174,
+        "ru_rubric_names": "IT-компания"
+    },
+    {
+        "rubric-id": 184106180,
+        "ru_rubric_names": "Конструкторское бюро"
+    },
+    {
+        "rubric-id": 184106182,
+        "ru_rubric_names": "Научно-производственная организация"
+    },
+    {
+        "rubric-id": 184106192,
+        "ru_rubric_names": "НИИ"
+    },
+    {
+        "rubric-id": 184106194,
+        "ru_rubric_names": "Управление образованием"
+    },
+    {
+        "rubric-id": 184106206,
+        "ru_rubric_names": "Новые технологии"
+    },
+    {
+        "rubric-id": 184106212,
+        "ru_rubric_names": "Военная, кадетская школа"
+    },
+    {
+        "rubric-id": 184106214,
+        "ru_rubric_names": "Обучение мастеров для салонов красоты"
+    },
+    {
+        "rubric-id": 184106220,
+        "ru_rubric_names": "Курсы и мастер-классы"
+    },
+    {
+        "rubric-id": 184106222,
+        "ru_rubric_names": "Духовное учебное заведение"
+    },
+    {
+        "rubric-id": 184106224,
+        "ru_rubric_names": "Театральное и цирковое образование"
+    },
+    {
+        "rubric-id": 184106226,
+        "ru_rubric_names": "Школа охраны"
+    },
+    {
+        "rubric-id": 184106232,
+        "ru_rubric_names": "Воскресная школа"
+    },
+    {
+        "rubric-id": 184106234,
+        "ru_rubric_names": "Гимназия"
+    },
+    {
+        "rubric-id": 184106236,
+        "ru_rubric_names": "Колледж"
+    },
+    {
+        "rubric-id": 184106238,
+        "ru_rubric_names": "Лицей"
+    },
+    {
+        "rubric-id": 184106240,
+        "ru_rubric_names": "Общеобразовательная школа"
+    },
+    {
+        "rubric-id": 184106242,
+        "ru_rubric_names": "Училище"
+    },
+    {
+        "rubric-id": 184106244,
+        "ru_rubric_names": "Техникум"
+    },
+    {
+        "rubric-id": 184106246,
+        "ru_rubric_names": "Школа искусств"
+    },
+    {
+        "rubric-id": 184106250,
+        "ru_rubric_names": "Школа санаторного типа"
+    },
+    {
+        "rubric-id": 184106252,
+        "ru_rubric_names": "Частная школа"
+    },
+    {
+        "rubric-id": 184106254,
+        "ru_rubric_names": "Школа-интернат"
+    },
+    {
+        "rubric-id": 184106258,
+        "ru_rubric_names": "Магазин наглядных учебных пособий"
+    },
+    {
+        "rubric-id": 184106260,
+        "ru_rubric_names": "Учебная литература"
+    },
+    {
+        "rubric-id": 184106262,
+        "ru_rubric_names": "Услуги репетиторов"
+    },
+    {
+        "rubric-id": 184106264,
+        "ru_rubric_names": "Учебное оборудование"
+    },
+    {
+        "rubric-id": 184106270,
+        "ru_rubric_names": "Благотворительный фонд"
+    },
+    {
+        "rubric-id": 184106272,
+        "ru_rubric_names": "Общественный пункт охраны порядка"
+    },
+    {
+        "rubric-id": 184106274,
+        "ru_rubric_names": "Общественная организация"
+    },
+    {
+        "rubric-id": 184106280,
+        "ru_rubric_names": "Потребительская кооперация"
+    },
+    {
+        "rubric-id": 184106282,
+        "ru_rubric_names": "Профсоюз"
+    },
+    {
+        "rubric-id": 184106284,
+        "ru_rubric_names": "Торгово-промышленная палата"
+    },
+    {
+        "rubric-id": 184106286,
+        "ru_rubric_names": "Общественный фонд"
+    },
+    {
+        "rubric-id": 184106288,
+        "ru_rubric_names": "Экологическая организация"
+    },
+    {
+        "rubric-id": 184106292,
+        "ru_rubric_names": "Политическая партия"
+    },
+    {
+        "rubric-id": 184106296,
+        "ru_rubric_names": "Религиозное объединение"
+    },
+    {
+        "rubric-id": 184106298,
+        "ru_rubric_names": "Мечеть"
+    },
+    {
+        "rubric-id": 184106300,
+        "ru_rubric_names": "Религиозные товары"
+    },
+    {
+        "rubric-id": 184106304,
+        "ru_rubric_names": "Детский дом"
+    },
+    {
+        "rubric-id": 184106306,
+        "ru_rubric_names": "Детский приют"
+    },
+    {
+        "rubric-id": 184106308,
+        "ru_rubric_names": "Дом инвалидов и престарелых"
+    },
+    {
+        "rubric-id": 184106310,
+        "ru_rubric_names": "Дом ребёнка"
+    },
+    {
+        "rubric-id": 184106312,
+        "ru_rubric_names": "Миграционные услуги"
+    },
+    {
+        "rubric-id": 184106314,
+        "ru_rubric_names": "Ночлежный дом"
+    },
+    {
+        "rubric-id": 184106316,
+        "ru_rubric_names": "Общежитие"
+    },
+    {
+        "rubric-id": 184106320,
+        "ru_rubric_names": "Пенсионный фонд"
+    },
+    {
+        "rubric-id": 184106322,
+        "ru_rubric_names": "Социальная служба"
+    },
+    {
+        "rubric-id": 184106324,
+        "ru_rubric_names": "Социологические исследования"
+    },
+    {
+        "rubric-id": 184106330,
+        "ru_rubric_names": "Букмекерская контора"
+    },
+    {
+        "rubric-id": 184106332,
+        "ru_rubric_names": "Игровой клуб"
+    },
+    {
+        "rubric-id": 184106334,
+        "ru_rubric_names": "Казино, игорный дом"
+    },
+    {
+        "rubric-id": 184106336,
+        "ru_rubric_names": "Лотереи"
+    },
+    {
+        "rubric-id": 184106340,
+        "ru_rubric_names": "Дельфинарий, океанариум"
+    },
+    {
+        "rubric-id": 184106342,
+        "ru_rubric_names": "Пляж"
+    },
+    {
+        "rubric-id": 184106344,
+        "ru_rubric_names": "Зоопарк"
+    },
+    {
+        "rubric-id": 184106346,
+        "ru_rubric_names": "Парк культуры и отдыха"
+    },
+    {
+        "rubric-id": 184106350,
+        "ru_rubric_names": "Аквапарк"
+    },
+    {
+        "rubric-id": 184106354,
+        "ru_rubric_names": "Парк аттракционов"
+    },
+    {
+        "rubric-id": 184106356,
+        "ru_rubric_names": "Сауна"
+    },
+    {
+        "rubric-id": 184106358,
+        "ru_rubric_names": "Бильярдный клуб"
+    },
+    {
+        "rubric-id": 184106360,
+        "ru_rubric_names": "Боулинг-клуб"
+    },
+    {
+        "rubric-id": 184106362,
+        "ru_rubric_names": "Клуб досуга"
+    },
+    {
+        "rubric-id": 184106366,
+        "ru_rubric_names": "Магия и эзотерика"
+    },
+    {
+        "rubric-id": 184106368,
+        "ru_rubric_names": "Ночной клуб"
+    },
+    {
+        "rubric-id": 184106370,
+        "ru_rubric_names": "Планетарий"
+    },
+    {
+        "rubric-id": 184106372,
+        "ru_rubric_names": "Развлекательный центр"
+    },
+    {
+        "rubric-id": 184106374,
+        "ru_rubric_names": "Аренда теплоходов"
+    },
+    {
+        "rubric-id": 184106376,
+        "ru_rubric_names": "Служба знакомств"
+    },
+    {
+        "rubric-id": 184106378,
+        "ru_rubric_names": "Спортивно-развлекательный центр"
+    },
+    {
+        "rubric-id": 184106380,
+        "ru_rubric_names": "Цирк"
+    },
+    {
+        "rubric-id": 184106384,
+        "ru_rubric_names": "Бар, паб"
+    },
+    {
+        "rubric-id": 184106386,
+        "ru_rubric_names": "Быстрое питание"
+    },
+    {
+        "rubric-id": 184106390,
+        "ru_rubric_names": "Кафе"
+    },
+    {
+        "rubric-id": 184106392,
+        "ru_rubric_names": "Пиццерия"
+    },
+    {
+        "rubric-id": 184106394,
+        "ru_rubric_names": "Ресторан"
+    },
+    {
+        "rubric-id": 184106396,
+        "ru_rubric_names": "Столовая"
+    },
+    {
+        "rubric-id": 184106400,
+        "ru_rubric_names": "Дом отдыха"
+    },
+    {
+        "rubric-id": 184106404,
+        "ru_rubric_names": "Санаторий"
+    },
+    {
+        "rubric-id": 184106406,
+        "ru_rubric_names": "Санаторно-курортное объединение"
+    },
+    {
+        "rubric-id": 184106410,
+        "ru_rubric_names": "Бронирование VIP-залов в аэропортах"
+    },
+    {
+        "rubric-id": 184106412,
+        "ru_rubric_names": "Бронирование гостиниц"
+    },
+    {
+        "rubric-id": 184106414,
+        "ru_rubric_names": "Гостиница"
+    },
+    {
+        "rubric-id": 184106416,
+        "ru_rubric_names": "Деловой туризм"
+    },
+    {
+        "rubric-id": 184106418,
+        "ru_rubric_names": "Детский лагерь отдыха"
+    },
+    {
+        "rubric-id": 184106420,
+        "ru_rubric_names": "Кемпинг"
+    },
+    {
+        "rubric-id": 184106422,
+        "ru_rubric_names": "Помощь в оформлении виз и загранпаспортов"
+    },
+    {
+        "rubric-id": 184106424,
+        "ru_rubric_names": "Посольство, консульство"
+    },
+    {
+        "rubric-id": 184106426,
+        "ru_rubric_names": "Турбаза"
+    },
+    {
+        "rubric-id": 184106428,
+        "ru_rubric_names": "Туристический клуб"
+    },
+    {
+        "rubric-id": 184106430,
+        "ru_rubric_names": "Туроператор"
+    },
+    {
+        "rubric-id": 184106432,
+        "ru_rubric_names": "Турагентство"
+    },
+    {
+        "rubric-id": 184106434,
+        "ru_rubric_names": "Экскурсии"
+    },
+    {
+        "rubric-id": 184106438,
+        "ru_rubric_names": "Услуги вышивки"
+    },
+    {
+        "rubric-id": 184106440,
+        "ru_rubric_names": "Магазин нумизматики"
+    },
+    {
+        "rubric-id": 184106442,
+        "ru_rubric_names": "Товары для творчества и рукоделия"
+    },
+    {
+        "rubric-id": 184106444,
+        "ru_rubric_names": "Радиоуправляемые и стендовые модели"
+    },
+    {
+        "rubric-id": 184106446,
+        "ru_rubric_names": "Садоводческие товарищества и общества"
+    },
+    {
+        "rubric-id": 184106448,
+        "ru_rubric_names": "Филателия"
+    },
+    {
+        "rubric-id": 184106452,
+        "ru_rubric_names": "Секс-шоп"
+    },
+    {
+        "rubric-id": 184106458,
+        "ru_rubric_names": "Сельскохозяйственное предприятие"
+    },
+    {
+        "rubric-id": 184106460,
+        "ru_rubric_names": "Выращивание и продажа грибов"
+    },
+    {
+        "rubric-id": 184106462,
+        "ru_rubric_names": "Животноводческое хозяйство"
+    },
+    {
+        "rubric-id": 184106464,
+        "ru_rubric_names": "Звероферма"
+    },
+    {
+        "rubric-id": 184106466,
+        "ru_rubric_names": "Зерно и зерноотходы"
+    },
+    {
+        "rubric-id": 184106470,
+        "ru_rubric_names": "Овощи и фрукты оптом"
+    },
+    {
+        "rubric-id": 184106472,
+        "ru_rubric_names": "Яйцо и мясо птицы"
+    },
+    {
+        "rubric-id": 184106474,
+        "ru_rubric_names": "Мёд и продукты пчеловодства"
+    },
+    {
+        "rubric-id": 184106476,
+        "ru_rubric_names": "Рыба и морепродукты оптом"
+    },
+    {
+        "rubric-id": 184106478,
+        "ru_rubric_names": "Рыбное хозяйство, рыбоводство"
+    },
+    {
+        "rubric-id": 184106480,
+        "ru_rubric_names": "Садовый центр"
+    },
+    {
+        "rubric-id": 184106482,
+        "ru_rubric_names": "Селекция и семеноводство"
+    },
+    {
+        "rubric-id": 184106484,
+        "ru_rubric_names": "Сельскохозяйственная продукция"
+    },
+    {
+        "rubric-id": 184106486,
+        "ru_rubric_names": "Тепличное оборудование"
+    },
+    {
+        "rubric-id": 184106488,
+        "ru_rubric_names": "Тепличное хозяйство"
+    },
+    {
+        "rubric-id": 184106490,
+        "ru_rubric_names": "Хладокомбинат"
+    },
+    {
+        "rubric-id": 184106496,
+        "ru_rubric_names": "Геодезическое оборудование"
+    },
+    {
+        "rubric-id": 184106498,
+        "ru_rubric_names": "Геологоразведочное оборудование"
+    },
+    {
+        "rubric-id": 184106500,
+        "ru_rubric_names": "Геофизическое оборудование"
+    },
+    {
+        "rubric-id": 184106506,
+        "ru_rubric_names": "Компрессоры и компрессорное оборудование"
+    },
+    {
+        "rubric-id": 184106508,
+        "ru_rubric_names": "Насосы, насосное оборудование"
+    },
+    {
+        "rubric-id": 184106510,
+        "ru_rubric_names": "Гидравлическое и пневматическое оборудование"
+    },
+    {
+        "rubric-id": 184106514,
+        "ru_rubric_names": "Добыча природных ресурсов"
+    },
+    {
+        "rubric-id": 184106522,
+        "ru_rubric_names": "Верёвки, канаты, тросы"
+    },
+    {
+        "rubric-id": 184106524,
+        "ru_rubric_names": "Графит, технические углероды"
+    },
+    {
+        "rubric-id": 184106528,
+        "ru_rubric_names": "Редукторы"
+    },
+    {
+        "rubric-id": 184106530,
+        "ru_rubric_names": "Резиновые и резинотехнические изделия"
+    },
+    {
+        "rubric-id": 184106532,
+        "ru_rubric_names": "Рукава и шланги"
+    },
+    {
+        "rubric-id": 184106534,
+        "ru_rubric_names": "Транспортёры и конвейеры"
+    },
+    {
+        "rubric-id": 184106542,
+        "ru_rubric_names": "Инструментальная промышленность"
+    },
+    {
+        "rubric-id": 184106548,
+        "ru_rubric_names": "Нетканые материалы"
+    },
+    {
+        "rubric-id": 184106550,
+        "ru_rubric_names": "Нитки, пряжа"
+    },
+    {
+        "rubric-id": 184106552,
+        "ru_rubric_names": "Обувная косметика"
+    },
+    {
+        "rubric-id": 184106554,
+        "ru_rubric_names": "Обувная компания"
+    },
+    {
+        "rubric-id": 184106556,
+        "ru_rubric_names": "Одежда оптом"
+    },
+    {
+        "rubric-id": 184106558,
+        "ru_rubric_names": "Производство и продажа тканей"
+    },
+    {
+        "rubric-id": 184106560,
+        "ru_rubric_names": "Спецодежда"
+    },
+    {
+        "rubric-id": 184106564,
+        "ru_rubric_names": "Технические ткани"
+    },
+    {
+        "rubric-id": 184106566,
+        "ru_rubric_names": "Швейная фабрика"
+    },
+    {
+        "rubric-id": 184106570,
+        "ru_rubric_names": "Деревообрабатывающее предприятие"
+    },
+    {
+        "rubric-id": 184106572,
+        "ru_rubric_names": "Лесничество, лесхоз"
+    },
+    {
+        "rubric-id": 184106574,
+        "ru_rubric_names": "Лесозаготовительная техника"
+    },
+    {
+        "rubric-id": 184106576,
+        "ru_rubric_names": "Лесозаготовка, продажа леса"
+    },
+    {
+        "rubric-id": 184106578,
+        "ru_rubric_names": "Лесоустройство, лесовосстановление"
+    },
+    {
+        "rubric-id": 184106580,
+        "ru_rubric_names": "Пиломатериалы"
+    },
+    {
+        "rubric-id": 184106582,
+        "ru_rubric_names": "Столярные работы"
+    },
+    {
+        "rubric-id": 184106584,
+        "ru_rubric_names": "Фанера"
+    },
+    {
+        "rubric-id": 184106588,
+        "ru_rubric_names": "Авиационное и аэродромное оборудование"
+    },
+    {
+        "rubric-id": 184106590,
+        "ru_rubric_names": "Продажа и ремонт автобусов"
+    },
+    {
+        "rubric-id": 184106592,
+        "ru_rubric_names": "Автомобильный завод"
+    },
+    {
+        "rubric-id": 184106594,
+        "ru_rubric_names": "Автомобильные прицепы"
+    },
+    {
+        "rubric-id": 184106596,
+        "ru_rubric_names": "Автофургоны и автодома"
+    },
+    {
+        "rubric-id": 184106600,
+        "ru_rubric_names": "Горнодобывающее оборудование"
+    },
+    {
+        "rubric-id": 184106602,
+        "ru_rubric_names": "Грузовые автомобили, грузовая техника"
+    },
+    {
+        "rubric-id": 184106604,
+        "ru_rubric_names": "Железнодорожная техника и оборудование"
+    },
+    {
+        "rubric-id": 184106608,
+        "ru_rubric_names": "Подшипники"
+    },
+    {
+        "rubric-id": 184106610,
+        "ru_rubric_names": "Подъёмное оборудование"
+    },
+    {
+        "rubric-id": 184106616,
+        "ru_rubric_names": "Ремонт двигателей"
+    },
+    {
+        "rubric-id": 184106618,
+        "ru_rubric_names": "Ремонт сельскохозяйственной техники"
+    },
+    {
+        "rubric-id": 184106620,
+        "ru_rubric_names": "Сельскохозяйственная техника"
+    },
+    {
+        "rubric-id": 184106622,
+        "ru_rubric_names": "Спецтехника и спецавтомобили"
+    },
+    {
+        "rubric-id": 184106624,
+        "ru_rubric_names": "Судовое оборудование"
+    },
+    {
+        "rubric-id": 184106626,
+        "ru_rubric_names": "Судостроение, судоремонт"
+    },
+    {
+        "rubric-id": 184106628,
+        "ru_rubric_names": "Машиностроительный завод"
+    },
+    {
+        "rubric-id": 184106632,
+        "ru_rubric_names": "Мебельная фурнитура и комплектующие"
+    },
+    {
+        "rubric-id": 184106634,
+        "ru_rubric_names": "Мебельная фабрика"
+    },
+    {
+        "rubric-id": 184106636,
+        "ru_rubric_names": "Металлическая мебель"
+    },
+    {
+        "rubric-id": 184106640,
+        "ru_rubric_names": "Стеллажи"
+    },
+    {
+        "rubric-id": 184106644,
+        "ru_rubric_names": "Строительная арматура"
+    },
+    {
+        "rubric-id": 184106650,
+        "ru_rubric_names": "Крепёжные изделия"
+    },
+    {
+        "rubric-id": 184106652,
+        "ru_rubric_names": "Литейное производство"
+    },
+    {
+        "rubric-id": 184106654,
+        "ru_rubric_names": "Магниты и магнитные системы"
+    },
+    {
+        "rubric-id": 184106656,
+        "ru_rubric_names": "Металлоизделия"
+    },
+    {
+        "rubric-id": 184106658,
+        "ru_rubric_names": "Металлоконструкции"
+    },
+    {
+        "rubric-id": 184106660,
+        "ru_rubric_names": "Металлообрабатывающее оборудование"
+    },
+    {
+        "rubric-id": 184106662,
+        "ru_rubric_names": "Металлообработка"
+    },
+    {
+        "rubric-id": 184106664,
+        "ru_rubric_names": "Металлопрокат"
+    },
+    {
+        "rubric-id": 184106666,
+        "ru_rubric_names": "Металлургическое предприятие"
+    },
+    {
+        "rubric-id": 184106670,
+        "ru_rubric_names": "Огнеупоры"
+    },
+    {
+        "rubric-id": 184106672,
+        "ru_rubric_names": "Цветные металлы"
+    },
+    {
+        "rubric-id": 184106674,
+        "ru_rubric_names": "Чёрная металлургия"
+    },
+    {
+        "rubric-id": 184106678,
+        "ru_rubric_names": "Буровое оборудование"
+    },
+    {
+        "rubric-id": 184106680,
+        "ru_rubric_names": "Установка ГБО"
+    },
+    {
+        "rubric-id": 184106682,
+        "ru_rubric_names": "Газовые баллоны"
+    },
+    {
+        "rubric-id": 184106690,
+        "ru_rubric_names": "Нефтегазовая компания"
+    },
+    {
+        "rubric-id": 184106692,
+        "ru_rubric_names": "Нефтепродукты"
+    },
+    {
+        "rubric-id": 184106694,
+        "ru_rubric_names": "Нефтегазовое оборудование"
+    },
+    {
+        "rubric-id": 184106700,
+        "ru_rubric_names": "Газовое оборудование"
+    },
+    {
+        "rubric-id": 184106702,
+        "ru_rubric_names": "Смазочные материалы"
+    },
+    {
+        "rubric-id": 184106706,
+        "ru_rubric_names": "Автомоечное оборудование"
+    },
+    {
+        "rubric-id": 184106708,
+        "ru_rubric_names": "Автосервисное и гаражное оборудование"
+    },
+    {
+        "rubric-id": 184106712,
+        "ru_rubric_names": "Окрасочное оборудование"
+    },
+    {
+        "rubric-id": 184106714,
+        "ru_rubric_names": "Строительство и оснащение АЗС"
+    },
+    {
+        "rubric-id": 184106718,
+        "ru_rubric_names": "Оборудование для лёгкой промышленности"
+    },
+    {
+        "rubric-id": 184106720,
+        "ru_rubric_names": "Обувные материалы и фурнитура"
+    },
+    {
+        "rubric-id": 184106724,
+        "ru_rubric_names": "Текстильное оборудование"
+    },
+    {
+        "rubric-id": 184106726,
+        "ru_rubric_names": "Швейное оборудование"
+    },
+    {
+        "rubric-id": 184106730,
+        "ru_rubric_names": "Игорное и развлекательное оборудование"
+    },
+    {
+        "rubric-id": 184106732,
+        "ru_rubric_names": "Оборудование для ресторанов"
+    },
+    {
+        "rubric-id": 184106734,
+        "ru_rubric_names": "Оборудование и материалы для салонов красоты"
+    },
+    {
+        "rubric-id": 184106736,
+        "ru_rubric_names": "Оборудование для химчисток и прачечных"
+    },
+    {
+        "rubric-id": 184106738,
+        "ru_rubric_names": "Оборудование и продукция для гостиниц"
+    },
+    {
+        "rubric-id": 184106744,
+        "ru_rubric_names": "Клининговое оборудование и инвентарь"
+    },
+    {
+        "rubric-id": 184106748,
+        "ru_rubric_names": "Приём вторсырья"
+    },
+    {
+        "rubric-id": 184106754,
+        "ru_rubric_names": "Утилизация отходов"
+    },
+    {
+        "rubric-id": 184106760,
+        "ru_rubric_names": "Комбинат питания"
+    },
+    {
+        "rubric-id": 184106768,
+        "ru_rubric_names": "Молочная продукция оптом"
+    },
+    {
+        "rubric-id": 184106770,
+        "ru_rubric_names": "Мука и крупы"
+    },
+    {
+        "rubric-id": 184106772,
+        "ru_rubric_names": "Мясная продукция оптом"
+    },
+    {
+        "rubric-id": 184106774,
+        "ru_rubric_names": "Орехи, снеки, сухофрукты"
+    },
+    {
+        "rubric-id": 184106776,
+        "ru_rubric_names": "Пивоваренный завод"
+    },
+    {
+        "rubric-id": 184106778,
+        "ru_rubric_names": "Пищевое сырьё"
+    },
+    {
+        "rubric-id": 184106782,
+        "ru_rubric_names": "Пищевые ингредиенты и специи"
+    },
+    {
+        "rubric-id": 184106786,
+        "ru_rubric_names": "Продукты глубокой заморозки"
+    },
+    {
+        "rubric-id": 184106788,
+        "ru_rubric_names": "Мороженое"
+    },
+    {
+        "rubric-id": 184106790,
+        "ru_rubric_names": "Производство продуктов питания"
+    },
+    {
+        "rubric-id": 184106796,
+        "ru_rubric_names": "Хлебозавод"
+    },
+    {
+        "rubric-id": 184106798,
+        "ru_rubric_names": "Булочная, пекарня"
+    },
+    {
+        "rubric-id": 184106812,
+        "ru_rubric_names": "Пивоваренное оборудование"
+    },
+    {
+        "rubric-id": 184106814,
+        "ru_rubric_names": "Пищевое оборудование"
+    },
+    {
+        "rubric-id": 184106830,
+        "ru_rubric_names": "Нанесение покрытий"
+    },
+    {
+        "rubric-id": 184106834,
+        "ru_rubric_names": "Водосчётчики, газосчётчики, теплосчётчики"
+    },
+    {
+        "rubric-id": 184106836,
+        "ru_rubric_names": "Контрольно-измерительные приборы"
+    },
+    {
+        "rubric-id": 184106838,
+        "ru_rubric_names": "Оптические приборы и оборудование"
+    },
+    {
+        "rubric-id": 184106846,
+        "ru_rubric_names": "Ремонт измерительных приборов"
+    },
+    {
+        "rubric-id": 184106852,
+        "ru_rubric_names": "Электросчетчики"
+    },
+    {
+        "rubric-id": 184106858,
+        "ru_rubric_names": "Криогенная техника"
+    },
+    {
+        "rubric-id": 184106860,
+        "ru_rubric_names": "Оборудование для переработки пластмасс"
+    },
+    {
+        "rubric-id": 184106862,
+        "ru_rubric_names": "Промышленное оборудование"
+    },
+    {
+        "rubric-id": 184106864,
+        "ru_rubric_names": "Промышленные печи"
+    },
+    {
+        "rubric-id": 184106866,
+        "ru_rubric_names": "Ремонт промышленного оборудования"
+    },
+    {
+        "rubric-id": 184106874,
+        "ru_rubric_names": "Материально-техническое снабжение"
+    },
+    {
+        "rubric-id": 184106880,
+        "ru_rubric_names": "Производственное предприятие"
+    },
+    {
+        "rubric-id": 184106884,
+        "ru_rubric_names": "Сварочное оборудование и материалы"
+    },
+    {
+        "rubric-id": 184106886,
+        "ru_rubric_names": "Сварочные работы"
+    },
+    {
+        "rubric-id": 184106894,
+        "ru_rubric_names": "Звуковое и световое оборудование"
+    },
+    {
+        "rubric-id": 184106898,
+        "ru_rubric_names": "Светотехника"
+    },
+    {
+        "rubric-id": 184106906,
+        "ru_rubric_names": "Складское оборудование"
+    },
+    {
+        "rubric-id": 184106912,
+        "ru_rubric_names": "Деревообрабатывающее оборудование"
+    },
+    {
+        "rubric-id": 184106914,
+        "ru_rubric_names": "Камнеобрабатывающее оборудование"
+    },
+    {
+        "rubric-id": 184106916,
+        "ru_rubric_names": "Лазерная резка и гравировка"
+    },
+    {
+        "rubric-id": 184106918,
+        "ru_rubric_names": "Оборудование для производства окон"
+    },
+    {
+        "rubric-id": 184106930,
+        "ru_rubric_names": "Ёмкостное оборудование, резервуары"
+    },
+    {
+        "rubric-id": 184106932,
+        "ru_rubric_names": "Контейнеры"
+    },
+    {
+        "rubric-id": 184106936,
+        "ru_rubric_names": "Тара и упаковочные материалы"
+    },
+    {
+        "rubric-id": 184106938,
+        "ru_rubric_names": "Фасовочно-упаковочное оборудование"
+    },
+    {
+        "rubric-id": 184106940,
+        "ru_rubric_names": "Фасовка товаров"
+    },
+    {
+        "rubric-id": 184106944,
+        "ru_rubric_names": "Надувные конструкции и изделия"
+    },
+    {
+        "rubric-id": 184106946,
+        "ru_rubric_names": "Пластмассовые и пластиковые изделия"
+    },
+    {
+        "rubric-id": 184106948,
+        "ru_rubric_names": "Товары народного потребления"
+    },
+    {
+        "rubric-id": 184106954,
+        "ru_rubric_names": "Твёрдое топливо"
+    },
+    {
+        "rubric-id": 184106956,
+        "ru_rubric_names": "Угольная компания"
+    },
+    {
+        "rubric-id": 184106960,
+        "ru_rubric_names": "Банковское оборудование"
+    },
+    {
+        "rubric-id": 184106962,
+        "ru_rubric_names": "Вендинговое оборудование"
+    },
+    {
+        "rubric-id": 184106964,
+        "ru_rubric_names": "Весы и весоизмерительное оборудование"
+    },
+    {
+        "rubric-id": 184106968,
+        "ru_rubric_names": "Кассовые аппараты и расходные материалы"
+    },
+    {
+        "rubric-id": 184106970,
+        "ru_rubric_names": "Маркировка товаров, штриховое кодирование"
+    },
+    {
+        "rubric-id": 184106974,
+        "ru_rubric_names": "Платёжный терминал"
+    },
+    {
+        "rubric-id": 184106976,
+        "ru_rubric_names": "Промышленное холодильное оборудование"
+    },
+    {
+        "rubric-id": 184106980,
+        "ru_rubric_names": "Ремонт кассовых аппаратов"
+    },
+    {
+        "rubric-id": 184106982,
+        "ru_rubric_names": "Ремонт промышленных холодильников"
+    },
+    {
+        "rubric-id": 184106984,
+        "ru_rubric_names": "Ремонт торгового оборудования"
+    },
+    {
+        "rubric-id": 184106986,
+        "ru_rubric_names": "Сейфы"
+    },
+    {
+        "rubric-id": 184106990,
+        "ru_rubric_names": "Торговое оборудование"
+    },
+    {
+        "rubric-id": 184106996,
+        "ru_rubric_names": "Взрывчатые вещества"
+    },
+    {
+        "rubric-id": 184106998,
+        "ru_rubric_names": "Красители для ткани"
+    },
+    {
+        "rubric-id": 184107002,
+        "ru_rubric_names": "Полимерные материалы"
+    },
+    {
+        "rubric-id": 184107004,
+        "ru_rubric_names": "Производство и продажа бумаги"
+    },
+    {
+        "rubric-id": 184107008,
+        "ru_rubric_names": "Средства защиты растений"
+    },
+    {
+        "rubric-id": 184107014,
+        "ru_rubric_names": "Технические и медицинские газы"
+    },
+    {
+        "rubric-id": 184107016,
+        "ru_rubric_names": "Удобрения"
+    },
+    {
+        "rubric-id": 184107018,
+        "ru_rubric_names": "Химические реактивы"
+    },
+    {
+        "rubric-id": 184107022,
+        "ru_rubric_names": "Химическое оборудование"
+    },
+    {
+        "rubric-id": 184107024,
+        "ru_rubric_names": "Промышленная химия"
+    },
+    {
+        "rubric-id": 184107028,
+        "ru_rubric_names": "Автоматизация производств"
+    },
+    {
+        "rubric-id": 184107030,
+        "ru_rubric_names": "Аккумуляторы и зарядные устройства"
+    },
+    {
+        "rubric-id": 184107032,
+        "ru_rubric_names": "Кабель и провод"
+    },
+    {
+        "rubric-id": 184107042,
+        "ru_rubric_names": "Прокладка кабеля"
+    },
+    {
+        "rubric-id": 184107046,
+        "ru_rubric_names": "Ремонт электрооборудования"
+    },
+    {
+        "rubric-id": 184107056,
+        "ru_rubric_names": "Электродвигатели"
+    },
+    {
+        "rubric-id": 184107058,
+        "ru_rubric_names": "Электромонтажные и электроустановочные изделия"
+    },
+    {
+        "rubric-id": 184107062,
+        "ru_rubric_names": "Электронные приборы и компоненты"
+    },
+    {
+        "rubric-id": 184107066,
+        "ru_rubric_names": "Электротехническая продукция"
+    },
+    {
+        "rubric-id": 184107076,
+        "ru_rubric_names": "Обслуживание электросетей"
+    },
+    {
+        "rubric-id": 184107078,
+        "ru_rubric_names": "АЭС, ГЭС, ТЭС"
+    },
+    {
+        "rubric-id": 184107080,
+        "ru_rubric_names": "Энергетическая организация"
+    },
+    {
+        "rubric-id": 184107082,
+        "ru_rubric_names": "Энергетическое оборудование"
+    },
+    {
+        "rubric-id": 184107084,
+        "ru_rubric_names": "Энергосбережение и энергоаудит"
+    },
+    {
+        "rubric-id": 184107088,
+        "ru_rubric_names": "Ювелирное оборудование"
+    },
+    {
+        "rubric-id": 184107090,
+        "ru_rubric_names": "Ювелирные камни"
+    },
+    {
+        "rubric-id": 184107108,
+        "ru_rubric_names": "Копировальный центр"
+    },
+    {
+        "rubric-id": 184107120,
+        "ru_rubric_names": "Широкоформатная печать"
+    },
+    {
+        "rubric-id": 184107122,
+        "ru_rubric_names": "Материалы для полиграфии"
+    },
+    {
+        "rubric-id": 184107124,
+        "ru_rubric_names": "Полиграфические услуги"
+    },
+    {
+        "rubric-id": 184107126,
+        "ru_rubric_names": "Полиграфическое оборудование"
+    },
+    {
+        "rubric-id": 184107134,
+        "ru_rubric_names": "Типография"
+    },
+    {
+        "rubric-id": 184107140,
+        "ru_rubric_names": "Выставочные стенды"
+    },
+    {
+        "rubric-id": 184107142,
+        "ru_rubric_names": "Студия графического дизайна"
+    },
+    {
+        "rubric-id": 184107146,
+        "ru_rubric_names": "Изготовление вывесок"
+    },
+    {
+        "rubric-id": 184107152,
+        "ru_rubric_names": "Наружная реклама"
+    },
+    {
+        "rubric-id": 184107176,
+        "ru_rubric_names": "Рекламная продукция"
+    },
+    {
+        "rubric-id": 184107178,
+        "ru_rubric_names": "Рекламное оборудование и материалы"
+    },
+    {
+        "rubric-id": 184107180,
+        "ru_rubric_names": "Рекламное агентство"
+    },
+    {
+        "rubric-id": 184107182,
+        "ru_rubric_names": "Светодиодные системы"
+    },
+    {
+        "rubric-id": 184107184,
+        "ru_rubric_names": "Изготовление и оптовая продажа сувениров"
+    },
+    {
+        "rubric-id": 184107202,
+        "ru_rubric_names": "Клуб для детей и подростков"
+    },
+    {
+        "rubric-id": 184107204,
+        "ru_rubric_names": "Центр развития ребёнка"
+    },
+    {
+        "rubric-id": 184107206,
+        "ru_rubric_names": "Детский сад"
+    },
+    {
+        "rubric-id": 184107210,
+        "ru_rubric_names": "Магазин аквариумов"
+    },
+    {
+        "rubric-id": 184107214,
+        "ru_rubric_names": "Ветеринарная аптека"
+    },
+    {
+        "rubric-id": 184107216,
+        "ru_rubric_names": "Ветеринарная клиника"
+    },
+    {
+        "rubric-id": 184107218,
+        "ru_rubric_names": "Ветеринарные препараты и оборудование"
+    },
+    {
+        "rubric-id": 184107220,
+        "ru_rubric_names": "Гостиница для животных"
+    },
+    {
+        "rubric-id": 184107222,
+        "ru_rubric_names": "Зоомагазин"
+    },
+    {
+        "rubric-id": 184107224,
+        "ru_rubric_names": "Зоосалон, зоопарикмахерская"
+    },
+    {
+        "rubric-id": 184107228,
+        "ru_rubric_names": "Клуб любителей животных"
+    },
+    {
+        "rubric-id": 184107232,
+        "ru_rubric_names": "Комбикорма и кормовые добавки"
+    },
+    {
+        "rubric-id": 184107236,
+        "ru_rubric_names": "Товары для животных оптом"
+    },
+    {
+        "rubric-id": 184107240,
+        "ru_rubric_names": "Домашний персонал"
+    },
+    {
+        "rubric-id": 184107242,
+        "ru_rubric_names": "ЗАГС"
+    },
+    {
+        "rubric-id": 184107244,
+        "ru_rubric_names": "Семейное консультирование"
+    },
+    {
+        "rubric-id": 184107248,
+        "ru_rubric_names": "Магазин детской одежды"
+    },
+    {
+        "rubric-id": 184107250,
+        "ru_rubric_names": "Детские игрушки и игры"
+    },
+    {
+        "rubric-id": 184107252,
+        "ru_rubric_names": "Детский магазин"
+    },
+    {
+        "rubric-id": 184107254,
+        "ru_rubric_names": "Детские товары оптом"
+    },
+    {
+        "rubric-id": 184107256,
+        "ru_rubric_names": "Детское питание оптом"
+    },
+    {
+        "rubric-id": 184107258,
+        "ru_rubric_names": "Игровые приставки"
+    },
+    {
+        "rubric-id": 184107260,
+        "ru_rubric_names": "Магазин детского питания"
+    },
+    {
+        "rubric-id": 184107262,
+        "ru_rubric_names": "Магазин для будущих мам"
+    },
+    {
+        "rubric-id": 184107265,
+        "ru_rubric_names": "Молочная кухня"
+    },
+    {
+        "rubric-id": 184107267,
+        "ru_rubric_names": "Настольные и интеллектуальные игры"
+    },
+    {
+        "rubric-id": 184107275,
+        "ru_rubric_names": "Бассейн"
+    },
+    {
+        "rubric-id": 184107277,
+        "ru_rubric_names": "Дайвинг"
+    },
+    {
+        "rubric-id": 184107279,
+        "ru_rubric_names": "Яхт-клуб"
+    },
+    {
+        "rubric-id": 184107285,
+        "ru_rubric_names": "Ипподром"
+    },
+    {
+        "rubric-id": 184107287,
+        "ru_rubric_names": "Конный клуб"
+    },
+    {
+        "rubric-id": 184107293,
+        "ru_rubric_names": "Лыжная база"
+    },
+    {
+        "rubric-id": 184107295,
+        "ru_rubric_names": "Спортивная база"
+    },
+    {
+        "rubric-id": 184107297,
+        "ru_rubric_names": "Спортивный клуб, секция"
+    },
+    {
+        "rubric-id": 184107301,
+        "ru_rubric_names": "Клуб охотников и рыболовов"
+    },
+    {
+        "rubric-id": 184107303,
+        "ru_rubric_names": "Спортивное объединение"
+    },
+    {
+        "rubric-id": 184107305,
+        "ru_rubric_names": "Спортивная школа"
+    },
+    {
+        "rubric-id": 184107309,
+        "ru_rubric_names": "Гольф-клуб"
+    },
+    {
+        "rubric-id": 184107311,
+        "ru_rubric_names": "Каток"
+    },
+    {
+        "rubric-id": 184107313,
+        "ru_rubric_names": "Спортивный комплекс"
+    },
+    {
+        "rubric-id": 184107315,
+        "ru_rubric_names": "Стадион"
+    },
+    {
+        "rubric-id": 184107317,
+        "ru_rubric_names": "Стрелковый клуб, тир"
+    },
+    {
+        "rubric-id": 184107319,
+        "ru_rubric_names": "Теннисный клуб"
+    },
+    {
+        "rubric-id": 184107323,
+        "ru_rubric_names": "Вездеходы, гидроциклы, снегоходы"
+    },
+    {
+        "rubric-id": 184107325,
+        "ru_rubric_names": "Веломагазин"
+    },
+    {
+        "rubric-id": 184107329,
+        "ru_rubric_names": "Катера, лодки, яхты"
+    },
+    {
+        "rubric-id": 184107333,
+        "ru_rubric_names": "Магазин бильярда"
+    },
+    {
+        "rubric-id": 184107337,
+        "ru_rubric_names": "Мотосалон"
+    },
+    {
+        "rubric-id": 184107341,
+        "ru_rubric_names": "Спортивная одежда и обувь"
+    },
+    {
+        "rubric-id": 184107343,
+        "ru_rubric_names": "Спортивное питание"
+    },
+    {
+        "rubric-id": 184107345,
+        "ru_rubric_names": "Спортивный магазин"
+    },
+    {
+        "rubric-id": 184107347,
+        "ru_rubric_names": "Спортивный инвентарь и оборудование"
+    },
+    {
+        "rubric-id": 184107353,
+        "ru_rubric_names": "Товары для охоты"
+    },
+    {
+        "rubric-id": 184107355,
+        "ru_rubric_names": "Товары для отдыха и туризма"
+    },
+    {
+        "rubric-id": 184107357,
+        "ru_rubric_names": "Товары для рыбалки"
+    },
+    {
+        "rubric-id": 184107361,
+        "ru_rubric_names": "Центр йоги"
+    },
+    {
+        "rubric-id": 184107363,
+        "ru_rubric_names": "Фитнес-клуб"
+    },
+    {
+        "rubric-id": 184107367,
+        "ru_rubric_names": "Аэроклуб"
+    },
+    {
+        "rubric-id": 184107369,
+        "ru_rubric_names": "Пейнтбол"
+    },
+    {
+        "rubric-id": 184107373,
+        "ru_rubric_names": "Горячая линия"
+    },
+    {
+        "rubric-id": 184107375,
+        "ru_rubric_names": "Информационное агентство"
+    },
+    {
+        "rubric-id": 184107377,
+        "ru_rubric_names": "Информационная служба"
+    },
+    {
+        "rubric-id": 184107379,
+        "ru_rubric_names": "Колл-центр"
+    },
+    {
+        "rubric-id": 184107381,
+        "ru_rubric_names": "Медицинские информационные услуги"
+    },
+    {
+        "rubric-id": 184107383,
+        "ru_rubric_names": "Справочник"
+    },
+    {
+        "rubric-id": 184107389,
+        "ru_rubric_names": "Антенны"
+    },
+    {
+        "rubric-id": 184107393,
+        "ru_rubric_names": "Издательские услуги"
+    },
+    {
+        "rubric-id": 184107395,
+        "ru_rubric_names": "Кабельное телевидение"
+    },
+    {
+        "rubric-id": 184107397,
+        "ru_rubric_names": "Радиокомпания"
+    },
+    {
+        "rubric-id": 184107399,
+        "ru_rubric_names": "Агентство по подписке"
+    },
+    {
+        "rubric-id": 184107401,
+        "ru_rubric_names": "Редакция СМИ"
+    },
+    {
+        "rubric-id": 184107403,
+        "ru_rubric_names": "Спутниковое телевидение"
+    },
+    {
+        "rubric-id": 184107409,
+        "ru_rubric_names": "Телекомпания"
+    },
+    {
+        "rubric-id": 184107417,
+        "ru_rubric_names": "Архитектурное бюро"
+    },
+    {
+        "rubric-id": 184107419,
+        "ru_rubric_names": "Проектная организация"
+    },
+    {
+        "rubric-id": 184107425,
+        "ru_rubric_names": "Быстровозводимые здания"
+    },
+    {
+        "rubric-id": 184107427,
+        "ru_rubric_names": "Тенты, шатры, навесы"
+    },
+    {
+        "rubric-id": 184107431,
+        "ru_rubric_names": "Строительство дачных домов и коттеджей"
+    },
+    {
+        "rubric-id": 184107433,
+        "ru_rubric_names": "Строительство бань и саун"
+    },
+    {
+        "rubric-id": 184107439,
+        "ru_rubric_names": "Биотуалеты, туалетные кабины"
+    },
+    {
+        "rubric-id": 184107443,
+        "ru_rubric_names": "Водонагреватели"
+    },
+    {
+        "rubric-id": 184107445,
+        "ru_rubric_names": "Водоочистка, водоочистное оборудование"
+    },
+    {
+        "rubric-id": 184107447,
+        "ru_rubric_names": "Водопроводное оборудование"
+    },
+    {
+        "rubric-id": 184107449,
+        "ru_rubric_names": "Водостоки и водосточные системы"
+    },
+    {
+        "rubric-id": 184107453,
+        "ru_rubric_names": "Очистители, увлажнители и ароматизаторы воздуха"
+    },
+    {
+        "rubric-id": 184107457,
+        "ru_rubric_names": "Строительство и обслуживание инженерных сетей"
+    },
+    {
+        "rubric-id": 184107459,
+        "ru_rubric_names": "Инжиниринг"
+    },
+    {
+        "rubric-id": 184107461,
+        "ru_rubric_names": "Интеллектуальные здания"
+    },
+    {
+        "rubric-id": 184107463,
+        "ru_rubric_names": "Кондиционеры"
+    },
+    {
+        "rubric-id": 184107465,
+        "ru_rubric_names": "Котлы и котельное оборудование"
+    },
+    {
+        "rubric-id": 184107467,
+        "ru_rubric_names": "Продажа и обслуживание лифтов"
+    },
+    {
+        "rubric-id": 184107469,
+        "ru_rubric_names": "Монтаж и обслуживание систем водоснабжения и канализации"
+    },
+    {
+        "rubric-id": 184107473,
+        "ru_rubric_names": "Оборудование и монтаж мусоропроводов"
+    },
+    {
+        "rubric-id": 184107475,
+        "ru_rubric_names": "Отопительное оборудование и системы"
+    },
+    {
+        "rubric-id": 184107477,
+        "ru_rubric_names": "Очистные сооружения и оборудование"
+    },
+    {
+        "rubric-id": 184107483,
+        "ru_rubric_names": "Ремонт климатических систем"
+    },
+    {
+        "rubric-id": 184107485,
+        "ru_rubric_names": "Системы вентиляции"
+    },
+    {
+        "rubric-id": 184107487,
+        "ru_rubric_names": "Системы водоснабжения, отопления, канализации"
+    },
+    {
+        "rubric-id": 184107489,
+        "ru_rubric_names": "Строительство и монтаж бассейнов, аквапарков"
+    },
+    {
+        "rubric-id": 184107493,
+        "ru_rubric_names": "Техническое обслуживание зданий"
+    },
+    {
+        "rubric-id": 184107495,
+        "ru_rubric_names": "Трубы и трубопроводная арматура"
+    },
+    {
+        "rubric-id": 184107499,
+        "ru_rubric_names": "Фильтры для воды"
+    },
+    {
+        "rubric-id": 184107503,
+        "ru_rubric_names": "Агентство недвижимости"
+    },
+    {
+        "rubric-id": 184107509,
+        "ru_rubric_names": "Бизнес-центр"
+    },
+    {
+        "rubric-id": 184107511,
+        "ru_rubric_names": "БТИ"
+    },
+    {
+        "rubric-id": 184107513,
+        "ru_rubric_names": "Жилищный отдел"
+    },
+    {
+        "rubric-id": 184107517,
+        "ru_rubric_names": "Ипотечное агентство"
+    },
+    {
+        "rubric-id": 184107519,
+        "ru_rubric_names": "Квартиры в новостройках"
+    },
+    {
+        "rubric-id": 184107521,
+        "ru_rubric_names": "Продажа и аренда коммерческой недвижимости"
+    },
+    {
+        "rubric-id": 184107527,
+        "ru_rubric_names": "Согласование перепланировок"
+    },
+    {
+        "rubric-id": 184107529,
+        "ru_rubric_names": "Управление недвижимостью"
+    },
+    {
+        "rubric-id": 184107531,
+        "ru_rubric_names": "Элитная недвижимость"
+    },
+    {
+        "rubric-id": 184107535,
+        "ru_rubric_names": "Остекление балконов и лоджий"
+    },
+    {
+        "rubric-id": 184107537,
+        "ru_rubric_names": "Изготовление витражей"
+    },
+    {
+        "rubric-id": 184107539,
+        "ru_rubric_names": "Дизайн интерьеров"
+    },
+    {
+        "rubric-id": 184107543,
+        "ru_rubric_names": "Промышленный дизайн"
+    },
+    {
+        "rubric-id": 184107545,
+        "ru_rubric_names": "Сантехнические работы"
+    },
+    {
+        "rubric-id": 184107547,
+        "ru_rubric_names": "Строительные и отделочные работы"
+    },
+    {
+        "rubric-id": 184107551,
+        "ru_rubric_names": "Аренда строительной и спецтехники"
+    },
+    {
+        "rubric-id": 184107555,
+        "ru_rubric_names": "Дорожно-строительная техника"
+    },
+    {
+        "rubric-id": 184107561,
+        "ru_rubric_names": "Опалубка"
+    },
+    {
+        "rubric-id": 184107565,
+        "ru_rubric_names": "Строительное оборудование и техника"
+    },
+    {
+        "rubric-id": 184107567,
+        "ru_rubric_names": "Строительный инструмент"
+    },
+    {
+        "rubric-id": 184107569,
+        "ru_rubric_names": "Строительные леса"
+    },
+    {
+        "rubric-id": 184107571,
+        "ru_rubric_names": "Электро- и бензоинструмент"
+    },
+    {
+        "rubric-id": 184107575,
+        "ru_rubric_names": "Гаражный кооператив"
+    },
+    {
+        "rubric-id": 184107579,
+        "ru_rubric_names": "Строительный кооператив"
+    },
+    {
+        "rubric-id": 184107583,
+        "ru_rubric_names": "Алмазная резка"
+    },
+    {
+        "rubric-id": 184107585,
+        "ru_rubric_names": "Городское благоустройство"
+    },
+    {
+        "rubric-id": 184107587,
+        "ru_rubric_names": "Буровые работы"
+    },
+    {
+        "rubric-id": 184107589,
+        "ru_rubric_names": "Взрывные работы"
+    },
+    {
+        "rubric-id": 184107599,
+        "ru_rubric_names": "Строительство и ремонт дорог"
+    },
+    {
+        "rubric-id": 184107601,
+        "ru_rubric_names": "Земляные работы"
+    },
+    {
+        "rubric-id": 184107603,
+        "ru_rubric_names": "Изыскательские работы"
+    },
+    {
+        "rubric-id": 184107607,
+        "ru_rubric_names": "Кровельные работы"
+    },
+    {
+        "rubric-id": 184107609,
+        "ru_rubric_names": "Мелиоративные работы"
+    },
+    {
+        "rubric-id": 184107613,
+        "ru_rubric_names": "Монтажные работы"
+    },
+    {
+        "rubric-id": 184107615,
+        "ru_rubric_names": "Подводные работы"
+    },
+    {
+        "rubric-id": 184107617,
+        "ru_rubric_names": "Подземные работы"
+    },
+    {
+        "rubric-id": 184107619,
+        "ru_rubric_names": "Промышленное строительство"
+    },
+    {
+        "rubric-id": 184107621,
+        "ru_rubric_names": "Промышленный альпинизм"
+    },
+    {
+        "rubric-id": 184107623,
+        "ru_rubric_names": "Девелопмент недвижимости"
+    },
+    {
+        "rubric-id": 184107625,
+        "ru_rubric_names": "Снос зданий"
+    },
+    {
+        "rubric-id": 184107627,
+        "ru_rubric_names": "Специализированные строительные работы"
+    },
+    {
+        "rubric-id": 184107633,
+        "ru_rubric_names": "Строительная компания"
+    },
+    {
+        "rubric-id": 184107635,
+        "ru_rubric_names": "Строительные конструкции"
+    },
+    {
+        "rubric-id": 184107639,
+        "ru_rubric_names": "Строительство и ремонт железнодорожных путей"
+    },
+    {
+        "rubric-id": 184107653,
+        "ru_rubric_names": "Элеватор"
+    },
+    {
+        "rubric-id": 184107655,
+        "ru_rubric_names": "Электромонтажные работы"
+    },
+    {
+        "rubric-id": 184107657,
+        "ru_rubric_names": "Электронагреватели"
+    },
+    {
+        "rubric-id": 184107661,
+        "ru_rubric_names": "Автоматические двери и ворота"
+    },
+    {
+        "rubric-id": 184107665,
+        "ru_rubric_names": "Алюминий, алюминиевые конструкции"
+    },
+    {
+        "rubric-id": 184107669,
+        "ru_rubric_names": "Дорожные материалы"
+    },
+    {
+        "rubric-id": 184107671,
+        "ru_rubric_names": "Бетон, бетонные изделия"
+    },
+    {
+        "rubric-id": 184107673,
+        "ru_rubric_names": "Герметики"
+    },
+    {
+        "rubric-id": 184107675,
+        "ru_rubric_names": "Грязезащитные покрытия"
+    },
+    {
+        "rubric-id": 184107677,
+        "ru_rubric_names": "Двери"
+    },
+    {
+        "rubric-id": 184107679,
+        "ru_rubric_names": "Декоративные покрытия"
+    },
+    {
+        "rubric-id": 184107681,
+        "ru_rubric_names": "ЖБИ"
+    },
+    {
+        "rubric-id": 184107683,
+        "ru_rubric_names": "Зимние сады, веранды, террасы"
+    },
+    {
+        "rubric-id": 184107685,
+        "ru_rubric_names": "Изготовление и монтаж зеркал"
+    },
+    {
+        "rubric-id": 184107687,
+        "ru_rubric_names": "Изделия из камня"
+    },
+    {
+        "rubric-id": 184107689,
+        "ru_rubric_names": "Изоляционные материалы"
+    },
+    {
+        "rubric-id": 184107691,
+        "ru_rubric_names": "Кирпич"
+    },
+    {
+        "rubric-id": 184107693,
+        "ru_rubric_names": "Клеящие вещества и материалы"
+    },
+    {
+        "rubric-id": 184107695,
+        "ru_rubric_names": "Кованые изделия"
+    },
+    {
+        "rubric-id": 184107697,
+        "ru_rubric_names": "Снабжение строительных объектов"
+    },
+    {
+        "rubric-id": 184107699,
+        "ru_rubric_names": "Кровля и кровельные материалы"
+    },
+    {
+        "rubric-id": 184107701,
+        "ru_rubric_names": "Лакокрасочные материалы"
+    },
+    {
+        "rubric-id": 184107703,
+        "ru_rubric_names": "Ламинат"
+    },
+    {
+        "rubric-id": 184107705,
+        "ru_rubric_names": "Лестницы и лестничные ограждения"
+    },
+    {
+        "rubric-id": 184107707,
+        "ru_rubric_names": "Линолеум"
+    },
+    {
+        "rubric-id": 184107709,
+        "ru_rubric_names": "Магазин обоев"
+    },
+    {
+        "rubric-id": 184107711,
+        "ru_rubric_names": "Магазин сантехники"
+    },
+    {
+        "rubric-id": 184107713,
+        "ru_rubric_names": "Металлические заборы и ограждения"
+    },
+    {
+        "rubric-id": 184107715,
+        "ru_rubric_names": "Москитные сетки"
+    },
+    {
+        "rubric-id": 184107717,
+        "ru_rubric_names": "Напольные покрытия"
+    },
+    {
+        "rubric-id": 184107719,
+        "ru_rubric_names": "Натяжные и подвесные потолки"
+    },
+    {
+        "rubric-id": 184107721,
+        "ru_rubric_names": "Нерудные материалы"
+    },
+    {
+        "rubric-id": 184107723,
+        "ru_rubric_names": "Облицовочные материалы"
+    },
+    {
+        "rubric-id": 184107727,
+        "ru_rubric_names": "Окна"
+    },
+    {
+        "rubric-id": 184107729,
+        "ru_rubric_names": "Паркет"
+    },
+    {
+        "rubric-id": 184107731,
+        "ru_rubric_names": "Плёнки архитектурные, декоративные, защитные"
+    },
+    {
+        "rubric-id": 184107733,
+        "ru_rubric_names": "Рольставни"
+    },
+    {
+        "rubric-id": 184107735,
+        "ru_rubric_names": "Сантехника оптом"
+    },
+    {
+        "rubric-id": 184107737,
+        "ru_rubric_names": "Светопрозрачные конструкции"
+    },
+    {
+        "rubric-id": 184107741,
+        "ru_rubric_names": "Покрытия для площадок"
+    },
+    {
+        "rubric-id": 184107743,
+        "ru_rubric_names": "Стекло, стекольная продукция"
+    },
+    {
+        "rubric-id": 184107745,
+        "ru_rubric_names": "Комплектующие для окон"
+    },
+    {
+        "rubric-id": 184107747,
+        "ru_rubric_names": "Стеклопластик"
+    },
+    {
+        "rubric-id": 184107749,
+        "ru_rubric_names": "Стеклянные двери"
+    },
+    {
+        "rubric-id": 184107751,
+        "ru_rubric_names": "Стекольная мастерская"
+    },
+    {
+        "rubric-id": 184107753,
+        "ru_rubric_names": "Строительный магазин"
+    },
+    {
+        "rubric-id": 184107755,
+        "ru_rubric_names": "Стройматериалы оптом"
+    },
+    {
+        "rubric-id": 184107757,
+        "ru_rubric_names": "Сухие строительные смеси"
+    },
+    {
+        "rubric-id": 184107759,
+        "ru_rubric_names": "Теплоизоляционные материалы"
+    },
+    {
+        "rubric-id": 184107761,
+        "ru_rubric_names": "Тротуарная плитка"
+    },
+    {
+        "rubric-id": 184107763,
+        "ru_rubric_names": "Фасады и фасадные системы"
+    },
+    {
+        "rubric-id": 184107765,
+        "ru_rubric_names": "Цемент"
+    },
+    {
+        "rubric-id": 184107775,
+        "ru_rubric_names": "Сетевое оборудование"
+    },
+    {
+        "rubric-id": 184107777,
+        "ru_rubric_names": "Телекоммуникационное оборудование"
+    },
+    {
+        "rubric-id": 184107781,
+        "ru_rubric_names": "GPS-навигаторы"
+    },
+    {
+        "rubric-id": 184107783,
+        "ru_rubric_names": "Оператор сотовой связи"
+    },
+    {
+        "rubric-id": 184107787,
+        "ru_rubric_names": "Ремонт телефонов"
+    },
+    {
+        "rubric-id": 184107789,
+        "ru_rubric_names": "Салон связи"
+    },
+    {
+        "rubric-id": 184107791,
+        "ru_rubric_names": "Мониторинг автотранспорта"
+    },
+    {
+        "rubric-id": 184107795,
+        "ru_rubric_names": "Предприятие связи"
+    },
+    {
+        "rubric-id": 184107797,
+        "ru_rubric_names": "Оператор спутниковой связи"
+    },
+    {
+        "rubric-id": 184107799,
+        "ru_rubric_names": "Телекоммуникационная компания"
+    },
+    {
+        "rubric-id": 184107803,
+        "ru_rubric_names": "Радиотехника"
+    },
+    {
+        "rubric-id": 184107817,
+        "ru_rubric_names": "Городская телефонная сеть"
+    },
+    {
+        "rubric-id": 184107833,
+        "ru_rubric_names": "Магазин дисков BD, CD, DVD"
+    },
+    {
+        "rubric-id": 184107835,
+        "ru_rubric_names": "Магазин электроники"
+    },
+    {
+        "rubric-id": 184107839,
+        "ru_rubric_names": "Ремонт фотоаппаратов"
+    },
+    {
+        "rubric-id": 184107841,
+        "ru_rubric_names": "Фотомагазин"
+    },
+    {
+        "rubric-id": 184107845,
+        "ru_rubric_names": "Бытовая техника оптом"
+    },
+    {
+        "rubric-id": 184107851,
+        "ru_rubric_names": "Кофемашины, кофейные автоматы"
+    },
+    {
+        "rubric-id": 184107853,
+        "ru_rubric_names": "Магазин бытовой техники"
+    },
+    {
+        "rubric-id": 184107861,
+        "ru_rubric_names": "Швейные и вязальные машины"
+    },
+    {
+        "rubric-id": 184107869,
+        "ru_rubric_names": "Корпусная мебель"
+    },
+    {
+        "rubric-id": 184107871,
+        "ru_rubric_names": "Магазин мебели"
+    },
+    {
+        "rubric-id": 184107873,
+        "ru_rubric_names": "Мебель для кухни"
+    },
+    {
+        "rubric-id": 184107877,
+        "ru_rubric_names": "Мягкая мебель"
+    },
+    {
+        "rubric-id": 184107879,
+        "ru_rubric_names": "Мебель на заказ"
+    },
+    {
+        "rubric-id": 184107881,
+        "ru_rubric_names": "Ремонт мебели"
+    },
+    {
+        "rubric-id": 184107883,
+        "ru_rubric_names": "Сборка мебели"
+    },
+    {
+        "rubric-id": 184107887,
+        "ru_rubric_names": "Шкафы-купе"
+    },
+    {
+        "rubric-id": 184107889,
+        "ru_rubric_names": "Эксклюзивная мебель"
+    },
+    {
+        "rubric-id": 184107893,
+        "ru_rubric_names": "Алкогольная продукция оптом"
+    },
+    {
+        "rubric-id": 184107895,
+        "ru_rubric_names": "Безалкогольные напитки оптом"
+    },
+    {
+        "rubric-id": 184107897,
+        "ru_rubric_names": "Вина и винные напитки оптом"
+    },
+    {
+        "rubric-id": 184107899,
+        "ru_rubric_names": "Магазин алкогольных напитков"
+    },
+    {
+        "rubric-id": 184107901,
+        "ru_rubric_names": "Магазин воды"
+    },
+    {
+        "rubric-id": 184107903,
+        "ru_rubric_names": "Магазин табака и курительных принадлежностей"
+    },
+    {
+        "rubric-id": 184107905,
+        "ru_rubric_names": "Табачная продукция оптом"
+    },
+    {
+        "rubric-id": 184107909,
+        "ru_rubric_names": "Ателье по пошиву одежды"
+    },
+    {
+        "rubric-id": 184107915,
+        "ru_rubric_names": "Военная форма"
+    },
+    {
+        "rubric-id": 184107917,
+        "ru_rubric_names": "Войлочные и фетровые изделия"
+    },
+    {
+        "rubric-id": 184107919,
+        "ru_rubric_names": "Галантерейные изделия оптом"
+    },
+    {
+        "rubric-id": 184107921,
+        "ru_rubric_names": "Пошив и оптовая продажа головных уборов"
+    },
+    {
+        "rubric-id": 184107923,
+        "ru_rubric_names": "Магазин джинсовой одежды"
+    },
+    {
+        "rubric-id": 184107925,
+        "ru_rubric_names": "Карнавальные, театральные и танцевальные костюмы"
+    },
+    {
+        "rubric-id": 184107927,
+        "ru_rubric_names": "Кожаные изделия оптом"
+    },
+    {
+        "rubric-id": 184107929,
+        "ru_rubric_names": "Комиссионный магазин"
+    },
+    {
+        "rubric-id": 184107933,
+        "ru_rubric_names": "Магазин белья и купальников"
+    },
+    {
+        "rubric-id": 184107935,
+        "ru_rubric_names": "Магазин галантереи и аксессуаров"
+    },
+    {
+        "rubric-id": 184107937,
+        "ru_rubric_names": "Магазин головных уборов"
+    },
+    {
+        "rubric-id": 184107939,
+        "ru_rubric_names": "Магазин кожи и меха"
+    },
+    {
+        "rubric-id": 184107941,
+        "ru_rubric_names": "Магазин обуви"
+    },
+    {
+        "rubric-id": 184107943,
+        "ru_rubric_names": "Магазин одежды"
+    },
+    {
+        "rubric-id": 184107945,
+        "ru_rubric_names": "Магазин часов"
+    },
+    {
+        "rubric-id": 184107947,
+        "ru_rubric_names": "Меховая компания"
+    },
+    {
+        "rubric-id": 184107949,
+        "ru_rubric_names": "Меховое ателье"
+    },
+    {
+        "rubric-id": 184107953,
+        "ru_rubric_names": "Одежда больших размеров"
+    },
+    {
+        "rubric-id": 184107955,
+        "ru_rubric_names": "Магазин сумок и чемоданов"
+    },
+    {
+        "rubric-id": 184107957,
+        "ru_rubric_names": "Салон вечерней одежды"
+    },
+    {
+        "rubric-id": 184107959,
+        "ru_rubric_names": "Секонд-хенд"
+    },
+    {
+        "rubric-id": 184107961,
+        "ru_rubric_names": "Производство и оптовая продажа часов"
+    },
+    {
+        "rubric-id": 184107963,
+        "ru_rubric_names": "Магазин чулок и колготок"
+    },
+    {
+        "rubric-id": 184107967,
+        "ru_rubric_names": "Магазин посуды"
+    },
+    {
+        "rubric-id": 184107971,
+        "ru_rubric_names": "Одноразовая посуда"
+    },
+    {
+        "rubric-id": 184107973,
+        "ru_rubric_names": "Посуда оптом"
+    },
+    {
+        "rubric-id": 184107981,
+        "ru_rubric_names": "Антикварный магазин"
+    },
+    {
+        "rubric-id": 184107983,
+        "ru_rubric_names": "Гипсовые изделия"
+    },
+    {
+        "rubric-id": 184107985,
+        "ru_rubric_names": "Гобелены"
+    },
+    {
+        "rubric-id": 184107987,
+        "ru_rubric_names": "Ёлки и ёлочные игрушки"
+    },
+    {
+        "rubric-id": 184107989,
+        "ru_rubric_names": "Жалюзи и рулонные шторы"
+    },
+    {
+        "rubric-id": 184107991,
+        "ru_rubric_names": "Искусственные растения и цветы"
+    },
+    {
+        "rubric-id": 184107993,
+        "ru_rubric_names": "Камины, печи"
+    },
+    {
+        "rubric-id": 184107995,
+        "ru_rubric_names": "Керамическая плитка"
+    },
+    {
+        "rubric-id": 184107997,
+        "ru_rubric_names": "Ковровые покрытия"
+    },
+    {
+        "rubric-id": 184107999,
+        "ru_rubric_names": "Магазин ковров"
+    },
+    {
+        "rubric-id": 184108001,
+        "ru_rubric_names": "Магазин подарков и сувениров"
+    },
+    {
+        "rubric-id": 184108003,
+        "ru_rubric_names": "Светильники"
+    },
+    {
+        "rubric-id": 184108005,
+        "ru_rubric_names": "Товары для интерьера"
+    },
+    {
+        "rubric-id": 184108007,
+        "ru_rubric_names": "Шторы, карнизы"
+    },
+    {
+        "rubric-id": 184108013,
+        "ru_rubric_names": "Диетические и диабетические продукты"
+    },
+    {
+        "rubric-id": 184108015,
+        "ru_rubric_names": "Кондитерские изделия оптом"
+    },
+    {
+        "rubric-id": 184108017,
+        "ru_rubric_names": "Кондитерская"
+    },
+    {
+        "rubric-id": 184108023,
+        "ru_rubric_names": "Магазин кулинарии"
+    },
+    {
+        "rubric-id": 184108025,
+        "ru_rubric_names": "Молочный магазин"
+    },
+    {
+        "rubric-id": 184108027,
+        "ru_rubric_names": "Магазин мяса, колбас"
+    },
+    {
+        "rubric-id": 184108029,
+        "ru_rubric_names": "Магазин овощей и фруктов"
+    },
+    {
+        "rubric-id": 184108031,
+        "ru_rubric_names": "Магазин продуктов"
+    },
+    {
+        "rubric-id": 184108033,
+        "ru_rubric_names": "Магазин рыбы и морепродуктов"
+    },
+    {
+        "rubric-id": 184108035,
+        "ru_rubric_names": "Магазин чая и кофе"
+    },
+    {
+        "rubric-id": 184108039,
+        "ru_rubric_names": "Магазин ткани"
+    },
+    {
+        "rubric-id": 184108041,
+        "ru_rubric_names": "Матрасы"
+    },
+    {
+        "rubric-id": 184108043,
+        "ru_rubric_names": "Магазин постельных принадлежностей"
+    },
+    {
+        "rubric-id": 184108045,
+        "ru_rubric_names": "Текстильная компания"
+    },
+    {
+        "rubric-id": 184108047,
+        "ru_rubric_names": "Трикотаж, трикотажные изделия"
+    },
+    {
+        "rubric-id": 184108051,
+        "ru_rubric_names": "Магазин для садоводов"
+    },
+    {
+        "rubric-id": 184108053,
+        "ru_rubric_names": "Магазин семян"
+    },
+    {
+        "rubric-id": 184108055,
+        "ru_rubric_names": "Садовая мебель"
+    },
+    {
+        "rubric-id": 184108057,
+        "ru_rubric_names": "Садовый инвентарь и техника"
+    },
+    {
+        "rubric-id": 184108063,
+        "ru_rubric_names": "Нижнее бельё оптом"
+    },
+    {
+        "rubric-id": 184108065,
+        "ru_rubric_names": "Оптовая компания"
+    },
+    {
+        "rubric-id": 184108067,
+        "ru_rubric_names": "Оптовый магазин"
+    },
+    {
+        "rubric-id": 184108069,
+        "ru_rubric_names": "Продукты питания оптом"
+    },
+    {
+        "rubric-id": 184108071,
+        "ru_rubric_names": "Рынок"
+    },
+    {
+        "rubric-id": 184108075,
+        "ru_rubric_names": "Гипермаркет"
+    },
+    {
+        "rubric-id": 184108079,
+        "ru_rubric_names": "Супермаркет"
+    },
+    {
+        "rubric-id": 184108081,
+        "ru_rubric_names": "Товары по каталогам"
+    },
+    {
+        "rubric-id": 184108083,
+        "ru_rubric_names": "Торговый центр"
+    },
+    {
+        "rubric-id": 184108085,
+        "ru_rubric_names": "Универмаг"
+    },
+    {
+        "rubric-id": 184108089,
+        "ru_rubric_names": "Бытовая химия оптом"
+    },
+    {
+        "rubric-id": 184108091,
+        "ru_rubric_names": "Замки и запорные устройства"
+    },
+    {
+        "rubric-id": 184108093,
+        "ru_rubric_names": "Магазин хозтоваров и бытовой химии"
+    },
+    {
+        "rubric-id": 184108095,
+        "ru_rubric_names": "Магазин электротоваров"
+    },
+    {
+        "rubric-id": 184108097,
+        "ru_rubric_names": "Товары для дома"
+    },
+    {
+        "rubric-id": 184108099,
+        "ru_rubric_names": "Хозтовары оптом"
+    },
+    {
+        "rubric-id": 184108105,
+        "ru_rubric_names": "Авиакомпания"
+    },
+    {
+        "rubric-id": 184108107,
+        "ru_rubric_names": "Управление и обслуживание воздушного транспорта"
+    },
+    {
+        "rubric-id": 184108109,
+        "ru_rubric_names": "Аренда и заказ самолётов, вертолётов"
+    },
+    {
+        "rubric-id": 184108111,
+        "ru_rubric_names": "Аэропорт"
+    },
+    {
+        "rubric-id": 184108117,
+        "ru_rubric_names": "Автобусный парк"
+    },
+    {
+        "rubric-id": 184108119,
+        "ru_rubric_names": "Автобусные междугородные перевозки"
+    },
+    {
+        "rubric-id": 184108121,
+        "ru_rubric_names": "Автовокзал, автостанция"
+    },
+    {
+        "rubric-id": 184108127,
+        "ru_rubric_names": "Морское агентство"
+    },
+    {
+        "rubric-id": 184108129,
+        "ru_rubric_names": "Водная база, лодочная станция"
+    },
+    {
+        "rubric-id": 184108131,
+        "ru_rubric_names": "Управление и обслуживание водных путей"
+    },
+    {
+        "rubric-id": 184108133,
+        "ru_rubric_names": "Пароходство, порт"
+    },
+    {
+        "rubric-id": 184108135,
+        "ru_rubric_names": "Морские и речные вокзалы"
+    },
+    {
+        "rubric-id": 184108143,
+        "ru_rubric_names": "Управление и обслуживание городского транспорта"
+    },
+    {
+        "rubric-id": 184108145,
+        "ru_rubric_names": "Трамвайное депо"
+    },
+    {
+        "rubric-id": 184108147,
+        "ru_rubric_names": "Трамвайная станция"
+    },
+    {
+        "rubric-id": 184108149,
+        "ru_rubric_names": "Троллейбусный парк"
+    },
+    {
+        "rubric-id": 184108151,
+        "ru_rubric_names": "Троллейбусная станция"
+    },
+    {
+        "rubric-id": 184108155,
+        "ru_rubric_names": "Железнодорожный вокзал"
+    },
+    {
+        "rubric-id": 184108157,
+        "ru_rubric_names": "Управление и обслуживание железных дорог"
+    },
+    {
+        "rubric-id": 184108161,
+        "ru_rubric_names": "Заказ автомобилей"
+    },
+    {
+        "rubric-id": 184108163,
+        "ru_rubric_names": "Прокат автомобилей"
+    },
+    {
+        "rubric-id": 184108171,
+        "ru_rubric_names": "Такси"
+    },
+    {
+        "rubric-id": 184108175,
+        "ru_rubric_names": "Автомобильные грузоперевозки"
+    },
+    {
+        "rubric-id": 184108177,
+        "ru_rubric_names": "Автотранспортное предприятие, автобаза"
+    },
+    {
+        "rubric-id": 184108179,
+        "ru_rubric_names": "Грузовые авиаперевозки"
+    },
+    {
+        "rubric-id": 184108181,
+        "ru_rubric_names": "Железнодорожные грузоперевозки"
+    },
+    {
+        "rubric-id": 184108183,
+        "ru_rubric_names": "Контейнерные перевозки"
+    },
+    {
+        "rubric-id": 184108185,
+        "ru_rubric_names": "Логистическая компания"
+    },
+    {
+        "rubric-id": 184108187,
+        "ru_rubric_names": "Перевозка автомобилей"
+    },
+    {
+        "rubric-id": 184108189,
+        "ru_rubric_names": "Перевозка грузов водным транспортом"
+    },
+    {
+        "rubric-id": 184108191,
+        "ru_rubric_names": "Перевозка негабаритных грузов"
+    },
+    {
+        "rubric-id": 184108193,
+        "ru_rubric_names": "Перевозка нефтепродуктов"
+    },
+    {
+        "rubric-id": 184108197,
+        "ru_rubric_names": "Переезды"
+    },
+    {
+        "rubric-id": 184108199,
+        "ru_rubric_names": "Услуги грузчиков"
+    },
+    {
+        "rubric-id": 184108201,
+        "ru_rubric_names": "Экспедирование грузов"
+    },
+    {
+        "rubric-id": 184108207,
+        "ru_rubric_names": "Бытовые услуги"
+    },
+    {
+        "rubric-id": 184108209,
+        "ru_rubric_names": "Вывоз мусора и отходов"
+    },
+    {
+        "rubric-id": 184108211,
+        "ru_rubric_names": "Дезинфекция, дезинсекция, дератизация"
+    },
+    {
+        "rubric-id": 184108213,
+        "ru_rubric_names": "Металлоремонт"
+    },
+    {
+        "rubric-id": 184108217,
+        "ru_rubric_names": "Прачечная"
+    },
+    {
+        "rubric-id": 184108219,
+        "ru_rubric_names": "Пункт проката"
+    },
+    {
+        "rubric-id": 184108221,
+        "ru_rubric_names": "Ремонт аудиотехники и видеотехники"
+    },
+    {
+        "rubric-id": 184108223,
+        "ru_rubric_names": "Ремонт бытовой техники"
+    },
+    {
+        "rubric-id": 184108227,
+        "ru_rubric_names": "Ремонт кожи"
+    },
+    {
+        "rubric-id": 184108229,
+        "ru_rubric_names": "Ремонт обуви"
+    },
+    {
+        "rubric-id": 184108239,
+        "ru_rubric_names": "Ремонт часов"
+    },
+    {
+        "rubric-id": 184108247,
+        "ru_rubric_names": "Трубочисты"
+    },
+    {
+        "rubric-id": 184108249,
+        "ru_rubric_names": "Установка, ремонт и вскрытие замков"
+    },
+    {
+        "rubric-id": 184108251,
+        "ru_rubric_names": "Химчистка"
+    },
+    {
+        "rubric-id": 184108253,
+        "ru_rubric_names": "Чистка ковров"
+    },
+    {
+        "rubric-id": 184108257,
+        "ru_rubric_names": "Аэросъёмка"
+    },
+    {
+        "rubric-id": 184108259,
+        "ru_rubric_names": "Видеосъёмка"
+    },
+    {
+        "rubric-id": 184108261,
+        "ru_rubric_names": "Фотоуслуги"
+    },
+    {
+        "rubric-id": 184108265,
+        "ru_rubric_names": "Студия ландшафтного дизайна"
+    },
+    {
+        "rubric-id": 184108267,
+        "ru_rubric_names": "Студия дизайна"
+    },
+    {
+        "rubric-id": 184108271,
+        "ru_rubric_names": "Доставка воды"
+    },
+    {
+        "rubric-id": 184108273,
+        "ru_rubric_names": "Доставка еды и обедов"
+    },
+    {
+        "rubric-id": 184108275,
+        "ru_rubric_names": "Торты на заказ"
+    },
+    {
+        "rubric-id": 184108279,
+        "ru_rubric_names": "Железнодорожные и авиабилеты"
+    },
+    {
+        "rubric-id": 184108281,
+        "ru_rubric_names": "Автобусные билеты"
+    },
+    {
+        "rubric-id": 184108289,
+        "ru_rubric_names": "Аварийная служба"
+    },
+    {
+        "rubric-id": 184108295,
+        "ru_rubric_names": "Водоканал, водное хозяйство"
+    },
+    {
+        "rubric-id": 184108297,
+        "ru_rubric_names": "Служба газового хозяйства"
+    },
+    {
+        "rubric-id": 184108301,
+        "ru_rubric_names": "Коммунальная служба"
+    },
+    {
+        "rubric-id": 184108307,
+        "ru_rubric_names": "Теплоснабжение"
+    },
+    {
+        "rubric-id": 184108311,
+        "ru_rubric_names": "Энергоснабжение"
+    },
+    {
+        "rubric-id": 184108315,
+        "ru_rubric_names": "Банкетный зал"
+    },
+    {
+        "rubric-id": 184108317,
+        "ru_rubric_names": "Товары для праздника"
+    },
+    {
+        "rubric-id": 184108319,
+        "ru_rubric_names": "Доставка цветов и букетов"
+    },
+    {
+        "rubric-id": 184108321,
+        "ru_rubric_names": "Кейтеринг"
+    },
+    {
+        "rubric-id": 184108325,
+        "ru_rubric_names": "Магазин цветов"
+    },
+    {
+        "rubric-id": 184108327,
+        "ru_rubric_names": "Организация и проведение детских праздников"
+    },
+    {
+        "rubric-id": 184108329,
+        "ru_rubric_names": "Праздничное агентство"
+    },
+    {
+        "rubric-id": 184108331,
+        "ru_rubric_names": "Фейерверки и пиротехника"
+    },
+    {
+        "rubric-id": 184108335,
+        "ru_rubric_names": "Свадебный салон"
+    },
+    {
+        "rubric-id": 184108339,
+        "ru_rubric_names": "Магистральные перевозки почты"
+    },
+    {
+        "rubric-id": 184108341,
+        "ru_rubric_names": "Почтовое отделение"
+    },
+    {
+        "rubric-id": 184108345,
+        "ru_rubric_names": "Почтовые услуги"
+    },
+    {
+        "rubric-id": 184108349,
+        "ru_rubric_names": "Гравёрные работы"
+    },
+    {
+        "rubric-id": 184108351,
+        "ru_rubric_names": "Реставрационная мастерская"
+    },
+    {
+        "rubric-id": 184108357,
+        "ru_rubric_names": "Кладбище"
+    },
+    {
+        "rubric-id": 184108359,
+        "ru_rubric_names": "Крематорий"
+    },
+    {
+        "rubric-id": 184108361,
+        "ru_rubric_names": "Морг"
+    },
+    {
+        "rubric-id": 184108363,
+        "ru_rubric_names": "Изготовление памятников и надгробий"
+    },
+    {
+        "rubric-id": 184108365,
+        "ru_rubric_names": "Ритуальные принадлежности"
+    },
+    {
+        "rubric-id": 184108367,
+        "ru_rubric_names": "Ритуальные услуги"
+    },
+    {
+        "rubric-id": 184108371,
+        "ru_rubric_names": "Таксидермия"
+    },
+    {
+        "rubric-id": 219866132,
+        "ru_rubric_names": "Продажа готового бизнеса и франшиз"
+    },
+    {
+        "rubric-id": 241940622,
+        "ru_rubric_names": "Питьевые галереи и источники"
+    },
+    {
+        "rubric-id": 241940865,
+        "ru_rubric_names": "Канатная дорога, фуникулёр"
+    },
+    {
+        "rubric-id": 241941211,
+        "ru_rubric_names": "Расчётно-кассовый центр"
+    },
+    {
+        "rubric-id": 242331571,
+        "ru_rubric_names": "Совет депутатов"
+    },
+    {
+        "rubric-id": 252709577,
+        "ru_rubric_names": "Продажа земельных участков"
+    },
+    {
+        "rubric-id": 252957001,
+        "ru_rubric_names": "Ремонт садовой техники"
+    },
+    {
+        "rubric-id": 255605347,
+        "ru_rubric_names": "Выкуп автомобилей"
+    },
+    {
+        "rubric-id": 255768312,
+        "ru_rubric_names": "ТСЖ"
+    },
+    {
+        "rubric-id": 255921949,
+        "ru_rubric_names": "Отдых на ферме"
+    },
+    {
+        "rubric-id": 256037362,
+        "ru_rubric_names": "Лесопарк, заповедник"
+    },
+    {
+        "rubric-id": 258233344,
+        "ru_rubric_names": "Автоломбард"
+    },
+    {
+        "rubric-id": 265368577,
+        "ru_rubric_names": "Аутсорсинг"
+    },
+    {
+        "rubric-id": 275212651,
+        "ru_rubric_names": "Казначейство"
+    },
+    {
+        "rubric-id": 295903440,
+        "ru_rubric_names": "Визовые центры иностранных государств"
+    },
+    {
+        "rubric-id": 345869793,
+        "ru_rubric_names": "Иконописная мастерская"
+    },
+    {
+        "rubric-id": 390884805,
+        "ru_rubric_names": "Саморегулируемая организация"
+    },
+    {
+        "rubric-id": 580546880,
+        "ru_rubric_names": "Электронная платёжная система"
+    },
+    {
+        "rubric-id": 580604939,
+        "ru_rubric_names": "Детское игровое оборудование"
+    },
+    {
+        "rubric-id": 585422559,
+        "ru_rubric_names": "Ведущие праздников и мероприятий"
+    },
+    {
+        "rubric-id": 585423074,
+        "ru_rubric_names": "Частнопрактикующие врачи"
+    },
+    {
+        "rubric-id": 617849337,
+        "ru_rubric_names": "Геральдика и генеалогия"
+    },
+    {
+        "rubric-id": 642241548,
+        "ru_rubric_names": "Распространители косметики и бытовой химии"
+    },
+    {
+        "rubric-id": 667631987,
+        "ru_rubric_names": "Товары для бани и сауны"
+    },
+    {
+        "rubric-id": 680383784,
+        "ru_rubric_names": "Медицинская помощь на дому"
+    },
+    {
+        "rubric-id": 770931537,
+        "ru_rubric_names": "Спортбар"
+    },
+    {
+        "rubric-id": 780928338,
+        "ru_rubric_names": "Музыкальный клуб"
+    },
+    {
+        "rubric-id": 814731275,
+        "ru_rubric_names": "Железнодорожная пассажирская компания"
+    },
+    {
+        "rubric-id": 845622661,
+        "ru_rubric_names": "Психоневрологический интернат"
+    },
+    {
+        "rubric-id": 845629521,
+        "ru_rubric_names": "Магазин радиодеталей"
+    },
+    {
+        "rubric-id": 892505522,
+        "ru_rubric_names": "Услуги частных специалистов"
+    },
+    {
+        "rubric-id": 892508964,
+        "ru_rubric_names": "Косметология"
+    },
+    {
+        "rubric-id": 1343429186,
+        "ru_rubric_names": "Автокресла"
+    },
+    {
+        "rubric-id": 1363851944,
+        "ru_rubric_names": "Авторынок"
+    },
+    {
+        "rubric-id": 1387788996,
+        "ru_rubric_names": "Суши-бар"
+    },
+    {
+        "rubric-id": 1636761316,
+        "ru_rubric_names": "Жильё посуточно"
+    },
+    {
+        "rubric-id": 1874577368,
+        "ru_rubric_names": "Сырьё для текстильной промышленности"
+    },
+    {
+        "rubric-id": 1874578170,
+        "ru_rubric_names": "Конная амуниция"
+    },
+    {
+        "rubric-id": 1874584455,
+        "ru_rubric_names": "Автоклуб"
+    },
+    {
+        "rubric-id": 1928261506,
+        "ru_rubric_names": "Управление исполнения наказаний"
+    },
+    {
+        "rubric-id": 2521644566,
+        "ru_rubric_names": "Почтовый терминал"
+    },
+    {
+        "rubric-id": 3203853089,
+        "ru_rubric_names": "Фрезерная резка"
+    },
+    {
+        "rubric-id": 4231264634,
+        "ru_rubric_names": "Фотошкола"
+    },
+    {
+        "rubric-id": 6615355764,
+        "ru_rubric_names": "Пункт техосмотра"
+    },
+    {
+        "rubric-id": 7407769291,
+        "ru_rubric_names": "Салон бровей и ресниц"
+    },
+    {
+        "rubric-id": 9065909266,
+        "ru_rubric_names": "Туалет"
+    },
+    {
+        "rubric-id": 9065913217,
+        "ru_rubric_names": "Туристический инфоцентр"
+    },
+    {
+        "rubric-id": 9561111444,
+        "ru_rubric_names": "Детейлинг"
+    },
+    {
+        "rubric-id": 9653087989,
+        "ru_rubric_names": "Ремонт велосипедов"
+    },
+    {
+        "rubric-id": 9933541986,
+        "ru_rubric_names": "Прокат велосипедов"
+    },
+    {
+        "rubric-id": 10012252304,
+        "ru_rubric_names": "Салон эротического массажа"
+    },
+    {
+        "rubric-id": 12657125998,
+        "ru_rubric_names": "Факторинговая компания"
+    },
+    {
+        "rubric-id": 12657199218,
+        "ru_rubric_names": "Проверка на полиграфе"
+    },
+    {
+        "rubric-id": 12912484613,
+        "ru_rubric_names": "Производство и продажа аттракционов"
+    },
+    {
+        "rubric-id": 13885210461,
+        "ru_rubric_names": "Ветеринарная лаборатория"
+    },
+    {
+        "rubric-id": 13921233007,
+        "ru_rubric_names": "Авторазбор"
+    },
+    {
+        "rubric-id": 13922233267,
+        "ru_rubric_names": "Питомник животных"
+    },
+    {
+        "rubric-id": 14940940852,
+        "ru_rubric_names": "Строительный гипермаркет"
+    },
+    {
+        "rubric-id": 15631344006,
+        "ru_rubric_names": "Лазертаг"
+    },
+    {
+        "rubric-id": 16058225738,
+        "ru_rubric_names": "Приют для животных"
+    },
+    {
+        "rubric-id": 17127565621,
+        "ru_rubric_names": "Ёлочный базар"
+    },
+    {
+        "rubric-id": 18000698561,
+        "ru_rubric_names": "Ремонт персонального электротранспорта"
+    },
+    {
+        "rubric-id": 18552332209,
+        "ru_rubric_names": "Аренда фотостудий"
+    },
+    {
+        "rubric-id": 18726253054,
+        "ru_rubric_names": "МФЦ"
+    },
+    {
+        "rubric-id": 18955887118,
+        "ru_rubric_names": "Пункт выдачи"
+    },
+    {
+        "rubric-id": 19128631387,
+        "ru_rubric_names": "Скалодром"
+    },
+    {
+        "rubric-id": 19244809283,
+        "ru_rubric_names": "Караоке-клуб"
+    },
+    {
+        "rubric-id": 19244822968,
+        "ru_rubric_names": "Магазин верхней одежды"
+    },
+    {
+        "rubric-id": 20323898407,
+        "ru_rubric_names": "Перинатальный центр"
+    },
+    {
+        "rubric-id": 20476284572,
+        "ru_rubric_names": "Ногтевая студия"
+    },
+    {
+        "rubric-id": 20506802526,
+        "ru_rubric_names": "Запчасти и аксессуары для бытовой техники"
+    },
+    {
+        "rubric-id": 20699378251,
+        "ru_rubric_names": "Стоянка такси"
+    },
+    {
+        "rubric-id": 20699506347,
+        "ru_rubric_names": "Хостел"
+    },
+    {
+        "rubric-id": 23078342437,
+        "ru_rubric_names": "Мини-гольф"
+    },
+    {
+        "rubric-id": 23663725205,
+        "ru_rubric_names": "Страйкбол"
+    },
+    {
+        "rubric-id": 24040591040,
+        "ru_rubric_names": "Кайтсёрфинг"
+    },
+    {
+        "rubric-id": 24380081615,
+        "ru_rubric_names": "3D-печать"
+    },
+    {
+        "rubric-id": 26995300090,
+        "ru_rubric_names": "Верёвочный парк"
+    },
+    {
+        "rubric-id": 29135905636,
+        "ru_rubric_names": "Место для пикника"
+    },
+    {
+        "rubric-id": 31028250560,
+        "ru_rubric_names": "Школа для будущих мам"
+    },
+    {
+        "rubric-id": 31191171198,
+        "ru_rubric_names": "Спортивная касса"
+    },
+    {
+        "rubric-id": 31320523497,
+        "ru_rubric_names": "Инфокиоск"
+    },
+    {
+        "rubric-id": 31370163603,
+        "ru_rubric_names": "Антикафе"
+    },
+    {
+        "rubric-id": 31651529069,
+        "ru_rubric_names": "Ремонт лодок"
+    },
+    {
+        "rubric-id": 32209642850,
+        "ru_rubric_names": "Микрофинансирование"
+    },
+    {
+        "rubric-id": 32428107968,
+        "ru_rubric_names": "Товары для пчеловодства"
+    },
+    {
+        "rubric-id": 32432793389,
+        "ru_rubric_names": "Экстренная социальная психологическая помощь"
+    },
+    {
+        "rubric-id": 32562640747,
+        "ru_rubric_names": "Кадастровые работы"
+    },
+    {
+        "rubric-id": 32981347822,
+        "ru_rubric_names": "Публичный центр правовой информации"
+    },
+    {
+        "rubric-id": 34023894397,
+        "ru_rubric_names": "Зимние развлечения"
+    },
+    {
+        "rubric-id": 34866769160,
+        "ru_rubric_names": "Кальян-бар"
+    },
+    {
+        "rubric-id": 35193114937,
+        "ru_rubric_names": "Кофейня"
+    },
+    {
+        "rubric-id": 35284197120,
+        "ru_rubric_names": "Следственный комитет"
+    },
+    {
+        "rubric-id": 35325140238,
+        "ru_rubric_names": "Баня"
+    },
+    {
+        "rubric-id": 36609242320,
+        "ru_rubric_names": "Магазин детской обуви"
+    },
+    {
+        "rubric-id": 36656699923,
+        "ru_rubric_names": "Вневедомственная охрана"
+    },
+    {
+        "rubric-id": 37310772697,
+        "ru_rubric_names": "Начальная школа"
+    },
+    {
+        "rubric-id": 38174851981,
+        "ru_rubric_names": "Товары для кондитеров"
+    },
+    {
+        "rubric-id": 38423433944,
+        "ru_rubric_names": "Магазин приданого"
+    },
+    {
+        "rubric-id": 38423739286,
+        "ru_rubric_names": "Товары и услуги для паломников"
+    },
+    {
+        "rubric-id": 38567213983,
+        "ru_rubric_names": "Гидроабразивная резка"
+    },
+    {
+        "rubric-id": 40262971852,
+        "ru_rubric_names": "Магазин беспошлинной торговли"
+    },
+    {
+        "rubric-id": 40769093911,
+        "ru_rubric_names": "Соляная пещера"
+    },
+    {
+        "rubric-id": 40891073018,
+        "ru_rubric_names": "Магазин пива"
+    },
+    {
+        "rubric-id": 41074163667,
+        "ru_rubric_names": "Автосвет"
+    },
+    {
+        "rubric-id": 41235743198,
+        "ru_rubric_names": "Запчасти для мототехники"
+    },
+    {
+        "rubric-id": 41235778543,
+        "ru_rubric_names": "Ремонт мототехники"
+    },
+    {
+        "rubric-id": 41430094175,
+        "ru_rubric_names": "Спортивный, тренажёрный зал"
+    },
+    {
+        "rubric-id": 41694184644,
+        "ru_rubric_names": "Оргстекло, поликарбонат"
+    },
+    {
+        "rubric-id": 42959413904,
+        "ru_rubric_names": "Швейная фурнитура"
+    },
+    {
+        "rubric-id": 43413743342,
+        "ru_rubric_names": "Центр планирования семьи"
+    },
+    {
+        "rubric-id": 43459074165,
+        "ru_rubric_names": "Консьерж-сервис"
+    },
+    {
+        "rubric-id": 43752131937,
+        "ru_rubric_names": "Станция зарядки электромобилей"
+    },
+    {
+        "rubric-id": 43929590338,
+        "ru_rubric_names": "Детская мебель"
+    },
+    {
+        "rubric-id": 44060898610,
+        "ru_rubric_names": "Мебель для ванных комнат"
+    },
+    {
+        "rubric-id": 44904426857,
+        "ru_rubric_names": "Оцифровка"
+    },
+    {
+        "rubric-id": 47803256373,
+        "ru_rubric_names": "Прощальный зал"
+    },
+    {
+        "rubric-id": 48491606705,
+        "ru_rubric_names": "Ремонт одежды"
+    },
+    {
+        "rubric-id": 50227713954,
+        "ru_rubric_names": "Мебель для спальни"
+    },
+    {
+        "rubric-id": 51258116372,
+        "ru_rubric_names": "Конференц-зал"
+    },
+    {
+        "rubric-id": 51371667410,
+        "ru_rubric_names": "Плазменная резка металла"
+    },
+    {
+        "rubric-id": 51846601764,
+        "ru_rubric_names": "Пункт сбора помощи"
+    },
+    {
+        "rubric-id": 52444182335,
+        "ru_rubric_names": "Отделение милиции"
+    },
+    {
+        "rubric-id": 52703089968,
+        "ru_rubric_names": "Изготовление номерных знаков"
+    },
+    {
+        "rubric-id": 52860047464,
+        "ru_rubric_names": "Услуги водителя без автомобиля"
+    },
+    {
+        "rubric-id": 52984923455,
+        "ru_rubric_names": "Товары для мобильных телефонов"
+    },
+    {
+        "rubric-id": 52986023756,
+        "ru_rubric_names": "Синагога"
+    },
+    {
+        "rubric-id": 52986399301,
+        "ru_rubric_names": "Католический храм"
+    },
+    {
+        "rubric-id": 53436519791,
+        "ru_rubric_names": "Православный храм"
+    },
+    {
+        "rubric-id": 53437260559,
+        "ru_rubric_names": "Специализированная больница"
+    },
+    {
+        "rubric-id": 56396710895,
+        "ru_rubric_names": "Квесты"
+    },
+    {
+        "rubric-id": 56914142386,
+        "ru_rubric_names": "Услуги для ювелиров"
+    },
+    {
+        "rubric-id": 56939813315,
+        "ru_rubric_names": "Установка кондиционеров"
+    },
+    {
+        "rubric-id": 58594191367,
+        "ru_rubric_names": "Удостоверяющий центр"
+    },
+    {
+        "rubric-id": 59363595070,
+        "ru_rubric_names": "Кожевенное сырьё"
+    },
+    {
+        "rubric-id": 59532250699,
+        "ru_rubric_names": "Изоляционные работы"
+    },
+    {
+        "rubric-id": 59950248280,
+        "ru_rubric_names": "Велопарковка"
+    },
+    {
+        "rubric-id": 60934766081,
+        "ru_rubric_names": "Коворкинг"
+    },
+    {
+        "rubric-id": 62304669795,
+        "ru_rubric_names": "Wi-Fi хот-спот"
+    },
+    {
+        "rubric-id": 62907138794,
+        "ru_rubric_names": "Остеопатия"
+    },
+    {
+        "rubric-id": 64960171169,
+        "ru_rubric_names": "Жилой комплекс"
+    },
+    {
+        "rubric-id": 65565837500,
+        "ru_rubric_names": "Зуботехническая лаборатория"
+    },
+    {
+        "rubric-id": 66092393697,
+        "ru_rubric_names": "Оборудование для бассейнов"
+    },
+    {
+        "rubric-id": 66350561707,
+        "ru_rubric_names": "Магазин электротранспорта"
+    },
+    {
+        "rubric-id": 68190731095,
+        "ru_rubric_names": "Магазин суши и азиатских продуктов"
+    },
+    {
+        "rubric-id": 70647216620,
+        "ru_rubric_names": "Логопеды"
+    },
+    {
+        "rubric-id": 72160596923,
+        "ru_rubric_names": "Магазин пляжных товаров"
+    },
+    {
+        "rubric-id": 73671372243,
+        "ru_rubric_names": "Фонд социального страхования"
+    },
+    {
+        "rubric-id": 73797592236,
+        "ru_rubric_names": "Мировой судья"
+    },
+    {
+        "rubric-id": 75269254104,
+        "ru_rubric_names": "Топливные карты"
+    },
+    {
+        "rubric-id": 75811549599,
+        "ru_rubric_names": "Ремонт сумок и чемоданов"
+    },
+    {
+        "rubric-id": 75972823819,
+        "ru_rubric_names": "Ремонт гидравлического и пневматического оборудования"
+    },
+    {
+        "rubric-id": 76163258340,
+        "ru_rubric_names": "Массажное оборудование"
+    },
+    {
+        "rubric-id": 77500452834,
+        "ru_rubric_names": "Спортплощадка, воркаут"
+    },
+    {
+        "rubric-id": 78317142772,
+        "ru_rubric_names": "Промышленная очистка сооружений и оборудования"
+    },
+    {
+        "rubric-id": 79439712472,
+        "ru_rubric_names": "Железнодорожная станция"
+    },
+    {
+        "rubric-id": 79749836877,
+        "ru_rubric_names": "Питомник растений"
+    },
+    {
+        "rubric-id": 82858001211,
+        "ru_rubric_names": "Бизнес-инкубатор"
+    },
+    {
+        "rubric-id": 84843009243,
+        "ru_rubric_names": "Фотостудия"
+    },
+    {
+        "rubric-id": 87599323630,
+        "ru_rubric_names": "Бар безалкогольных напитков"
+    },
+    {
+        "rubric-id": 87599854587,
+        "ru_rubric_names": "Площадки для сноуборда"
+    },
+    {
+        "rubric-id": 88844575693,
+        "ru_rubric_names": "Детские игровые залы и площадки"
+    },
+    {
+        "rubric-id": 89667439494,
+        "ru_rubric_names": "Полигон ТБО"
+    },
+    {
+        "rubric-id": 89667850478,
+        "ru_rubric_names": "Пагода"
+    },
+    {
+        "rubric-id": 89667922902,
+        "ru_rubric_names": "Транспортная касса"
+    },
+    {
+        "rubric-id": 89683368508,
+        "ru_rubric_names": "Достопримечательность"
+    },
+    {
+        "rubric-id": 89800553252,
+        "ru_rubric_names": "Вейп шоп"
+    },
+    {
+        "rubric-id": 89968878637,
+        "ru_rubric_names": "Ремонт товаров для рыбалки"
+    },
+    {
+        "rubric-id": 90078724394,
+        "ru_rubric_names": "Протестантская церковь"
+    },
+    {
+        "rubric-id": 90081707756,
+        "ru_rubric_names": "Монастырь"
+    },
+    {
+        "rubric-id": 90152190901,
+        "ru_rubric_names": "Парковочная зона"
+    },
+    {
+        "rubric-id": 91159992255,
+        "ru_rubric_names": "Центр профориентации"
+    },
+    {
+        "rubric-id": 93081206027,
+        "ru_rubric_names": "Согласование наружной рекламы"
+    },
+    {
+        "rubric-id": 96105634495,
+        "ru_rubric_names": "Сапсёрфинг"
+    },
+    {
+        "rubric-id": 98035268007,
+        "ru_rubric_names": "Теннисный корт"
+    },
+    {
+        "rubric-id": 99035970482,
+        "ru_rubric_names": "Аренда зарядных устройств"
+    },
+    {
+        "rubric-id": 100301100019,
+        "ru_rubric_names": "Флоатинг"
+    },
+    {
+        "rubric-id": 105487623570,
+        "ru_rubric_names": "Фурнитура для стеклянных конструкций"
+    },
+    {
+        "rubric-id": 107482200336,
+        "ru_rubric_names": "Сквош-клуб"
+    },
+    {
+        "rubric-id": 109029491714,
+        "ru_rubric_names": "Обслуживание бассейнов"
+    },
+    {
+        "rubric-id": 111105474159,
+        "ru_rubric_names": "Шугаринг"
+    },
+    {
+        "rubric-id": 111356394537,
+        "ru_rubric_names": "Автоподбор"
+    },
+    {
+        "rubric-id": 112516403771,
+        "ru_rubric_names": "Скейт-парк"
+    },
+    {
+        "rubric-id": 118042931978,
+        "ru_rubric_names": "Киношкола"
+    },
+    {
+        "rubric-id": 119373172320,
+        "ru_rubric_names": "Киберспорт"
+    },
+    {
+        "rubric-id": 124171165826,
+        "ru_rubric_names": "Грили, мангалы"
+    },
+    {
+        "rubric-id": 126017967241,
+        "ru_rubric_names": "Вейк-клуб"
+    },
+    {
+        "rubric-id": 126204989789,
+        "ru_rubric_names": "Технопарк"
+    },
+    {
+        "rubric-id": 129603229909,
+        "ru_rubric_names": "Ароматовары"
+    },
+    {
+        "rubric-id": 132743426043,
+        "ru_rubric_names": "Мотошкола"
+    },
+    {
+        "rubric-id": 135681956006,
+        "ru_rubric_names": "Снежные горки в парках"
+    },
+    {
+        "rubric-id": 141571795088,
+        "ru_rubric_names": "Место памятных событий"
+    },
+    {
+        "rubric-id": 146516537320,
+        "ru_rubric_names": "Офис продаж"
+    },
+    {
+        "rubric-id": 149630553927,
+        "ru_rubric_names": "Вакуумное оборудование"
+    },
+    {
+        "rubric-id": 150049871970,
+        "ru_rubric_names": "Апартаменты"
+    },
+    {
+        "rubric-id": 151833982406,
+        "ru_rubric_names": "Ледяные горки в парках"
+    },
+    {
+        "rubric-id": 153105034992,
+        "ru_rubric_names": "Ремонт и дублирование автомобильных ключей и брелоков"
+    },
+    {
+        "rubric-id": 153130025614,
+        "ru_rubric_names": "Ремонт электронных сигарет"
+    },
+    {
+        "rubric-id": 154362991348,
+        "ru_rubric_names": "Аниме-магазин"
+    },
+    {
+        "rubric-id": 155686551196,
+        "ru_rubric_names": "Социальная реабилитация"
+    },
+    {
+        "rubric-id": 160180737191,
+        "ru_rubric_names": "Съёмка виртуальных туров и панорам"
+    },
+    {
+        "rubric-id": 162885333168,
+        "ru_rubric_names": "Магазин беговелов и самокатов"
+    },
+    {
+        "rubric-id": 167546488180,
+        "ru_rubric_names": "Магазин сыров"
+    },
+    {
+        "rubric-id": 168722155765,
+        "ru_rubric_names": "Оператор каршеринга"
+    },
+    {
+        "rubric-id": 171647048345,
+        "ru_rubric_names": "Дата-центр"
+    },
+    {
+        "rubric-id": 172632153000,
+        "ru_rubric_names": "Ремонт очков"
+    },
+    {
+        "rubric-id": 174404984450,
+        "ru_rubric_names": "Автотенты и пологи"
+    },
+    {
+        "rubric-id": 175424884932,
+        "ru_rubric_names": "Небанковская кредитная организация"
+    },
+    {
+        "rubric-id": 176717353603,
+        "ru_rubric_names": "Экспресс-пункт замены масла"
+    },
+    {
+        "rubric-id": 179419243745,
+        "ru_rubric_names": "Продажа живых бабочек"
+    },
+    {
+        "rubric-id": 179539030136,
+        "ru_rubric_names": "Печать на футболках"
+    },
+    {
+        "rubric-id": 181652271466,
+        "ru_rubric_names": "Строительный рынок"
+    },
+    {
+        "rubric-id": 186073544962,
+        "ru_rubric_names": "Самогонное оборудование"
+    },
+    {
+        "rubric-id": 187142065569,
+        "ru_rubric_names": "Продуктовый рынок"
+    },
+    {
+        "rubric-id": 188411445826,
+        "ru_rubric_names": "Горнолыжный комплекс"
+    },
+    {
+        "rubric-id": 188608973446,
+        "ru_rubric_names": "Сервисный центр МВД Украины"
+    },
+    {
+        "rubric-id": 188967180966,
+        "ru_rubric_names": "Диспоузеры"
+    },
+    {
+        "rubric-id": 189088837359,
+        "ru_rubric_names": "Изготовление макетов"
+    },
+    {
+        "rubric-id": 189283450790,
+        "ru_rubric_names": "Кастинг агентство"
+    },
+    {
+        "rubric-id": 189305575432,
+        "ru_rubric_names": "Фотообои и фрески"
+    },
+    {
+        "rubric-id": 191820096562,
+        "ru_rubric_names": "Клуб виртуальной реальности"
+    },
+    {
+        "rubric-id": 195377914618,
+        "ru_rubric_names": "Ремонт спортивного инвентаря"
+    },
+    {
+        "rubric-id": 197946435011,
+        "ru_rubric_names": "Батутный центр"
+    },
+    {
+        "rubric-id": 198983702022,
+        "ru_rubric_names": "Вещевой рынок"
+    },
+    {
+        "rubric-id": 200742422576,
+        "ru_rubric_names": "Магазин смешанных товаров"
+    },
+    {
+        "rubric-id": 200992989394,
+        "ru_rubric_names": "Аэродром"
+    },
+    {
+        "rubric-id": 201164668768,
+        "ru_rubric_names": "Сыроварня"
+    },
+    {
+        "rubric-id": 201458609953,
+        "ru_rubric_names": "Озеленение помещений"
+    },
+    {
+        "rubric-id": 205399862978,
+        "ru_rubric_names": "Армянская апостольская церковь"
+    },
+    {
+        "rubric-id": 205427414726,
+        "ru_rubric_names": "Арбитражный суд"
+    },
+    {
+        "rubric-id": 205618443020,
+        "ru_rubric_names": "Офис интернет-магазина"
+    },
+    {
+        "rubric-id": 206650152999,
+        "ru_rubric_names": "Терминал аэропорта"
+    },
+    {
+        "rubric-id": 211635190908,
+        "ru_rubric_names": "Коттеджный посёлок"
+    },
+    {
+        "rubric-id": 213083376121,
+        "ru_rubric_names": "Ремонт оружия"
+    },
+    {
+        "rubric-id": 215067206277,
+        "ru_rubric_names": "Картинг"
+    },
+    {
+        "rubric-id": 215141133668,
+        "ru_rubric_names": "Магазин фиксированной цены"
+    },
+    {
+        "rubric-id": 215839062375,
+        "ru_rubric_names": "Продуктовый гипермаркет"
+    },
+    {
+        "rubric-id": 216785437979,
+        "ru_rubric_names": "Прочие кассы"
+    },
+    {
+        "rubric-id": 216893312131,
+        "ru_rubric_names": "Обувное ателье"
+    },
+    {
+        "rubric-id": 218536193349,
+        "ru_rubric_names": "Аттракцион"
+    },
+    {
+        "rubric-id": 218951263042,
+        "ru_rubric_names": "Деловые услуги для предпринимателей"
+    },
+    {
+        "rubric-id": 219373470464,
+        "ru_rubric_names": "Приём металлолома"
+    },
+    {
+        "rubric-id": 219411058237,
+        "ru_rubric_names": "Партнеры Яндекс.Такси"
+    },
+    {
+        "rubric-id": 220956145262,
+        "ru_rubric_names": "Магазин комиксов"
+    },
+    {
+        "rubric-id": 228777502355,
+        "ru_rubric_names": "Кёрлинг-клуб"
+    },
+    {
+        "rubric-id": 230339141635,
+        "ru_rubric_names": "Автоматизация ресторанов"
+    },
+    {
+        "rubric-id": 230968386247,
+        "ru_rubric_names": "Площадки для самостоятельных запусков фейерверков"
+    },
+    {
+        "rubric-id": 231934541827,
+        "ru_rubric_names": "Аэротруба"
+    },
+    {
+        "rubric-id": 232419653486,
+        "ru_rubric_names": "Товары для подводного плавания"
+    },
+    {
+        "rubric-id": 233840262829,
+        "ru_rubric_names": "Ремонт турбин"
+    },
+    {
+        "rubric-id": 235890385035,
+        "ru_rubric_names": "Танцплощадка"
+    },
+    {
+        "rubric-id": 238748962603,
+        "ru_rubric_names": "Цветочный рынок"
+    },
+    {
+        "rubric-id": 239628851835,
+        "ru_rubric_names": "Барбершоп"
+    },
+    {
+        "rubric-id": 240441342749,
+        "ru_rubric_names": "Лазерная эпиляция"
+    },
+    {
+        "rubric-id": 241832957813,
+        "ru_rubric_names": "Шоу-рум"
+    },
+    {
+        "rubric-id": 242755155010,
+        "ru_rubric_names": "Скупка золота и ювелирных изделий"
+    }
+]
