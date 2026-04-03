@@ -1,15 +1,15 @@
-﻿import Header from "./components/Header";
+import Header from "./components/Header";
 import Tabs from "./components/Tabs";
-import NetworkForm from "./components/NetworkForm";
-import StationCard from "./components/StationCard";
-import BulkTable from "./components/BulkTable";
+import NetworkForm from "./components/network/NetworkForm";
+import StationCard from "./components/station/StationCard";
+import BulkTable from "./components/bulk/BulkTable";
 import ExportPanel from "./components/ExportPanel";
 import Modal from "./components/Modal";
-import { DEFAULT_BULK_ROW, DEFAULT_STATION, createUid } from "./utils/constants";
-import { buildCompanyXml, buildXml } from "./utils/xml";
+import { DEFAULT_BULK_ROW, DEFAULT_STATION, createUid } from "./const";
+import { buildCompanyXml, buildXml } from "./services/xml";
 import { validateNetwork, validateStation } from "./utils/validation";
-import { readText, readTextByLang, parseCompany } from "./utils/parser";
-import { readLocalStorage, writeLocalStorage } from "./hooks/storage";
+import { readText, readTextByLang, parseCompany } from "./services/xml";
+import { readLocalStorage, writeLocalStorage } from "./hooks/useStorage";
 import type { BulkRowState, NetworkState, StationState, Rubric } from "./types";
 import { useEffect, useState } from "react";
 
@@ -45,6 +45,7 @@ const buildBulkRowFromStation = (station: StationState): BulkRowState => ({
   lon: station.lon,
   lat: station.lat,
   nameOther: station.nameOther,
+  locality: station.locality,
 });
 
 const normalizeBulkRows = (rows?: BulkRowState[], stations?: StationState[]): BulkRowState[] => {
@@ -424,6 +425,8 @@ const App = () => {
             tag: "INTERIOR",
           },
         ],
+        fuels: [],
+        services: [],
       },
       {
         uid: createUid(),
@@ -450,6 +453,8 @@ const App = () => {
           { url: "https://ortk.ru/assets/ortk_0002_1.jpg", alt: "", type: "", tag: "ENTER" },
           { url: "https://ortk.ru/assets/ortk_0002_2.jpg", alt: "", type: "", tag: "SERVICES" },
         ],
+        fuels: [],
+        services: [],
       },
     ].map(withUid);
     setNetwork({
