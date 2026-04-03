@@ -46,12 +46,14 @@ const RubricTagPicker = ({ rubrics, selected, networkRubric, onChange }: Props) 
         )}
         {selected.map((rubric) => {
           const name = rubrics.find((r) => r.id === rubric)?.name;
+          const isProtected = !!networkRubric && rubric === networkRubric;
           return (
-            <span className="rubric-tag" key={rubric}>
+            <span className="rubric-tag" key={rubric} title={isProtected ? "Рубрика из настроек сети — нельзя удалить" : undefined}>
               {rubric}{name ? ` — ${name}` : ""}
-              <button type="button" onClick={() => onChange(selected.filter((item) => item !== rubric))}>
-                ×
-              </button>
+              {isProtected
+                ? <em> (из сети)</em>
+                : <button type="button" onClick={() => onChange(selected.filter((item) => item !== rubric))}>×</button>
+              }
             </span>
           );
         })}
@@ -78,7 +80,12 @@ const RubricTagPicker = ({ rubrics, selected, networkRubric, onChange }: Props) 
       />
       <div className={`rubric-suggestions${focused ? " active" : ""}`}>
         {suggestions.map((item) => (
-          <button type="button" key={item.id} onClick={() => addRubric(String(item.id))}>
+          <button
+            type="button"
+            key={item.id}
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => addRubric(String(item.id))}
+          >
             {item.id} — {item.name}
           </button>
         ))}
