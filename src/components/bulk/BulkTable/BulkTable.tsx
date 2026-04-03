@@ -1,16 +1,16 @@
-import type { BulkRowState, Rubric } from "../../../types";
+import type { StationState, Rubric } from "../../../types";
 import { formatPhoneRu, resolveRubricInput } from "../../../utils/helpers";
 
 type Props = {
-  rows: BulkRowState[];
+  stations: StationState[];
   rubrics: Rubric[];
-  onRowChange: (index: number, patch: Partial<BulkRowState>) => void;
-  onAddRow: () => void;
-  onDuplicateRow: (index: number) => void;
-  onRemoveRow: (index: number) => void;
+  onStationUpdate: (index: number, patch: Partial<StationState>) => void;
+  onAddStation: () => void;
+  onDuplicateStation: (index: number) => void;
+  onRemoveStation: (index: number) => void;
 };
 
-const BulkTable = ({ rows, rubrics, onRowChange, onAddRow, onDuplicateRow, onRemoveRow }: Props) => (
+const BulkTable = ({ stations, rubrics, onStationUpdate, onAddStation, onDuplicateStation, onRemoveStation }: Props) => (
   <div className="card">
     <h2>Основные поля по всем станциям</h2>
     <p className="hint">
@@ -34,38 +34,56 @@ const BulkTable = ({ rows, rubrics, onRowChange, onAddRow, onDuplicateRow, onRem
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr key={index}>
-              <td><input value={row.id} onChange={(e) => onRowChange(index, { id: e.target.value })} /></td>
-              <td><input value={row.address} onChange={(e) => onRowChange(index, { address: e.target.value })} /></td>
-              <td>
-                <input
-                  value={row.phone}
-                  onChange={(e) => onRowChange(index, { phone: e.target.value })}
-                  onBlur={(e) => onRowChange(index, { phone: formatPhoneRu(e.target.value) })}
-                />
-              </td>
-              <td><input value={row.workingTime} onChange={(e) => onRowChange(index, { workingTime: e.target.value })} /></td>
-              <td><input value={row.rubric} onChange={(e) => onRowChange(index, { rubric: resolveRubricInput(e.target.value, rubrics) })} /></td>
-              <td><input value={row.lon} onChange={(e) => onRowChange(index, { lon: e.target.value })} /></td>
-              <td><input value={row.lat} onChange={(e) => onRowChange(index, { lat: e.target.value })} /></td>
-              <td><input value={row.nameOther} onChange={(e) => onRowChange(index, { nameOther: e.target.value })} /></td>
-              <td>
-                <button className="ghost small" type="button" onClick={() => onDuplicateRow(index)}>
-                  ⧉
-                </button>
-              </td>
-              <td>
-                <button className="ghost small" type="button" onClick={() => onRemoveRow(index)}>
-                  ×
-                </button>
-              </td>
-            </tr>
-          ))}
+          {stations.map((station, index) => {
+            const phone = station.phones[0]?.number || "";
+            const rubric = station.rubrics[0] || "";
+            return (
+              <tr key={station.uid || index}>
+                <td><input value={station.id} onChange={(e) => onStationUpdate(index, { id: e.target.value })} /></td>
+                <td><input value={station.address} onChange={(e) => onStationUpdate(index, { address: e.target.value })} /></td>
+                <td>
+                  <input
+                    value={phone}
+                    onChange={(e) => {
+                      const base = station.phones[0] || { number: "", type: "phone", ext: "", info: "" };
+                      onStationUpdate(index, { phones: [{ ...base, number: e.target.value }] });
+                    }}
+                    onBlur={(e) => {
+                      const base = station.phones[0] || { number: "", type: "phone", ext: "", info: "" };
+                      onStationUpdate(index, { phones: [{ ...base, number: formatPhoneRu(e.target.value) }] });
+                    }}
+                  />
+                </td>
+                <td><input value={station.workingTime} onChange={(e) => onStationUpdate(index, { workingTime: e.target.value })} /></td>
+                <td>
+                  <input
+                    value={rubric}
+                    onChange={(e) => {
+                      const resolved = resolveRubricInput(e.target.value, rubrics);
+                      onStationUpdate(index, { rubrics: resolved ? [resolved, ...station.rubrics.slice(1)] : station.rubrics.slice(1) });
+                    }}
+                  />
+                </td>
+                <td><input value={station.lon} onChange={(e) => onStationUpdate(index, { lon: e.target.value })} /></td>
+                <td><input value={station.lat} onChange={(e) => onStationUpdate(index, { lat: e.target.value })} /></td>
+                <td><input value={station.nameOther} onChange={(e) => onStationUpdate(index, { nameOther: e.target.value })} /></td>
+                <td>
+                  <button className="ghost small" type="button" onClick={() => onDuplicateStation(index)}>
+                    ⧉
+                  </button>
+                </td>
+                <td>
+                  <button className="ghost small" type="button" onClick={() => onRemoveStation(index)}>
+                    ×
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
-    <button className="ghost" type="button" onClick={onAddRow}>
+    <button className="ghost" type="button" onClick={onAddStation}>
       Добавить строку
     </button>
   </div>

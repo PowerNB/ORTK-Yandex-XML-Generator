@@ -66,13 +66,25 @@ export const buildCompanyXml = (data: StationState, network: NetworkState): stri
   const scheduledXml = buildScheduledXml(data.scheduled);
   if (scheduledXml) blocks.push(scheduledXml);
 
-  const rubrics = data.rubrics && data.rubrics.length ? data.rubrics : network.rubric ? [network.rubric] : [];
+  // Network rubric must always be present; station can add up to 2 more (3 total max)
+  const networkRubric = network.rubric || "";
+  const stationRubrics = (data.rubrics || []).filter((r) => r && r !== networkRubric);
+  const rubrics = networkRubric
+    ? [networkRubric, ...stationRubrics].slice(0, 3)
+    : stationRubrics.slice(0, 3);
   rubrics.forEach((rubric) => {
-    if (rubric) blocks.push(`    <rubric-id>${escapeXml(rubric)}</rubric-id>`);
+    blocks.push(`    <rubric-id>${escapeXml(rubric)}</rubric-id>`);
   });
 
   if (network.actualization) {
     blocks.push(`    <actualization-date>${escapeXml(network.actualization)}</actualization-date>`);
+  }
+
+  if (data.lon && data.lat) {
+    blocks.push(`    <coordinates>`);
+    blocks.push(`      <lon>${escapeXml(data.lon)}</lon>`);
+    blocks.push(`      <lat>${escapeXml(data.lat)}</lat>`);
+    blocks.push(`    </coordinates>`);
   }
 
   const photosXml = buildPhotosXml(data.photos || [], data.galleryUrl);
@@ -84,13 +96,6 @@ export const buildCompanyXml = (data: StationState, network: NetworkState): stri
   (data.services || []).forEach((service) => {
     blocks.push(`    <feature-enum-multiple name="${FEATURE_SERVICE_NAME}">${escapeXml(service)}</feature-enum-multiple>`);
   });
-
-  if (data.lon && data.lat) {
-    blocks.push(`    <coordinates>`);
-    blocks.push(`      <lon>${escapeXml(data.lon)}</lon>`);
-    blocks.push(`      <lat>${escapeXml(data.lat)}</lat>`);
-    blocks.push(`    </coordinates>`);
-  }
 
   blocks.push(`  </company>`);
   return blocks.join("\n");

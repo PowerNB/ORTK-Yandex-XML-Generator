@@ -5,12 +5,12 @@ import StationCard from "./components/station/StationCard";
 import BulkTable from "./components/bulk/BulkTable";
 import ExportPanel from "./components/ExportPanel";
 import Modal from "./components/Modal";
-import { DEFAULT_BULK_ROW, DEFAULT_STATION, createUid } from "./const";
+import { DEFAULT_STATION, createUid } from "./const";
 import { buildCompanyXml, buildXml } from "./services/xml";
 import { validateNetwork, validateStation } from "./utils/validation";
 import { readText, readTextByLang, parseCompany } from "./services/xml";
 import { readLocalStorage, writeLocalStorage } from "./hooks/useStorage";
-import type { BulkRowState, NetworkState, StationState, Rubric } from "./types";
+import type { NetworkState, StationState, Rubric } from "./types";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "ortk-xml-state-v1";
@@ -21,7 +21,6 @@ type StoredState = {
   tab?: string;
   network?: NetworkState;
   stations?: StationState[];
-  bulkRows?: BulkRowState[];
 };
 
 const withUid = (station: StationState): StationState => ({
@@ -33,61 +32,6 @@ const withUid = (station: StationState): StationState => ({
 const normalizeStations = (list?: StationState[]): StationState[] => {
   if (!list || !list.length) return [DEFAULT_STATION()];
   return list.map((station) => withUid(station));
-};
-
-const buildBulkRowFromStation = (station: StationState): BulkRowState => ({
-  uid: station.uid,
-  id: station.id,
-  address: station.address,
-  phone: station.phones[0]?.number || "",
-  workingTime: station.workingTime,
-  rubric: station.rubrics[0] || "",
-  lon: station.lon,
-  lat: station.lat,
-  nameOther: station.nameOther,
-  locality: station.locality,
-});
-
-const normalizeBulkRows = (rows?: BulkRowState[], stations?: StationState[]): BulkRowState[] => {
-  if (rows && rows.length) {
-    return rows.map((row) => ({ ...row, uid: row.uid || createUid() }));
-  }
-  if (stations && stations.length) {
-    return stations.map(buildBulkRowFromStation);
-  }
-  return [DEFAULT_BULK_ROW()];
-};
-
-const mergeBulkRows = (
-  bulkRows: BulkRowState[],
-  stations: StationState[],
-  network: NetworkState
-): StationState[] => {
-  const byUid = new Map(stations.map((station) => [station.uid, station]));
-  const byId = new Map(stations.map((station) => [station.id, station]));
-  return bulkRows.map((row) => {
-    const base = (row.uid && byUid.get(row.uid)) || byId.get(row.id) || DEFAULT_STATION();
-    const updated: StationState = {
-      ...base,
-      id: row.id || base.id,
-      address: row.address || base.address,
-      workingTime: row.workingTime || base.workingTime,
-      nameOther: row.nameOther || base.nameOther,
-      lon: row.lon || base.lon,
-      lat: row.lat || base.lat,
-    };
-    if (row.phone !== undefined) {
-      const basePhone = base.phones[0] || { number: "", type: network.phoneType || "phone", ext: "", info: "" };
-      updated.phones = [{ ...basePhone, number: row.phone }];
-    }
-    if (row.rubric) {
-      updated.rubrics = [row.rubric];
-    } else if (row.rubric === "") {
-      updated.rubrics = [];
-    }
-    updated.uid = row.uid || base.uid || createUid();
-    return updated;
-  });
 };
 
 const App = () => {
@@ -105,9 +49,6 @@ const App = () => {
     }
   );
   const [stations, setStations] = useState<StationState[]>(normalizeStations(stored?.stations));
-  const [bulkRows, setBulkRows] = useState<BulkRowState[]>(
-    normalizeBulkRows(stored?.bulkRows, stored?.stations)
-  );
   const [rubrics, setRubrics] = useState<Rubric[]>([]);
   const [xmlOutput, setXmlOutput] = useState<string>("");
   const [errors, setErrors] = useState<string[]>([]);
@@ -153,144 +94,28 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    writeLocalStorage(STORAGE_KEY, { tab, network, stations, bulkRows });
-  }, [tab, network, stations, bulkRows]);
-
-  const syncBulkRowWithStation = (rows: BulkRowState[], station: StationState): BulkRowState[] => {
-    const idx = rows.findIndex((row) => row.uid === station.uid);
-    if (idx === -1) return rows;
-    const nextRow: BulkRowState = {
-      ...rows[idx],
-      id: station.id,
-      address: station.address,
-      phone: station.phones[0]?.number || "",
-      workingTime: station.workingTime,
-      rubric: station.rubrics[0] || "",
-      lon: station.lon,
-      lat: station.lat,
-      nameOther: station.nameOther,
-    };
-    return rows.map((row, i) => (i === idx ? nextRow : row));
-  };
-
-  const syncStationWithBulkRow = (list: StationState[], row: BulkRowState): StationState[] => {
-    const idx = list.findIndex((station) => station.uid === row.uid);
-    if (idx === -1) return list;
-    const base = list[idx];
-    const next: StationState = {
-      ...base,
-      id: row.id,
-      address: row.address,
-      workingTime: row.workingTime,
-      nameOther: row.nameOther,
-      lon: row.lon,
-      lat: row.lat,
-      rubrics: row.rubric ? [row.rubric] : [],
-    };
-    if (row.phone !== undefined) {
-      const basePhone = base.phones[0] || { number: "", type: network.phoneType || "phone", ext: "", info: "" };
-      next.phones = [{ ...basePhone, number: row.phone }];
-    }
-    return list.map((station, i) => (i === idx ? next : station));
-  };
+    writeLocalStorage(STORAGE_KEY, { tab, network, stations });
+  }, [tab, network, stations]);
 
   const handleStationUpdate = (index: number, patch: Partial<StationState>) => {
-    setStations((prev) => {
-      const next = prev.map((station, i) => (i === index ? { ...station, ...patch } : station));
-      const updated = next[index];
-      setBulkRows((rows) => syncBulkRowWithStation(rows, updated));
-      return next;
-    });
-  };
-
-  const handleBulkRowUpdate = (index: number, patch: Partial<BulkRowState>) => {
-    setBulkRows((prev) => {
-      const next = prev.map((row, i) => (i === index ? { ...row, ...patch } : row));
-      const updated = next[index];
-      setStations((list) => syncStationWithBulkRow(list, updated));
-      return next;
-    });
+    setStations((prev) => prev.map((station, i) => (i === index ? { ...station, ...patch } : station)));
   };
 
   const handleAddStation = () => {
-    const station = DEFAULT_STATION();
-    setStations((prev) => [...prev, station]);
-    setBulkRows((prev) => [...prev, buildBulkRowFromStation(station)]);
+    setStations((prev) => [...prev, DEFAULT_STATION()]);
   };
 
   const handleDuplicateStation = (index: number) => {
     setStations((prev) => {
       const clone: StationState = { ...prev[index], uid: createUid() };
-      const next = [...prev.slice(0, index + 1), clone, ...prev.slice(index + 1)];
-      setBulkRows((rows) => {
-        const rowClone = buildBulkRowFromStation(clone);
-        return [...rows.slice(0, index + 1), rowClone, ...rows.slice(index + 1)];
-      });
-      return next;
+      return [...prev.slice(0, index + 1), clone, ...prev.slice(index + 1)];
     });
   };
 
   const handleRemoveStation = (index: number) => {
     setStations((prev) => {
-      const removed = prev[index];
       const next = prev.filter((_, i) => i !== index);
-      setBulkRows((rows) => rows.filter((row) => row.uid !== removed.uid));
       return next.length ? next : [DEFAULT_STATION()];
-    });
-  };
-
-  const handleAddBulkRow = () => {
-    const row = DEFAULT_BULK_ROW();
-    const station: StationState = {
-      ...DEFAULT_STATION(),
-      uid: row.uid,
-      id: row.id,
-      address: row.address,
-      workingTime: row.workingTime,
-      nameOther: row.nameOther,
-      lon: row.lon,
-      lat: row.lat,
-      rubrics: row.rubric ? [row.rubric] : [],
-      phones: row.phone
-        ? [{ number: row.phone, type: network.phoneType || "phone", ext: "", info: "" }]
-        : DEFAULT_STATION().phones,
-    };
-    setBulkRows((prev) => [...prev, row]);
-    setStations((prev) => [...prev, station]);
-  };
-
-  const handleDuplicateBulkRow = (index: number) => {
-    setBulkRows((prev) => {
-      const clone: BulkRowState = { ...prev[index], uid: createUid() };
-      const next = [...prev.slice(0, index + 1), clone, ...prev.slice(index + 1)];
-      setStations((list) => {
-        const base = list[index] || DEFAULT_STATION();
-        const stationClone: StationState = {
-          ...base,
-          uid: clone.uid,
-          id: clone.id,
-          address: clone.address,
-          workingTime: clone.workingTime,
-          nameOther: clone.nameOther,
-          lon: clone.lon,
-          lat: clone.lat,
-          rubrics: clone.rubric ? [clone.rubric] : [],
-          phones: clone.phone
-            ? [{ number: clone.phone, type: network.phoneType || "phone", ext: "", info: "" }]
-            : base.phones,
-        };
-        return [...list.slice(0, index + 1), stationClone, ...list.slice(index + 1)];
-      });
-      return next;
-    });
-  };
-
-  const handleRemoveBulkRow = (index: number) => {
-    setBulkRows((prev) => {
-      const removed = prev[index];
-      const next = prev.filter((_, i) => i !== index);
-      setStations((list) => list.filter((station) => station.uid !== removed.uid));
-      return next.length ? next : [DEFAULT_BULK_ROW()];
     });
   };
 
@@ -300,8 +125,7 @@ const App = () => {
     const stationErrors: string[] = [];
     const stationWarnings: string[] = [];
 
-    const sourceStations = tab === "bulk" ? mergeBulkRows(bulkRows, stations, network) : stations;
-    sourceStations.forEach((station) => {
+    stations.forEach((station) => {
       const { errors: stErrors, warnings: stWarnings } = validateStation(station, network);
       stationErrors.push(...stErrors.map((item) => `${station.id || "station"}: ${item}`));
       stationWarnings.push(...stWarnings.map((item) => `${station.id || "station"}: ${item}`));
@@ -317,7 +141,7 @@ const App = () => {
       return;
     }
 
-    const xmlCompanies = sourceStations.map((station) => buildCompanyXml(station, network)).join("\n");
+    const xmlCompanies = stations.map((station) => buildCompanyXml(station, network)).join("\n");
     const xml = buildXml(xmlCompanies);
     setXmlOutput(xml);
     setShowExportModal(true);
@@ -357,7 +181,6 @@ const App = () => {
           actualization: readText(companies[0], "actualization-date") || prev.actualization,
         }));
         setStations(parsed);
-        setBulkRows(parsed.map(buildBulkRowFromStation));
         setTab("single");
       } catch (err) {
         console.error(err);
@@ -383,7 +206,6 @@ const App = () => {
         actualization: readText(companies[0], "actualization-date") || prev.actualization,
       }));
       setStations(parsed);
-      setBulkRows(parsed.map(buildBulkRowFromStation));
       setTab("single");
       setShowImportModal(false);
     } catch (err) {
@@ -466,7 +288,6 @@ const App = () => {
       phoneType: "phone",
     });
     setStations(mockStations);
-    setBulkRows(mockStations.map(buildBulkRowFromStation));
     setTab("single");
   };
 
@@ -498,12 +319,12 @@ const App = () => {
 
       {tab === "bulk" && (
         <BulkTable
-          rows={bulkRows}
+          stations={stations}
           rubrics={rubrics}
-          onRowChange={(index, patch) => handleBulkRowUpdate(index, patch)}
-          onAddRow={handleAddBulkRow}
-          onDuplicateRow={handleDuplicateBulkRow}
-          onRemoveRow={handleRemoveBulkRow}
+          onStationUpdate={handleStationUpdate}
+          onAddStation={handleAddStation}
+          onDuplicateStation={handleDuplicateStation}
+          onRemoveStation={handleRemoveStation}
         />
       )}
 
