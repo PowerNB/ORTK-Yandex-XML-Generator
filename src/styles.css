@@ -120,6 +120,19 @@ body {
   color: #5d554c;
 }
 
+.rubric-tag.inherited {
+  background: transparent;
+  border: 1px dashed #c0b8ae;
+  color: #8b7e72;
+  font-style: normal;
+}
+
+.rubric-tag.inherited em {
+  font-style: normal;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
 .rubric-tag button {
   background: transparent;
   color: #7a6f64;
@@ -201,6 +214,53 @@ label {
 .field-hint {
   font-size: 12px;
   color: #8b8278;
+}
+
+.features-block {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.features-group strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.phone-input-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.input-error {
+  border-color: #c54a1d !important;
+  background: #fff5f2;
+}
+
+.inline-error {
+  font-size: 11px;
+  color: #c54a1d;
+  margin-top: 2px;
 }
 
 input,
@@ -338,8 +398,26 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 1200px;
-  table-layout: auto;
+  min-width: 1800px;
+  table-layout: fixed;
+}
+
+table th:nth-child(1), table td:nth-child(1) { width: 120px; }  /* company-id */
+table th:nth-child(2), table td:nth-child(2) { width: 280px; }  /* address */
+table th:nth-child(3), table td:nth-child(3) { width: 160px; }  /* phone */
+table th:nth-child(4), table td:nth-child(4) { width: 180px; }  /* working-time */
+table th:nth-child(5), table td:nth-child(5) { width: 200px; }  /* rubric-id */
+table th:nth-child(6), table td:nth-child(6) { width: 100px; }  /* lon */
+table th:nth-child(7), table td:nth-child(7) { width: 100px; }  /* lat */
+table th:nth-child(8), table td:nth-child(8) { width: 160px; }  /* name-other */
+table th:nth-child(9), table td:nth-child(9) { width: 140px; }  /* населенный пункт */
+table th:nth-child(10), table td:nth-child(10) { width: 44px; } /* копировать */
+table th:nth-child(11), table td:nth-child(11) { width: 44px; } /* удалить */
+
+td select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 th,
@@ -389,4 +467,45 @@ td input {
   .actions {
     flex-direction: column;
   }
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 28, 26, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 24px;
+}
+
+.modal {
+  width: min(720px, 100%);
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modal-body {
+  display: grid;
+  gap: 12px;
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-family: "Inter", sans-serif;
 }
