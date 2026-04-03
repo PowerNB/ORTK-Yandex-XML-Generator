@@ -149,11 +149,7 @@ const StationCard = ({ station, rubrics, networkRubric, onUpdate, onRemove, onDu
           <br />
           2. Перейдите в раздел <strong>Автоматизация → Экспорт XML</strong>.
           <br />
-          3. Скачайте текущий XML-файл и откройте его в любом текстовом редакторе.
-          <br />
-          4. Найдите теги вида <code>&lt;feature-enum-multiple name="..."&gt;</code> и запишите значения атрибута <code>name</code>.
-          <br />
-          5. Обновите константы <code>FEATURE_FUEL_NAME</code> и <code>FEATURE_SERVICE_NAME</code> в файле <code>src/const/features.ts</code>.
+          3. Скачайте текущий XML-файл и скиньте его в чат задачи.
         </p>
         <label style={{ marginBottom: 8 }}>
           <span className="label-title">Виды топлива ({FEATURE_FUEL_NAME})</span>
